@@ -5,15 +5,15 @@ import { useAtom } from "jotai";
 import { Vector3 } from "three";
 import { Book } from "./Book";
 import { ModelShowcase } from "./ModelShowcase";
+import { PageParticles } from "./PageParticles";
 import { pageAtom, viewModeAtom } from "./UI";
-import { getBookFraming } from "./framing";
+import { getBookFraming, getBookOrbitOptions } from "./framing";
 
 /* ── Camera target positions ── */
-const CameraAnimator = ({ controls }) => {
+const CameraAnimator = ({ controls, animating }) => {
   const { camera, size } = useThree();
   const [viewMode] = useAtom(viewModeAtom);
   const [page] = useAtom(pageAtom);
-  const animating = useRef(false);
   const target = useRef(new Vector3());
   const lookAt = useRef(new Vector3());
 
@@ -46,9 +46,10 @@ export const Experience = () => {
   const framing = getBookFraming(size.width, size.height, viewMode, page);
   const reading = viewMode === 'reading';
   const controls = useRef();
+  const cameraAnimating = useRef(false);
   return (
     <>
-      <CameraAnimator controls={controls} />
+      <CameraAnimator controls={controls} animating={cameraAnimating} />
 
       {/* Book */}
       <Float
@@ -58,23 +59,18 @@ export const Experience = () => {
         rotationIntensity={reading ? 0 : .08}
       >
         <Book />
+        <PageParticles />
       </Float>
 
       {/* Optional decoration loads independently from book textures. */}
       <Suspense fallback={null}><ModelShowcase /></Suspense>
 
-      {/* A gentle orbit keeps the page and its separate illustration in frame. */}
+      {/* Showcase permits a full orbit; switching back restores the reading camera. */}
       <OrbitControls
         ref={controls}
         makeDefault
-        minDistance={framing.distance}
-        maxDistance={framing.distance * 1.6}
-        enablePan={false}
-        enableRotate={!reading}
-        minAzimuthAngle={-.08}
-        maxAzimuthAngle={.08}
-        minPolarAngle={Math.PI / 2 - .18}
-        maxPolarAngle={Math.PI / 2 + .10}
+        {...getBookOrbitOptions(framing, viewMode)}
+        onStart={() => { cameraAnimating.current = false; }}
       />
 
       {/* Ambient environment — nhẹ hơn studio */}

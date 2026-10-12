@@ -243,6 +243,7 @@ const Page = ({ number, front, back, page, opened, bookClosed, ...props }) => {
       }}
       onClick={(e) => {
         e.stopPropagation();
+        if (e.delta > 4) return; // A camera drag must not also turn a page.
         setPage(opened ? number : number + 1);
         setHighlighted(false);
       }}

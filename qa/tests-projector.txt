@@ -2,31 +2,34 @@
 > r3f-vite-starter@1.0.0 test
 > node scripts/run-tests.mjs
 
-✔ Every learning spread has its own illustration in normal reading and additional 3D mode (68.058ms)
-✔ Procedural objects and book bounds fit five viewport cameras and occupy separate reading regions (258.1559ms)
-✔ Narrative game: all correct, progression, feedback, duplicate-click lock, restart (99.5343ms)
-✔ Narrative game: all incorrect, progression, feedback, duplicate-click lock, restart (52.563ms)
-✔ Narrative game: partial credit, progression, feedback, duplicate-click lock, restart (54.8932ms)
-✔ Game choices work when speech APIs are unavailable; typewriter finishes (29.5632ms)
-✔ Quiz scores once despite stale repeated clicks, explains every selection, completes and resets (16.7171ms)
-✔ 3D book navigation: six sheets, twelve existing textures, correct boundaries (43.5175ms)
-✔ Academic coverage, source boundaries and no old topic in rendered content (92.9571ms)
-✔ Quiz incorrect answers use their own explanations and award zero points (8.0923ms)
-✔ Expandable explanations expose state and hide closed content (2.3158ms)
-✔ Navbar switches from book to specific content, and book/source tabs (4.8879ms)
-✔ Navbar scroll tracking follows nested theory, solutions and student sections (4.4624ms)
-✔ Randomized answers reach all positions without changing correctness or explanation (2.086ms)
-✔ Narrative mixed choices produce exact score and accurate final choice history (46.483ms)
-✔ Hypothetical fare balances money and labels fee revenue separately from profit (2.6709ms)
-✔ Book cover-to-cover face order and responsive framing are consistent (1.2813ms)
-✔ Five distinct local image assets map to the intended hero and four scenarios (2.5006ms)
-✔ Book enlarged reader navigates all twelve faces, closes and restores scroll state (9.5597ms)
-✔ Book 3D toggle and enlarged-reader keyboard preserve page state (6.8345ms)
-ℹ tests 20
+✔ Every learning spread has its own illustration in normal reading and additional 3D mode (38.5376ms)
+✔ Procedural objects and book bounds fit five viewport cameras and occupy separate reading regions (143.8337ms)
+✔ Front and back covers stay in frame throughout the 360 degree orbit (5.2098ms)
+✔ Narrative game: all correct, progression, feedback, duplicate-click lock, restart (53.9473ms)
+✔ Narrative game: all incorrect, progression, feedback, duplicate-click lock, restart (27.8522ms)
+✔ Narrative game: partial credit, progression, feedback, duplicate-click lock, restart (27.2202ms)
+✔ Game choices work when speech APIs are unavailable; typewriter finishes (13.4051ms)
+✔ Quiz scores once despite stale repeated clicks, explains every selection, completes and resets (4.8013ms)
+✔ 3D book navigation: six sheets, twelve existing textures, correct boundaries (20.6148ms)
+✔ Academic coverage, source boundaries and no old topic in rendered content (52.0803ms)
+✔ Quiz incorrect answers use their own explanations and award zero points (2.8694ms)
+✔ Expandable explanations expose state and hide closed content (1.3627ms)
+✔ Navbar switches from book to specific content, and book/source tabs (2.6225ms)
+✔ Navbar scroll tracking follows nested theory, solutions and student sections (2.5108ms)
+✔ Randomized answers reach all positions without changing correctness or explanation (0.947ms)
+✔ Narrative mixed choices produce exact score and accurate final choice history (19.5222ms)
+✔ Hypothetical fare balances money and labels fee revenue separately from profit (1.3996ms)
+✔ Book cover-to-cover face order and responsive framing are consistent (1.0061ms)
+✔ Five distinct local image assets map to the intended hero and four scenarios (1.0998ms)
+✔ Book enlarged reader navigates all twelve faces, closes and restores scroll state (4.5633ms)
+✔ Book 3D toggle and enlarged-reader keyboard preserve page state (2.9491ms)
+✔ Book sparkle bursts replay on fast page turns, settle, and keep ambient sparkles in 3D View (1.8459ms)
+✔ Reduced-motion preference suppresses book sparkles in both modes (0.6228ms)
+ℹ tests 23
 ℹ suites 0
-ℹ pass 20
+ℹ pass 23
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 784.9117
+ℹ duration_ms 431.7706

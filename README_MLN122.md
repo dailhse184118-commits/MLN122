@@ -43,11 +43,11 @@ Không mở index.html bằng file://; Three.js và module cần HTTP server. C�
 
 ## Kết quả và giới hạn
 
-- Đợt tối ưu trình chiếu hiện tại: 20/20 kiểm thử tương tác/tọa độ thành công; build production thành công; 57/57 tài nguyên public đúng HTTP. Bốn artifact build được đối chiếu SHA-256 qua production preview. Sách có năm minh họa hình học, không tải GLB. Font cục bộ đủ 112 mã tiếng Việt đã kiểm tra.
+- Đợt tối ưu trình chiếu hiện tại: 23/23 kiểm thử tương tác/tọa độ thành công; build production thành công; 57/57 tài nguyên public đúng HTTP. Bốn artifact build được đối chiếu SHA-256 qua production preview. Sách có năm minh họa hình học, không tải GLB. Font cục bộ đủ 112 mã tiếng Việt đã kiểm tra.
 - Chưa kiểm thử trực quan browser/desktop/mobile/WebGL/console vì công cụ không xác minh được quyền localhost. Chưa có screenshot website đang chạy.
 - Đã đọc thông báo gốc UBCTQG ngày 11/09/2026; đây là rà soát/xác minh, không phải kết luận vi phạm.
 - Đã đối chiếu phần lý luận với bản 2021 đăng lại và bài giảng Chương 5 của Đại học Thương mại. Chưa kiểm tra bản in của nhóm; không gán số trang cho từng diễn giải.
-- Build còn cảnh báo directive Jotai và chunk sách khoảng 872 KB minified; chưa thay major runtime trong đợt này.
+- Build còn cảnh báo directive Jotai và chunk sách khoảng 877 KB minified; chưa thay major runtime trong đợt này.
 
 Xem [Báo cáo trình chiếu hiện tại](PROJECTOR_REPORT_MLN122.md), [báo cáo thay ảnh trước đó](VISUAL_ASSETS_REPORT_MLN122.md) và [báo cáo chỉnh sửa nội dung trước đó](REFINEMENT_REPORT_MLN122.md) và [Báo cáo kiểm thử](TESTING_REPORT_MLN122.md). Báo cáo chuyển đổi trước đó nằm ở IMPLEMENTATION_REPORT_MLN122.md.
 

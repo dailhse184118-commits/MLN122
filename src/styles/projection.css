@@ -2,12 +2,12 @@
 :root {
   --font-body: 'Be Vietnam Pro', Arial, sans-serif;
   --font-heading: 'Noto Serif', Georgia, 'Times New Roman', serif;
-  --body-size: clamp(17px, calc(.94vw + 6.7px), 22.5px);
+  --body-size: clamp(16.5px, calc(.9vw + 6.2px), 21.5px);
   --caption-size: clamp(16px, calc(.33vw + 11.3px), 19px);
-  --card-title-size: clamp(21px, calc(.63vw + 12.5px), 25.5px);
-  --section-title-size: clamp(35.5px, calc(2.2vw + 12px), 52px);
-  --game-question-size: clamp(27.5px, calc(1.36vw + 9.55px), 35.5px);
-  --game-answer-size: clamp(20.5px, calc(.67vw + 11.2px), 23.5px);
+  --card-title-size: clamp(20px, calc(.6vw + 11.8px), 24px);
+  --section-title-size: clamp(34px, calc(2.1vw + 11px), 49px);
+  --game-question-size: clamp(26px, calc(1.3vw + 8.8px), 34px);
+  --game-answer-size: clamp(19.5px, calc(.64vw + 10.6px), 22.5px);
   --nav-clearance: 100px;
   --text-muted: #51453d;
 }
@@ -24,7 +24,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .section-header p { font-size: var(--body-size); max-width: 960px; line-height: 1.7; margin-top: 20px; }
 .section-label, .mln-source-note, .hero-image-credit { font-size: var(--caption-size); line-height: 1.65; }
 .section-label { letter-spacing: .075em; color: #8b6029; }
-.mln-subheading, .def-box h3, .fare-example figcaption h3 { font-size: clamp(25.5px, 1.98vw, 34px); line-height: 1.45; }
+.mln-subheading, .def-box h3, .fare-example figcaption h3 { font-size: clamp(24px, 1.88vw, 32px); line-height: 1.45; }
 .def-box p, .icon-card p, .fare-example p, .fare-takeaway, .exp-card-summary, .exp-card-body p, .exp-card-body ul { font-size: var(--body-size); line-height: 1.7; }
 .def-box p + p, .exp-card-body p + p { margin-top: 18px; }
 .def-box { padding: 28px 32px; }
@@ -61,10 +61,10 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .nav-mode-book .navbar-nav a { color: #4a3c33 !important; }
 
 .hero-v2-content { max-width: 860px; width: min(65%, 860px); padding: calc(var(--nav-clearance) + 36px) 32px 52px clamp(40px, 6vw, 112px); }
-.hero-v2-title-lg { font-size: clamp(76px, 4.9vw, 94px); line-height: 1.28; letter-spacing: -.025em; padding: 4px 0; }
+.hero-v2-title-lg { font-size: clamp(72px, 4.65vw, 89px); line-height: 1.28; letter-spacing: -.025em; padding: 4px 0; }
 .hero-v2-badge { font-size: var(--caption-size); letter-spacing: .07em; color: #f3e8db; margin-bottom: 18px; }
-.hero-v2-subtitle { font-size: clamp(20px, 1.36vw, 23.5px); line-height: 1.6; color: #f2dba9; letter-spacing: 0; max-width: 720px; }
-.hero-v2-desc { font-size: clamp(17px, 1.08vw, 20.5px); line-height: 1.65; color: #f4eee7; max-width: 740px; }
+.hero-v2-subtitle { font-size: clamp(19px, 1.3vw, 22px); line-height: 1.6; color: #f2dba9; letter-spacing: 0; max-width: 720px; }
+.hero-v2-desc { font-size: clamp(16.5px, 1.03vw, 19.5px); line-height: 1.65; color: #f4eee7; max-width: 740px; }
 .hero-v2-btn { font-size: 17px; line-height: 1.5; padding: 16px 24px; }
 .hero-v2-pill { font-size: 16px; }
 .hero-v2-actions { flex-wrap: wrap; }
@@ -75,7 +75,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .fare-flow { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
 .fare-flow li { padding: 18px 14px; gap: 10px; }
 .fare-flow li > span:not(.fare-arrow), .fare-flow small { font-size: var(--caption-size); line-height: 1.6; }
-.fare-flow strong { font-size: clamp(26.5px, 1.78vw, 34px); }
+.fare-flow strong { font-size: clamp(25px, 1.7vw, 32px); }
 .quiz-container { max-width: 1160px; overflow: visible; margin: 24px auto; padding: 32px; }
 .quiz-question-box h3 { font-size: var(--game-question-size); line-height: 1.55; }
 .option-card { font-size: var(--game-answer-size); padding: 20px 24px; line-height: 1.6; }
@@ -96,7 +96,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .balance-character { height: clamp(260px, 45svh, 450px); }
 .balance-context { padding: 38px 28px; }
 .balance-context h2, .balance-result h2 { font-size: var(--section-title-size); line-height: 1.4; }
-.balance-rules h2 { font-size: clamp(27.5px, 2.55vw, 40.5px); line-height: 1.4; }
+.balance-rules h2 { font-size: clamp(26px, 2.4vw, 38px); line-height: 1.4; }
 .balance-rules p { font-size: var(--body-size); line-height: 1.7; }
 .balance-context p, .balance-result p, .balance-rules-score, .balance-history li { font-size: var(--body-size); line-height: 1.65; }
 .balance-score { font-size: var(--caption-size); top: 24px; right: 90px; }
@@ -111,7 +111,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .book-topic, .book-chapter { font-size: 16px; line-height: 1.5; color: #51453d; letter-spacing: .02em; }
 .book-summary-note { font-size: 16px; max-width: 740px; line-height: 1.55; color: #51453d; }
 .book-intro > .relative { max-width: 1080px; }
-.book-intro h1 { font-size: clamp(41.5px, 3.2vw, 61px); }
+.book-intro h1 { font-size: clamp(39px, 3vw, 58px); }
 .book-intro p { font-size: var(--body-size); line-height: 1.7; color: #51453d; max-width: 860px; }
 .book-intro > .relative > p:first-child, .book-intro > .absolute p { font-size: var(--caption-size); }
 .book-intro button { font-size: 17px; }
@@ -123,6 +123,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .book-nav-btn { font-size: 16px; line-height: 1.55; padding: 10px 16px; letter-spacing: 0; color: #51453d; }
 .view-toggle { font-size: 16px; line-height: 1.5; letter-spacing: .02em; }
 .book-view-actions { bottom: 112px; }
+.book-orbit-hint { position: absolute; right: 0; top: 100%; margin-top: 6px; padding: 4px 10px; border-radius: 12px; background: rgba(245, 240, 232, .92); color: #51453d; font-size: 15px; line-height: 1.5; white-space: nowrap; }
 .book-reader { padding: 20px 28px; }
 .book-reader-toolbar { top: -20px; padding: 12px 0; }
 .book-reader-toolbar h2 { font-size: 23.5px; }
@@ -131,7 +132,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 
 .ai-usage-page { font-family: var(--font-body); padding-top: calc(var(--nav-clearance) + 40px); }
 .ai-usage-page h1 { font-size: var(--section-title-size); }
-.ai-usage-page h2 { font-size: 30px; line-height: 1.45; }
+.ai-usage-page h2 { font-size: 28px; line-height: 1.45; }
 .ai-usage-page h3 { font-size: var(--card-title-size); line-height: 1.5; }
 .ai-usage-page p, .ai-usage-page a { font-size: var(--body-size); color: #eee2d3; line-height: 1.75; }
 .ai-usage-page span { font-size: var(--caption-size); }
@@ -147,7 +148,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
   .book-header .page-eyebrow { max-width: 390px; }
 }
 @media (max-width: 900px) {
-  :root { --body-size: 18px; --card-title-size: 22px; --game-question-size: 25.5px; --game-answer-size: 19px; }
+  :root { --body-size: 17px; --card-title-size: 21px; --game-question-size: 24px; --game-answer-size: 18px; }
   .card-grid-2, .mln-comparison { grid-template-columns: minmax(0, 1fr); }
   .dialectic-wrapper { flex-direction: column; }
   .dialectic-mid { width: 100%; flex: auto; min-height: 64px; padding: 18px; }
@@ -157,19 +158,19 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
   .book-header .page-eyebrow { display: none; }
   .book-page-shell { padding-top: var(--book-top-clearance, calc(var(--nav-clearance) + 76px)); }
   .hero-v2-content { width: 100%; max-width: 780px; }
-  .hero-v2-title-lg { font-size: clamp(53px, 7.75vw, 76px); }
+  .hero-v2-title-lg { font-size: clamp(50px, 7.4vw, 72px); }
   .hero-v2-portrait { object-position: 65% center; }
 }
 @media (max-width: 650px) {
-  :root { --body-size: 17px; --caption-size: 15px; --card-title-size: 21px; --section-title-size: 32px; --game-question-size: 24px; --game-answer-size: 18px; }
+  :root { --body-size: 16.5px; --caption-size: 15px; --card-title-size: 20px; --section-title-size: 30px; --game-question-size: 23px; --game-answer-size: 17px; }
   .page-section { padding: 44px 18px; }
   .navbar-theory { width: calc(100% - 20px); padding: 7px 12px; gap: 12px; }
   .navbar-brand { font-size: 14px; max-width: 100px; }
   .navbar-nav a { font-size: 15px; }
   .hero-v2-content { padding: calc(var(--nav-clearance) + 24px) 22px 36px; }
-  .hero-v2-title-lg { font-size: 51px; }
-  .hero-v2-subtitle { font-size: 19px; }
-  .hero-v2-desc, .hero-v2-btn { font-size: 17px; }
+  .hero-v2-title-lg { font-size: 48px; }
+  .hero-v2-subtitle { font-size: 18px; }
+  .hero-v2-desc, .hero-v2-btn { font-size: 16.5px; }
   .hero-v2-pill { font-size: 15px; }
   .hero-image-credit { right: 16px; bottom: 12px; font-size: 14px; }
   .feature-card { padding: 24px; }

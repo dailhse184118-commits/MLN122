@@ -12,6 +12,7 @@ import Conclusion from '../src/game/sections/Conclusion';
 import Hero from '../src/game/sections/Hero';
 import { AIUsagePage } from '../src/ai-usage/AIUsagePage';
 import { UI, pages, pageAtom, viewModeAtom } from '../src/book/UI';
+import { PageParticles } from '../src/book/PageParticles';
 import { scenarios } from '../src/content/mln122';
 import ExpandCard from '../src/components/ExpandCard';
 import Navbar from '../src/game/sections/Navbar';
@@ -329,4 +330,36 @@ test('Book 3D toggle and enlarged-reader keyboard preserve page state', () => {
     key('ArrowLeft'); assert.equal(store.get(pageAtom), 2);
     key('Escape'); assert.equal(tree.root.findAllByProps({ role: 'dialog' }).length, 0); assert.equal(document.body.style.overflow, 'auto');
   } finally { if (tree) act(() => tree.unmount()); global.document = previousDocument; clock.restore(); }
+});
+
+test('Book sparkle bursts replay on fast page turns, settle, and keep ambient sparkles in 3D View', () => {
+  const clock = setup(); const store = createStore(); let tree;
+  try {
+    act(() => { tree = create(<Provider store={store}><PageParticles /></Provider>); });
+    const counts = () => tree.root.findAllByType('sparkles').map(node => node.props.count);
+    assert.deepEqual(counts(), []);
+    act(() => store.set(pageAtom, 1)); assert.deepEqual(counts(), [40, 12]);
+    clock.advance(1000);
+    act(() => store.set(pageAtom, 2)); clock.advance(1000); assert.deepEqual(counts(), [40, 12]);
+    clock.advance(800); assert.deepEqual(counts(), []);
+    act(() => store.set(viewModeAtom, 'showcase')); assert.deepEqual(counts(), [24]);
+    act(() => store.set(pageAtom, 3)); assert.deepEqual(counts(), [24, 40, 12]);
+    clock.advance(1800); assert.deepEqual(counts(), [24]);
+    act(() => store.set(viewModeAtom, 'reading')); assert.deepEqual(counts(), []);
+    act(() => store.set(pageAtom, 4)); act(() => tree.unmount()); tree = null;
+    clock.advance(2000);
+  } finally { if (tree) act(() => tree.unmount()); clock.restore(); }
+});
+
+test('Reduced-motion preference suppresses book sparkles in both modes', () => {
+  const clock = setup(); const store = createStore(); let tree;
+  window.matchMedia = () => ({ matches: true, addEventListener() {}, removeEventListener() {} });
+  try {
+    act(() => { tree = create(<Provider store={store}><PageParticles /></Provider>); });
+    act(() => store.set(viewModeAtom, 'showcase'));
+    act(() => store.set(pageAtom, 1));
+    assert.equal(tree.root.findAllByType('sparkles').length, 0);
+    act(() => store.set(viewModeAtom, 'reading'));
+    assert.equal(tree.root.findAllByType('sparkles').length, 0);
+  } finally { if (tree) act(() => tree.unmount()); clock.restore(); }
 });

@@ -6,7 +6,7 @@ import { Provider, createStore } from 'jotai';
 import * as THREE from 'three';
 import { EconomicIllustration } from '../src/book/EconomicIllustrations';
 import { ModelShowcase } from '../src/book/ModelShowcase';
-import { getBookFraming } from '../src/book/framing';
+import { getBookFraming, getBookOrbitOptions } from '../src/book/framing';
 import { getIllustrationTheme } from '../src/book/illustrationThemes';
 import { pageAtom, viewModeAtom } from '../src/book/UI';
 import { sceneTest } from './fiber-stub.mjs';
@@ -86,15 +86,36 @@ test('Procedural objects and book bounds fit five viewport cameras and occupy se
       const separate = modelRegion.left > bookRegion.right || modelRegion.bottom > bookRegion.top;
       assert.ok(separate, `${width}×${height} ${mode} page ${page}: illustration overlaps text region ${JSON.stringify({ bookRegion, modelRegion, bounds: [model.min.toArray(), model.max.toArray()] })}`);
       if (mode === 'showcase') {
-        for (const azimuth of [-.08, .08]) for (const polar of [Math.PI / 2 - .18, Math.PI / 2 + .10]) {
+        const orbit = getBookOrbitOptions(layout, mode);
+        assert.ok(orbit.enableRotate && !Number.isFinite(orbit.minAzimuthAngle) && !Number.isFinite(orbit.maxAzimuthAngle), '360 degree orbit has no horizontal stops');
+        for (let angle = 0; angle < 24; angle++) for (const polar of [orbit.minPolarAngle, Math.PI / 2, orbit.maxPolarAngle]) {
+          const azimuth = angle * Math.PI / 12;
           camera.position.copy(new THREE.Vector3().setFromSphericalCoords(layout.distance, polar, azimuth).add(new THREE.Vector3(...layout.target)));
           camera.lookAt(...layout.target); camera.updateMatrixWorld();
           const a = projected(book, camera), b = projected(model, camera);
           for (const region of [a, b]) assert.ok(region.left > -1 && region.right < 1 && region.bottom > -1 && region.top < 1, `${width}×${height} ${mode} page ${page}: orbit clips ${JSON.stringify(region)}`);
-          assert.ok(b.left > a.right || b.bottom > a.top, `${width}×${height} page ${page}: orbit overlaps pages`);
         }
+      } else {
+        assert.equal(getBookOrbitOptions(layout, mode).enableRotate, false, 'reading mode stays at its readable camera angle');
       }
       act(() => tree.unmount());
+    }
+  }
+});
+
+test('Front and back covers stay in frame throughout the 360 degree orbit', () => {
+  for (const [width, height] of [[1366, 488], [1920, 800], [2560, 1160], [820, 900], [390, 434]]) {
+    for (const page of [0, 6]) {
+      const layout = getBookFraming(width, height, 'showcase', page);
+      const box = new THREE.Box3(new THREE.Vector3(page === 0 ? 0 : -1.3, -1, -.35), new THREE.Vector3(page === 0 ? 1.3 : 0, 1, .35));
+      const orbit = getBookOrbitOptions(layout, 'showcase');
+      const camera = new THREE.PerspectiveCamera(layout.fov, width / height, .1, 100);
+      for (let angle = 0; angle < 24; angle++) for (const polar of [orbit.minPolarAngle, Math.PI / 2, orbit.maxPolarAngle]) {
+        camera.position.copy(new THREE.Vector3().setFromSphericalCoords(layout.distance, polar, angle * Math.PI / 12).add(new THREE.Vector3(...layout.target)));
+        camera.lookAt(...layout.target); camera.updateMatrixWorld();
+        const region = projected(box, camera);
+        assert.ok(region.left > -1 && region.right < 1 && region.bottom > -1 && region.top < 1, `${width}×${height} cover ${page}: orbit clips the cover`);
+      }
     }
   }
 });

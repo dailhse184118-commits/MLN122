@@ -1,8 +1,7 @@
 import { useRef, useState, useEffect } from "react";
-import { useFrame } from "@react-three/fiber";
 import { Sparkles } from "@react-three/drei";
 import { useAtom } from "jotai";
-import { pageAtom } from "./UI";
+import { pageAtom, viewModeAtom } from "./UI";
 
 /**
  * PageParticles — burst of sparkles when page flips
@@ -10,8 +9,18 @@ import { pageAtom } from "./UI";
  */
 export const PageParticles = () => {
   const [page] = useAtom(pageAtom);
+  const [viewMode] = useAtom(viewModeAtom);
   const [showParticles, setShowParticles] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(() => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false);
   const prevPage = useRef(page);
+
+  useEffect(() => {
+    const media = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+    if (!media) return;
+    const update = () => setReducedMotion(media.matches);
+    update(); media.addEventListener?.('change', update);
+    return () => media.removeEventListener?.('change', update);
+  }, []);
 
   useEffect(() => {
     if (prevPage.current !== page) {
@@ -22,10 +31,12 @@ export const PageParticles = () => {
     }
   }, [page]);
 
-  if (!showParticles) return null;
+  if (reducedMotion || (!showParticles && viewMode !== 'showcase')) return null;
 
   return (
     <group position={[0, 0, 0.05]}>
+      {viewMode === 'showcase' && <Sparkles count={24} scale={[3, 2.4, .8]} size={2.6} speed={.3} opacity={.3} color="#d4af68" />}
+      {showParticles && <>
       {/* Main golden dust burst */}
       <Sparkles
         count={40}
@@ -44,6 +55,7 @@ export const PageParticles = () => {
         opacity={0.4}
         color="#C5272D"
       />
+      </>}
     </group>
   );
 };

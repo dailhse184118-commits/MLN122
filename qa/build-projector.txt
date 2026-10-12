@@ -5,17 +5,17 @@
 vite v4.5.14 building for production...
 transforming...
 node_modules/jotai/esm/react.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/jotai/esm/react.mjs" was ignored.
-✓ 650 modules transformed.
+✓ 651 modules transformed.
 rendering chunks...
 computing gzip size...
 dist/index.html                        0.85 kB │ gzip:   0.48 kB
-dist/assets/index-33ccd80d.css        90.28 kB │ gzip:  18.10 kB
-dist/assets/AIUsagePage-f1f03040.js    6.39 kB │ gzip:   2.89 kB
-dist/assets/index-81bad896.js        205.39 kB │ gzip:  67.53 kB
-dist/assets/BookPage-b24cca1a.js     872.29 kB │ gzip: 239.23 kB
+dist/assets/index-84a7cdab.css        90.46 kB │ gzip:  18.13 kB
+dist/assets/AIUsagePage-95b6fd55.js    6.39 kB │ gzip:   2.90 kB
+dist/assets/index-c93b3f85.js        205.39 kB │ gzip:  67.53 kB
+dist/assets/BookPage-86a5611a.js     877.38 kB │ gzip: 240.80 kB
 
 (!) Some chunks are larger than 500 kBs after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-✓ built in 9.01s
+✓ built in 8.12s

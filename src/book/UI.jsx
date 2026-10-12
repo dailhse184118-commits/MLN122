@@ -206,12 +206,15 @@ export const UI = () => {
       <div className="book-view-actions">
       <button className="view-toggle" onClick={() => setReaderOpen(true)}>Đọc bản lớn</button>
       <button
-        className={`view-toggle ${viewMode === 'reading' ? 'active' : ''}`}
+        className={`view-toggle ${viewMode === 'showcase' ? 'active' : ''}`}
+        title={viewMode === 'showcase' ? 'Trở về góc đọc thẳng' : 'Kéo chuột để xoay sách 360°'}
+        aria-pressed={viewMode === 'showcase'}
         onClick={() => setViewMode(viewMode === 'showcase' ? 'reading' : 'showcase')}
       >
         {viewMode === 'showcase' ? <BookIcon /> : <CubeIcon />}
         <span>{viewMode === 'showcase' ? 'Đọc sách' : '3D View'}</span>
       </button>
+      {viewMode === 'showcase' && <span className="book-orbit-hint">Kéo để xoay 360° · Cuộn để zoom</span>}
       </div>
       {readerOpen && <PageReader onClose={() => setReaderOpen(false)} />}
 

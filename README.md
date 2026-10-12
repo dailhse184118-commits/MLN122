@@ -38,6 +38,6 @@ Tài liệu chính thức: [Vite trên Vercel](https://vercel.com/docs/framework
 
 Các ảnh mới là ảnh AI minh họa, không phải ảnh tư liệu của Grab/FPT. Sách là tóm tắt học tập do sinh viên biên soạn. Phép tính trong bài là giả định; thông báo rà soát không phải kết luận vi phạm. Xem phần Nguồn & AI trong website.
 
-Build và 20 kiểm thử renderer/tọa độ đã đạt ở máy phát triển; các kiểm tra này không thay thế xác nhận trực quan WebGL trên máy trình chiếu. Chưa xác nhận deploy Vercel cho đến khi nền tảng trả deployment thành công.
+Build và 23 kiểm thử renderer/tọa độ đã đạt ở máy phát triển; các kiểm tra này không thay thế xác nhận trực quan WebGL trên máy trình chiếu. Chưa xác nhận deploy Vercel cho đến khi nền tảng trả deployment thành công.
 
 Năm GLB cũ được giữ ở `assets/legacy-models`, không xuất bản và không được sách tải. Model không dùng `assets/nhamay.glb` vẫn chỉ giữ cục bộ và loại khỏi Git.
