@@ -1,0 +1,19 @@
+[
+  "public/images/mln201/game-1-driver.jpg",
+  "public/images/mln201/game-2-platform-office.jpg",
+  "public/images/mln201/game-3-customer.jpg",
+  "public/images/mln201/game-4-student-startup.jpg",
+  "public/images/mln201/hero-hcmc-sunset.jpg",
+  "scripts/optimize-visual-assets.mjs",
+  "src/ai-usage/AIUsagePage.jsx",
+  "src/book/Book.jsx",
+  "src/book/BookPage.jsx",
+  "src/book/Experience.jsx",
+  "src/book/framing.js",
+  "src/content/mln201.js",
+  "src/content/visualAssets.js",
+  "src/game/sections/GearOfEra.jsx",
+  "src/game/sections/Hero.jsx",
+  "src/index.css",
+  "tests/interactions.test.jsx"
+]

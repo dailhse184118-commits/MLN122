@@ -1,0 +1,53 @@
+{
+  "textures": [
+    {
+      "texture": "46_Page_1.png",
+      "unchanged": true
+    },
+    {
+      "texture": "46_Page_2.png",
+      "unchanged": true
+    },
+    {
+      "texture": "47_Page_1.png",
+      "unchanged": true
+    },
+    {
+      "texture": "47_Page_2.png",
+      "unchanged": true
+    },
+    {
+      "texture": "48_Page_1.png",
+      "unchanged": true
+    },
+    {
+      "texture": "48_Page_2.png",
+      "unchanged": true
+    },
+    {
+      "texture": "Close 1.png",
+      "unchanged": true
+    },
+    {
+      "texture": "Close 2.png",
+      "unchanged": true
+    },
+    {
+      "texture": "Coverpage_close.png",
+      "unchanged": true
+    },
+    {
+      "texture": "Coverpage_open.png",
+      "unchanged": true
+    },
+    {
+      "texture": "Open 1.png",
+      "unchanged": true
+    },
+    {
+      "texture": "Open 2.png",
+      "unchanged": true
+    }
+  ],
+  "mechanismUnchangedAfterMaterialNormalization": true
+}

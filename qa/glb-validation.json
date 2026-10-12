@@ -1,0 +1,32 @@
+[
+  {
+    "file": "astrolabe_-_medieval_-_reconstruction.glb",
+    "bytes": 27173040,
+    "meshes": 5,
+    "nodes": 11
+  },
+  {
+    "file": "bust_of_the_ancient_greek_philosopher_socrates.glb",
+    "bytes": 13845240,
+    "meshes": 3,
+    "nodes": 5
+  },
+  {
+    "file": "globe.glb",
+    "bytes": 8908508,
+    "meshes": 1,
+    "nodes": 5
+  },
+  {
+    "file": "Marx.glb",
+    "bytes": 76179492,
+    "meshes": 1,
+    "nodes": 1
+  },
+  {
+    "file": "vladimir_lenin_portrait_monument.glb",
+    "bytes": 58404108,
+    "meshes": 9,
+    "nodes": 11
+  }
+]

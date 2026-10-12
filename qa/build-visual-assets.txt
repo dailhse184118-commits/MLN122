@@ -1,0 +1,15 @@
+
+> r3f-vite-starter@1.0.0 build
+> vite build
+
+vite v4.5.14 building for production...
+transforming...
+✓ 648 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                        0.64 kB │ gzip:   0.42 kB
+dist/assets/index-2b64f0de.css        80.81 kB │ gzip:  16.07 kB
+dist/assets/AIUsagePage-342b8316.js    6.31 kB │ gzip:   2.85 kB
+dist/assets/index-6fe9c34a.js        204.60 kB │ gzip:  67.36 kB
+dist/assets/BookPage-13732c29.js     942.22 kB │ gzip: 259.92 kB
+✓ built in 16.21s

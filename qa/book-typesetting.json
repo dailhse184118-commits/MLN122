@@ -1,0 +1,72 @@
+[
+  {
+    "face": "Open 1",
+    "width": 1536,
+    "height": 2048,
+    "bodyFont": 64,
+    "contentBottom": 1776
+  },
+  {
+    "face": "Open 2",
+    "width": 1536,
+    "height": 2048,
+    "bodyFont": 64,
+    "contentBottom": 1689
+  },
+  {
+    "face": "46_Page_1",
+    "width": 1536,
+    "height": 2048,
+    "bodyFont": 64,
+    "contentBottom": 1776
+  },
+  {
+    "face": "46_Page_2",
+    "width": 1536,
+    "height": 2048,
+    "bodyFont": 51,
+    "contentBottom": 1579
+  },
+  {
+    "face": "47_Page_1",
+    "width": 1536,
+    "height": 2048,
+    "bodyFont": 64,
+    "contentBottom": 1689
+  },
+  {
+    "face": "47_Page_2",
+    "width": 1536,
+    "height": 2048,
+    "bodyFont": 64,
+    "contentBottom": 1689
+  },
+  {
+    "face": "48_Page_1",
+    "width": 1536,
+    "height": 2048,
+    "bodyFont": 64,
+    "contentBottom": 1689
+  },
+  {
+    "face": "48_Page_2",
+    "width": 1536,
+    "height": 2048,
+    "bodyFont": 64,
+    "contentBottom": 1776
+  },
+  {
+    "face": "Close 1",
+    "width": 1536,
+    "height": 2048,
+    "bodyFont": 64,
+    "contentBottom": 1602
+  },
+  {
+    "face": "Close 2",
+    "width": 1536,
+    "height": 2048,
+    "bodyFont": 64,
+    "contentBottom": 1689
+  }
+]
