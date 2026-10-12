@@ -13,7 +13,7 @@ export const IntroScreen = ({ onEnter }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-[#ede8e1] transition-all duration-1000 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+      className={`book-intro fixed inset-0 z-50 flex items-center justify-center bg-[#ede8e1] transition-all duration-1000 ease-[cubic-bezier(0.32,0.72,0,1)] ${
         isHiding ? "opacity-0 scale-105 pointer-events-none" : "opacity-100 scale-100"
       }`}
     >
@@ -23,17 +23,17 @@ export const IntroScreen = ({ onEnter }) => {
       <div className="relative z-10 flex flex-col items-center text-center max-w-2xl px-6">
         <p
           className="text-[#C5272D] font-semibold tracking-[0.2em] uppercase text-xs mb-6 opacity-0 animate-[fadeIn_1s_ease_0.5s_forwards]"
-          style={{ fontFamily: "'Outfit', sans-serif" }}
+          style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
         >
           Học phần: Kinh tế chính trị Mác – Lênin · MLN122
         </p>
 
         <h1
           className="text-5xl md:text-7xl font-bold mb-4 text-[#1A1A1A] opacity-0 animate-[slideInFromTop_1s_ease_0.8s_forwards]"
-          style={{ fontFamily: "'Playfair Display', serif", lineHeight: 1.2 }}
+          style={{ fontFamily: "'Noto Serif', serif", lineHeight: 1.4 }}
         >
           Lợi ích Kinh tế <br />
-          <span className="italic font-light opacity-80" style={{ fontFamily: "'EB Garamond', serif" }}>&</span>{" "}
+          <span className="italic font-light opacity-80" style={{ fontFamily: "'Noto Serif', serif" }}>&</span>{" "}
           Quan hệ lợi ích
         </h1>
 
@@ -41,7 +41,7 @@ export const IntroScreen = ({ onEnter }) => {
 
         <p
           className="text-[#8B8680] text-sm md:text-base max-w-md mx-auto leading-relaxed mb-12 opacity-0 animate-[fadeIn_1s_ease_1.5s_forwards]"
-          style={{ fontFamily: "'Outfit', sans-serif" }}
+          style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
         >
           Khám phá sách 3D tương tác về các chủ thể, sự thống nhất và mâu thuẫn lợi ích kinh tế, cùng tình huống thực tiễn tại Việt Nam.
         </p>
@@ -49,7 +49,7 @@ export const IntroScreen = ({ onEnter }) => {
         <button
           onClick={handleEnter}
           className="group relative overflow-hidden rounded-full bg-[#1A1A1A] text-[#FAFAF8] px-10 py-4 font-medium text-sm tracking-[0.1em] uppercase transition-transform hover:scale-105 active:scale-95 opacity-0 animate-[fadeIn_1s_ease_1.8s_forwards]"
-          style={{ fontFamily: "'Outfit', sans-serif", boxShadow: '0 8px 32px rgba(0,0,0,0.15)' }}
+          style={{ fontFamily: "'Be Vietnam Pro', sans-serif", boxShadow: '0 8px 32px rgba(0,0,0,0.15)' }}
         >
           <span className="relative z-10 flex items-center gap-3">
             Bắt đầu khám phá
@@ -63,7 +63,7 @@ export const IntroScreen = ({ onEnter }) => {
       </div>
 
       <div className="absolute bottom-10 text-center opacity-0 animate-[fadeIn_1s_ease_2.2s_forwards]">
-        <p className="text-[10px] uppercase tracking-widest text-[#8B8680]/60" style={{ fontFamily: "'Outfit', sans-serif" }}>
+        <p className="text-[10px] uppercase tracking-widest text-[#8B8680]/60" style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
           Sử dụng tai nghe & chuột để có trải nghiệm tốt nhất
         </p>
       </div>

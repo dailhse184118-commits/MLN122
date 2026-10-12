@@ -5,7 +5,6 @@ import { useAtom } from "jotai";
 import { Vector3 } from "three";
 import { Book } from "./Book";
 import { ModelShowcase } from "./ModelShowcase";
-import { PageParticles } from "./PageParticles";
 import { pageAtom, viewModeAtom } from "./UI";
 import { getBookFraming } from "./framing";
 
@@ -42,6 +41,9 @@ const CameraAnimator = ({ controls }) => {
 
 export const Experience = () => {
   const [viewMode] = useAtom(viewModeAtom);
+  const [page] = useAtom(pageAtom);
+  const { size } = useThree();
+  const framing = getBookFraming(size.width, size.height, viewMode, page);
   const reading = viewMode === 'reading';
   const controls = useRef();
   return (
@@ -50,42 +52,45 @@ export const Experience = () => {
 
       {/* Book */}
       <Float
-        rotation-x={reading ? -.08 : -.3}
-        floatIntensity={reading ? 0 : .6}
+        rotation-x={reading ? -.035 : -.22}
+        floatIntensity={reading ? 0 : .2}
         speed={1}
         rotationIntensity={reading ? 0 : .08}
       >
         <Book />
-        {!reading && <PageParticles />}
       </Float>
 
       {/* Optional decoration loads independently from book textures. */}
       <Suspense fallback={null}><ModelShowcase /></Suspense>
 
-      {/* OrbitControls — xoay, zoom, kéo tự do */}
+      {/* A gentle orbit keeps the page and its separate illustration in frame. */}
       <OrbitControls
         ref={controls}
         makeDefault
-        minDistance={2.2}
-        maxDistance={14}
+        minDistance={framing.distance}
+        maxDistance={framing.distance * 1.6}
         enablePan={false}
-        maxPolarAngle={Math.PI * .8}
+        enableRotate={!reading}
+        minAzimuthAngle={-.08}
+        maxAzimuthAngle={.08}
+        minPolarAngle={Math.PI / 2 - .18}
+        maxPolarAngle={Math.PI / 2 + .10}
       />
 
       {/* Ambient environment — nhẹ hơn studio */}
-      <ambientLight intensity={1.1} color="#fffaf3" />
+      <ambientLight intensity={.95} color="#ffffff" />
 
       {/* Key Light — không castShadow (shadows đã tắt ở Canvas) */}
       <directionalLight
         position={[2, 5, 2]}
-        intensity={2}
+        intensity={1.1}
       />
 
       {/* Fill Light */}
       <directionalLight
         position={[-3, 2, -1]}
-        intensity={0.5}
-        color="#ffeedd"
+        intensity={0.4}
+        color="#ffffff"
       />
 
       {/* ContactShadows — bóng mềm baked (không cần shadow map) */}

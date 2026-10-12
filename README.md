@@ -25,18 +25,19 @@ npm run build
 3. Build Command: **npm run build**. Output Directory: **dist**. Install Command: **npm ci**.
 4. Website hiện không yêu cầu biến môi trường. Chọn **Deploy**.
 
-`vercel.json` đã khai báo các cấu hình trên và rewrite cho đường dẫn SPA, ví dụ `/book` hoặc `/ai`. Tài nguyên ảnh, font, texture và model nằm trong `public` và được Vite sao chép vào `dist`. Không cần upload thư mục `dist` hay `node_modules` lên GitHub.
+`vercel.json` đã khai báo các cấu hình trên và rewrite cho đường dẫn SPA, ví dụ `/book` hoặc `/ai`. Tài nguyên ảnh, WOFF2 và texture nằm trong `public` và được Vite sao chép vào `dist`. Sách dùng minh họa hình học nhẹ; các GLB cũ được lưu ngoài public. Không cần upload thư mục `dist` hay `node_modules` lên GitHub.
 
 Tài liệu chính thức: [Vite trên Vercel](https://vercel.com/docs/frameworks/frontend/vite).
 
 ## Tài liệu và giới hạn kiểm chứng
 
+- [Báo cáo font, cỡ chữ, minh họa 3D và kiểm thử hiện tại](PROJECTOR_REPORT_MLN122.md)
 - [Hướng dẫn sử dụng](README_MLN122.md)
 - [Báo cáo nội dung và tương tác](REFINEMENT_REPORT_MLN122.md)
 - [Báo cáo bộ ảnh mới](VISUAL_ASSETS_REPORT_MLN122.md)
 
 Các ảnh mới là ảnh AI minh họa, không phải ảnh tư liệu của Grab/FPT. Sách là tóm tắt học tập do sinh viên biên soạn. Phép tính trong bài là giả định; thông báo rà soát không phải kết luận vi phạm. Xem phần Nguồn & AI trong website.
 
-Build và 17 kiểm thử renderer đã đạt ở máy phát triển; các kiểm tra này không thay thế xác nhận trực quan WebGL trên máy trình chiếu. Chưa xác nhận deploy Vercel cho đến khi nền tảng trả deployment thành công.
+Build và 20 kiểm thử renderer/tọa độ đã đạt ở máy phát triển; các kiểm tra này không thay thế xác nhận trực quan WebGL trên máy trình chiếu. Chưa xác nhận deploy Vercel cho đến khi nền tảng trả deployment thành công.
 
-Model gốc không dùng `assets/nhamay.glb` được giữ cục bộ và loại khỏi Git; các model 3D được website dùng trong `public/models` vẫn được đưa lên repo.
+Năm GLB cũ được giữ ở `assets/legacy-models`, không xuất bản và không được sách tải. Model không dùng `assets/nhamay.glb` vẫn chỉ giữ cục bộ và loại khỏi Git.

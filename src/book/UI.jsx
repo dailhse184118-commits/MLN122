@@ -1,6 +1,7 @@
 import { atom, useAtom } from "jotai";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import PageReader from './PageReader';
+import { getIllustrationTheme } from './illustrationThemes';
 
 // ── State atoms ──
 export const pageAtom = atom(0);
@@ -61,6 +62,18 @@ export const UI = () => {
   const [page, setPage] = useAtom(pageAtom);
   const [viewMode, setViewMode] = useAtom(viewModeAtom);
   const [readerOpen, setReaderOpen] = useState(false);
+  const header = useRef(null);
+
+  useEffect(() => {
+    const node = header.current;
+    if (!node) return;
+    const measure = () => document.documentElement.style.setProperty('--book-top-clearance', `${Math.ceil(node.getBoundingClientRect().bottom) + 12}px`);
+    measure();
+    const observer = typeof ResizeObserver === 'function' ? new ResizeObserver(measure) : null;
+    observer?.observe(node);
+    window.addEventListener('resize', measure);
+    return () => { observer?.disconnect(); window.removeEventListener('resize', measure); };
+  }, [page]);
 
   useEffect(() => {
     const audio = new Audio("/audios/page-flip-01a.mp3");
@@ -93,25 +106,24 @@ export const UI = () => {
 
       <main aria-hidden={readerOpen || undefined} className="pointer-events-none select-none z-10 fixed inset-0 flex justify-between flex-col">
         {/* ── Header ── */}
-        <div className="book-header pointer-events-auto flex items-center justify-between px-8 pt-24">
+        <div ref={header} className="book-header pointer-events-auto flex items-center justify-between px-8 pt-24">
           <div className="flex items-center gap-3">
             <div
               className="w-9 h-9 rounded-full flex items-center justify-center"
               style={{ background: '#C5272D' }}
             >
-              <span className="text-white text-sm font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>M</span>
+              <span className="text-white text-sm font-bold" style={{ fontFamily: 'Noto Serif, serif' }}>M</span>
             </div>
             <div>
               <h1
                 className="text-sm font-semibold tracking-wider uppercase"
-                style={{ fontFamily: 'Playfair Display, serif', color: '#1A1A1A' }}
+                style={{ fontFamily: 'Noto Serif, serif', color: '#1A1A1A' }}
               >
                 Kinh tế chính trị
               </h1>
-              <p className="tracking-widest uppercase" style={{ color: '#8B8680', fontSize: '10px' }}>
+              <p className="book-topic uppercase">
                 Lợi ích kinh tế & Quan hệ lợi ích
               </p>
-              <p className="book-summary-note">Tóm tắt học tập do sinh viên biên soạn · Không phải bản sao chính thức của giáo trình.</p>
             </div>
           </div>
 
@@ -122,10 +134,11 @@ export const UI = () => {
                 <span className="accent">{String(page).padStart(2, '0')}</span>
                 <span style={{ margin: '0 6px', opacity: 0.3 }}>|</span>
                 {currentTitle}
+                <p className="book-illustration-label">Minh họa: {getIllustrationTheme(page)?.label}</p>
               </div>
             )}
             <div className="text-right hidden sm:block">
-              <p className="tracking-widest uppercase" style={{ color: '#8B8680', fontSize: '10px' }}>
+              <p className="book-chapter uppercase">
                 Chương V · 5.3.1
               </p>
             </div>
@@ -163,7 +176,7 @@ export const UI = () => {
         </div>
 
         {/* ── Bottom: Floating Nav Island ── */}
-        <div className="w-full pointer-events-auto flex justify-center pb-6">
+        <div className="book-footer w-full pointer-events-auto flex flex-col items-center justify-center">
           <div className="book-nav rounded-full px-2 py-2 flex flex-col items-center gap-0" style={{ maxWidth: '90vw' }}>
 
             {/* Nav buttons */}
@@ -185,6 +198,7 @@ export const UI = () => {
               </button>
             </div>
           </div>
+          <p className="book-summary-note">Tóm tắt học tập do sinh viên biên soạn · Không phải bản sao chính thức của giáo trình.</p>
         </div>
       </main>
 

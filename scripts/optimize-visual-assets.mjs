@@ -3,7 +3,7 @@ import { createCanvas, loadImage } from 'canvas';
 import { mkdirSync, readFileSync, writeFileSync, statSync } from 'node:fs';
 const generated = 'C:/Users/Admin/.codex/generated_images/01a12eb9-652b-7131-a9d5-b3cd1644feba';
 const assets = [
-  ['hero-hcmc-sunset', 'exec-1c8e5a35-dd57-476d-9dac-eafcd377b82d.png'],
+  ['hero-hcmc-daylight', 'assets/images/hero-hcmc-daylight-source.png'],
   ['game-1-driver', 'exec-ab406a03-394a-4ff8-b718-f7889b3a7ef8.png'],
   ['game-2-platform-office', 'exec-79bdd305-f95f-43b8-866b-6a9bdf57cdb5.png'],
   ['game-3-customer', 'exec-e21e5eca-87a4-4f31-b050-0170cf252a2f.png'],
@@ -12,7 +12,7 @@ const assets = [
 mkdirSync('public/images/mln122', { recursive: true });
 const records = [];
 for (const [name, file] of assets) {
-  const original = `${generated}/${file}`;
+  const original = file.startsWith('assets/') ? file : `${generated}/${file}`;
   const img = await loadImage(original);
   // Center-crop the sub-pixel ratio difference to an exact 16:9 frame.
   const cropHeight = Math.min(img.height, img.width * 9 / 16);

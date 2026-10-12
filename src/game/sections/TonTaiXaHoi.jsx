@@ -55,12 +55,12 @@ export default function QuanHeLoiIch() {
         <div className="dialectic-wrapper reveal delay-1">
           <div className="dialectic-side left">
             <h4 style={{ color: 'var(--gold-pale)' }}>Sự thống nhất</h4>
-            <p style={{ opacity: 0.9, fontSize: '0.9rem' }}>CÙNG TẠO RA GIÁ TRỊ</p>
+            <p style={{ opacity: 0.9 }}>CÙNG TẠO RA GIÁ TRỊ</p>
           </div>
           <div className="dialectic-mid">Quan hệ lợi ích</div>
           <div className="dialectic-side" style={{ background: 'var(--card-bg)' }}>
             <h4 style={{ color: 'var(--brown-dark)' }}>Sự mâu thuẫn</h4>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>KHÁC BIỆT PHÂN CHIA GIÁ TRỊ</p>
+            <p style={{ color: 'var(--text-muted)' }}>KHÁC BIỆT PHÂN CHIA GIÁ TRỊ</p>
           </div>
         </div>
         <div className="card-grid card-grid-2 reveal mln-detail-grid">
@@ -79,7 +79,7 @@ export default function QuanHeLoiIch() {
           <p><strong>Sự kiện chính thức:</strong> Thông báo ngày 11/09/2026 của Ủy ban Cạnh tranh Quốc gia nêu việc yêu cầu tài liệu và rà soát, xác minh vấn đề giá, phí của Grab.</p>
           <p><strong>Phản ánh của một số tài xế:</strong> Vấn đề giá cước, phí, chiết khấu và các khoản khấu trừ được nêu trong thông báo là phản ánh cần được xác minh.</p>
           <p><strong>Phân tích của nhóm:</strong> Có khả năng tồn tại căng thẳng giữa mục tiêu hiệu quả của nền tảng và thu nhập ròng của tài xế. Đây là một cách vận dụng lý luận, <strong>không phải kết luận Grab vi phạm pháp luật</strong>.</p>
-          <p style={{ fontSize: '0.85rem', marginTop: '1rem' }}>Nguồn chính thức: <a href="https://vcc.gov.vn/default.aspx?category_id=e0904ba0-4694-4595-9f66-dc2df621842a&do=detail&id=f73009a6-f838-4d43-9535-911c7e85ea9e&page=news" target="_blank" rel="noreferrer">Ủy ban Cạnh tranh Quốc gia, 11/09/2026 ↗</a></p>
+          <p className="mln-source-note" style={{ marginTop: '1rem' }}>Nguồn chính thức: <a href="https://vcc.gov.vn/default.aspx?category_id=e0904ba0-4694-4595-9f66-dc2df621842a&do=detail&id=f73009a6-f838-4d43-9535-911c7e85ea9e&page=news" target="_blank" rel="noreferrer">Ủy ban Cạnh tranh Quốc gia, 11/09/2026 ↗</a></p>
         </div>
 
         <div className="card-grid card-grid-2 stakeholder-grid reveal mln-detail-grid">{stakeholders.map(([t, d, tradeoff]) => <ExpandCard key={t} title={t} summary={d}><p><strong>Điểm cần xét:</strong> {tradeoff}</p></ExpandCard>)}</div>
@@ -111,7 +111,7 @@ export default function QuanHeLoiIch() {
         <div className="icon-card reveal delay-2" style={{ maxWidth: '900px', margin: '2rem auto', textAlign: 'left' }}>
           <h4>Câu hỏi dành cho cả lớp</h4><p>Nếu nền tảng giảm khấu trừ cho tài xế nhưng đồng thời tăng giá cước với khách hàng, liệu đó đã là <strong>hài hòa lợi ích kinh tế</strong>? Nhóm cần dựa trên tiêu chí nào để đánh giá?</p>
         </div>
-        <div style={{ marginTop: '4rem', textAlign: 'center', opacity: 0.7, fontSize: '0.8rem' }} className="reveal">
+        <div style={{ marginTop: '4rem', textAlign: 'center' }} className="reveal mln-source-note">
           <p>Tham khảo: Giáo trình Kinh tế chính trị Mác – Lênin (2021); thông báo UBCTQG (11/09/2026). Xem phạm vi kiểm chứng ở phần kết luận.</p>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const NAV_LINKS = [
   { href: '#hero', label: 'Mở Đầu' },
@@ -15,6 +15,18 @@ const NAV_LINKS = [
 
 export default function Navbar({ activeTab, onTabChange }) {
   const [active, setActive] = useState('#hero');
+  const wrapper = useRef(null);
+
+  useEffect(() => {
+    const node = wrapper.current;
+    if (!node) return;
+    const measure = () => document.documentElement.style.setProperty('--nav-clearance', `${Math.ceil(node.getBoundingClientRect().bottom) + 20}px`);
+    measure();
+    const observer = typeof ResizeObserver === 'function' ? new ResizeObserver(measure) : null;
+    observer?.observe(node);
+    window.addEventListener('resize', measure);
+    return () => { observer?.disconnect(); window.removeEventListener('resize', measure); };
+  }, []);
 
   useEffect(() => {
     // Only observe scroll if we are on the game tab
@@ -32,7 +44,8 @@ export default function Navbar({ activeTab, onTabChange }) {
       .map(id => document.getElementById(id))
       .filter(el => el !== null);
     const updateActive = () => {
-      const current = sections.filter(section => section.getBoundingClientRect().top <= 160).at(-1);
+      const clearance = wrapper.current ? wrapper.current.getBoundingClientRect().bottom + 28 : 160;
+      const current = sections.filter(section => section.getBoundingClientRect().top <= clearance).at(-1);
       setActive(`#${current?.id || 'hero'}`);
     };
     let frame;
@@ -86,7 +99,7 @@ export default function Navbar({ activeTab, onTabChange }) {
   const isBook = activeTab === 'book';
 
   return (
-    <div className="navbar-theory-wrapper w-full flex justify-center z-[100] fixed pointer-events-none">
+    <div ref={wrapper} className="navbar-theory-wrapper w-full flex justify-center z-[100] fixed pointer-events-none">
       <nav aria-label="Điều hướng thuyết trình" className={`navbar-theory pointer-events-auto ${isBook ? 'nav-mode-book' : ''}`}>
         <a href="#hero" className="navbar-brand" onClick={(e) => handleNavClick(e, '#hero')}>
           <span className="brand-icon">

@@ -13,7 +13,7 @@ export const BookPage = ({ skipIntro = false, onEntered }) => {
     <>
       {!isStarted && <IntroScreen onEnter={() => { setIsStarted(true); onEntered?.(); }} />}
 
-      <div style={{ opacity: isStarted ? 1 : 0, transition: 'opacity 1s ease', width: '100%', height: '100svh', paddingTop: '164px', paddingBottom: '106px', overflow: 'hidden', pointerEvents: isStarted ? 'auto' : 'none' }}>
+      <div className="book-page-shell" style={{ opacity: isStarted ? 1 : 0, transition: 'opacity 1s ease', width: '100%', overflow: 'hidden', pointerEvents: isStarted ? 'auto' : 'none' }}>
         <UI />
         <Loader containerStyles={{ background: 'rgba(245,240,232,.75)', pointerEvents: 'none' }} dataStyles={{ color: '#79272c' }} dataInterpolation={percent => `Đang tải tài nguyên sách ${Math.round(percent)}%`} />
         <Canvas

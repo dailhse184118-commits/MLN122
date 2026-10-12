@@ -36,23 +36,23 @@ Preview thông thường ở http://127.0.0.1:4173/. Script kiểm tra tài nguy
 
 ```powershell
 node scripts/verify-assets.mjs
-node scripts/verify-assets.mjs http://127.0.0.1:4173
+node scripts/verify-assets.mjs http://127.0.0.1:4173 --production
 ```
 
 Không mở index.html bằng file://; Three.js và module cần HTTP server. Các liên kết nguồn cần Internet; ảnh/font/texture/model hiển thị dùng tài nguyên cục bộ. Giọng đọc phụ thuộc API/voice có sẵn của trình duyệt, mặc định tắt.
 
 ## Kết quả và giới hạn
 
-- Đợt thay ảnh hiện tại: 17/17 kiểm thử logic thành công; build production thành công; 75/75 tài nguyên public trả đúng HTTP ở dev và production preview. Năm JPEG mới 1600×900, tổng 973.969 byte.
+- Đợt tối ưu trình chiếu hiện tại: 20/20 kiểm thử tương tác/tọa độ thành công; build production thành công; 57/57 tài nguyên public đúng HTTP. Bốn artifact build được đối chiếu SHA-256 qua production preview. Sách có năm minh họa hình học, không tải GLB. Font cục bộ đủ 112 mã tiếng Việt đã kiểm tra.
 - Chưa kiểm thử trực quan browser/desktop/mobile/WebGL/console vì công cụ không xác minh được quyền localhost. Chưa có screenshot website đang chạy.
 - Đã đọc thông báo gốc UBCTQG ngày 11/09/2026; đây là rà soát/xác minh, không phải kết luận vi phạm.
 - Đã đối chiếu phần lý luận với bản 2021 đăng lại và bài giảng Chương 5 của Đại học Thương mại. Chưa kiểm tra bản in của nhóm; không gán số trang cho từng diễn giải.
-- Còn 10 cảnh báo dependency sau cập nhật tương thích; chưa nâng major Vite/Tailwind.
+- Build còn cảnh báo directive Jotai và chunk sách khoảng 872 KB minified; chưa thay major runtime trong đợt này.
 
-Xem [Báo cáo thay ảnh hiện tại](VISUAL_ASSETS_REPORT_MLN122.md) và [báo cáo chỉnh sửa nội dung trước đó](REFINEMENT_REPORT_MLN122.md) và [Báo cáo kiểm thử](TESTING_REPORT_MLN122.md). Báo cáo chuyển đổi trước đó nằm ở IMPLEMENTATION_REPORT_MLN122.md.
+Xem [Báo cáo trình chiếu hiện tại](PROJECTOR_REPORT_MLN122.md), [báo cáo thay ảnh trước đó](VISUAL_ASSETS_REPORT_MLN122.md) và [báo cáo chỉnh sửa nội dung trước đó](REFINEMENT_REPORT_MLN122.md) và [Báo cáo kiểm thử](TESTING_REPORT_MLN122.md). Báo cáo chuyển đổi trước đó nằm ở IMPLEMENTATION_REPORT_MLN122.md.
 
 ## Sửa nội dung và sách
 
 Nội dung và tình huống nằm ở src/content/mln122.js; quiz và hàm xáo trộn ở src/content/quiz.js; nội dung chính nằm ở src/game/sections/TonTaiXaHoi.jsx. Thứ tự sách khai báo ở src/book/UI.jsx, giữ tên texture kỹ thuật.
 
-Bìa trước được tạo lại bằng `node scripts/generate-book-cover.mjs`, dùng font Times New Roman và Arial của Windows khi có. Mười trang bên trong được sắp chữ lại bằng `node scripts/generate-book-pages.mjs`; script này dùng font Windows và ghi bằng chứng giới hạn layout vào qa/book-typesetting.json. Cơ chế sách gốc nằm ở src/book/Book.jsx. Nút Đọc bản lớn dùng chung texture và trạng thái trang của sách 3D. Nguồn tài nguyên gốc/giấy phép cần nhóm rà soát nếu phát hành công khai.
+Bìa trước, mười trang nội dung và bìa sau được tạo bằng `node scripts/generate-book-cover.mjs`, `node scripts/generate-book-pages.mjs`, `node scripts/generate-book-back-cover.mjs`. Các script dùng Skia và Noto Serif/Be Vietnam Pro đóng gói trong assets/fonts, không phụ thuộc font Windows. Bằng chứng giới hạn glyph/layout nằm trong qa/book-typesetting.json. Cơ chế sách gốc nằm ở src/book/Book.jsx. Nút Đọc bản lớn dùng chung texture và trạng thái trang của sách 3D. Nguồn tài nguyên gốc/giấy phép cần nhóm rà soát nếu phát hành công khai.

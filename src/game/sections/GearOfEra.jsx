@@ -54,7 +54,7 @@ function TransparentSprite({ portraitKey, side, speaking }) {
         <div style={{
           position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
           background: 'gold', color: '#000', padding: '8px 25px', borderRadius: 20,
-          fontSize: 12, fontWeight: 900, whiteSpace: 'nowrap', boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+          fontSize: 'var(--caption-size)', fontWeight: 700, whiteSpace: 'normal', maxWidth: '100%', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
           animation: 'fadeUp 0.3s ease both', zIndex: 110
         }}>
           ĐANG NÓI...
@@ -88,10 +88,10 @@ function ActTransition({ act, title, quote, onDone }) {
   }, [onDone]);
   return (
     <div onClick={onDone} style={{ position: 'absolute', inset: 0, zIndex: 5000, background: '#000', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: 40, cursor: 'pointer' }}>
-      <p style={{ color: 'gold', fontSize: 13, fontWeight: 900, letterSpacing: 5, marginBottom: 15, animation: 'fadeUp 0.8s ease both' }}>{act.toUpperCase()}</p>
-      <h1 style={{ fontSize: 40, fontWeight: 900, color: '#fff', marginBottom: 30, animation: 'fadeUp 1s 0.2s ease both' }}>{title}</h1>
-      <p style={{ fontSize: 16, fontStyle: 'italic', color: 'rgba(255,255,255,0.6)', maxWidth: 550 }}>{quote}</p>
-      <div style={{ position: 'absolute', bottom: 40, fontSize: 8, color: 'rgba(255,255,255,0.2)', letterSpacing: 3 }}>CLICK TO SKIP</div>
+      <p style={{ color: 'gold', fontSize: 'var(--caption-size)', fontWeight: 900, letterSpacing: 1, marginBottom: 15, animation: 'fadeUp 0.8s ease both' }}>{act.toUpperCase()}</p>
+      <h1 style={{ fontSize: 'var(--game-question-size)', fontWeight: 900, color: '#fff', marginBottom: 30, animation: 'fadeUp 1s 0.2s ease both' }}>{title}</h1>
+      <p style={{ fontSize: 'var(--caption-size)', fontStyle: 'italic', color: 'rgba(255,255,255,0.6)', maxWidth: 960 }}>{quote}</p>
+      <div style={{ position: 'absolute', bottom: 40, fontSize: 'var(--caption-size)', color: 'rgba(255,255,255,0.75)', letterSpacing: 1 }}>CLICK TO SKIP</div>
     </div>
   );
 }
@@ -121,7 +121,7 @@ function SoundControl({ muted, setMuted }) {
 function ConsciousnessMeter({ level }) {
   return (
     <div className="balance-meter" style={{ position: 'absolute', top: 30, left: 30, width: '220px', zIndex: 1000 }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6, fontSize: 8, fontWeight: 900, color: 'rgba(255,255,255,0.4)', letterSpacing: 2 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6, fontSize: 'var(--caption-size)', fontWeight: 900, color: 'rgba(255,255,255,0.85)', letterSpacing: 2 }}>
         <span style={{ color: level < 40 ? '#4ade80' : 'inherit' }}>CÂN BẰNG</span>
         <span style={{ color: level > 70 ? '#f87171' : 'inherit' }}>XUNG ĐỘT</span>
       </div>
@@ -234,7 +234,7 @@ export default function GearOfEra() {
       <SoundControl muted={muted} setMuted={setMuted} />
       {phase === 'game' && !showTransition && <ConsciousnessMeter level={driftLevel} />}
       {showTransition && <ActTransition act={SCENARIOS[idx].act} title={SCENARIOS[idx].title} quote={actQuotes[idx + 1]} onDone={() => setShowTransition(false)} />}
-      {achievement && <div className="achievement-card"><span style={{ fontSize: 10, color: 'gold', fontWeight: 900, display: 'block' }}>DANH HIỆU</span><span style={{ fontSize: 14, fontWeight: 900 }}>{achievement}</span></div>}
+      {achievement && <div className="achievement-card"><span style={{ fontSize: 'var(--caption-size)', color: 'gold', fontWeight: 900, display: 'block' }}>DANH HIỆU</span><span style={{ fontSize: 'var(--caption-size)', fontWeight: 900 }}>{achievement}</span></div>}
 
       <div className="balance-content">
         {phase === 'cinematic' && <Cinematic onDone={() => setPhase('rules')} />}
@@ -258,7 +258,7 @@ function Cinematic({ onDone }) {
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: 40 }}>
       <h1 style={{ fontSize: 60, fontWeight: 900, color: 'gold', marginBottom: 30, letterSpacing: 10, animation: 'fadeUp 1s ease both' }}>BALANCE</h1>
-      <p style={{ fontSize: 20, color: '#ccc', maxWidth: 700, fontStyle: 'italic' }}>{displayText}</p>
+      <p style={{ fontSize: 'var(--body-size)', color: '#ccc', maxWidth: 1040, fontStyle: 'italic' }}>{displayText}</p>
       {<button onClick={onDone} style={{ marginTop: 40, padding: '18px 60px', background: 'gold', border: 'none', borderRadius: 50, fontWeight: 900, cursor: 'pointer' }}>BƯỚC VÀO →</button>}
     </div>
   );
@@ -267,7 +267,7 @@ function Cinematic({ onDone }) {
 function RulesScreen({ onStart }) {
   return (
     <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-      <div style={{ maxWidth: 500, background: 'rgba(255,255,255,0.02)', padding: 50, borderRadius: 30, border: '1px solid rgba(255,255,255,0.1)' }}>
+      <div className="balance-rules" style={{ maxWidth: 980, background: 'rgba(255,255,255,0.02)', padding: 50, borderRadius: 30, border: '1px solid rgba(255,255,255,0.1)' }}>
         <h2 style={{ color: 'gold', marginBottom: 20 }}>LUẬT CHƠI</h2>
         <p style={{ color: '#aaa', marginBottom: 30 }}>Bốn tình huống giả định sẽ kiểm tra cách bạn cân bằng lợi ích kinh tế. Các tình huống dùng để học lý luận, không mô tả quyết định cụ thể của Grab.</p><p className="balance-rules-score">Phân tích đầy đủ: 50 điểm · Đúng một phần: 20 điểm · Nhầm khái niệm: 0 điểm. Tối đa 200 điểm. Thanh cân bằng chỉ minh họa phản hồi trò chơi.</p>
         <button onClick={onStart} style={{ padding: '15px 50px', background: 'gold', border: 'none', borderRadius: 10, fontWeight: 900, cursor: 'pointer' }}>BẮT ĐẦU</button>
@@ -344,7 +344,7 @@ function GameScreen({ scenario, onChoice, muted, parallax }) {
       <div className="balance-scene-bg" aria-hidden="true" style={{ position: 'absolute', inset: '-50px', backgroundImage: `url(${scenario.image})`, backgroundSize: 'cover', backgroundPosition: scenario.imagePosition || 'center', filter: step === 'choices' ? 'blur(3px) brightness(0.48)' : 'brightness(0.62)', transform: `translate(${parallax.bg.x}px, ${parallax.bg.y}px)`, transition: 'all 1s' }} />
       {step === 'context' && (
         <div className="balance-context" style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.8)' }}>
-          <div style={{ maxWidth: 600, textAlign: 'center', animation: 'fadeUp 1s ease' }}>
+          <div style={{ maxWidth: 960, textAlign: 'center', animation: 'fadeUp 1s ease' }}>
             <h2 style={{ color: 'gold', marginBottom: 20 }}>{scenario.title}</h2>
             <p style={{ lineHeight: 1.8, marginBottom: 40 }}>{scenario.context}</p>
             <button onClick={startDialogue} style={{ padding: '15px 50px', background: 'gold', border: 'none', borderRadius: 50, fontWeight: 900, cursor: 'pointer' }}>TIẾP TỤC</button>
@@ -361,8 +361,8 @@ function GameScreen({ scenario, onChoice, muted, parallax }) {
             <TransparentSprite portraitKey={scenario.character.side === 'right' ? scenario.character.portrait : 'minh'} side="right" speaking={scenario.character.side === 'right' ? step === 'dialogue' : step === 'choices'} />
           </div>
           <div className="balance-dialogue">
-            <div className="balance-question" style={{ maxWidth: 800, textAlign: 'center', marginBottom: step === 'choices' ? 30 : 50 }}>
-              <p style={{ color: 'gold', fontSize: 12, fontWeight: 900, marginBottom: 5 }}>{scenario.character.name}:</p>
+            <div className="balance-question" style={{ width: '100%', textAlign: 'center', marginBottom: step === 'choices' ? 30 : 50 }}>
+              <p style={{ color: 'gold', fontSize: 'var(--caption-size)', fontWeight: 900, marginBottom: 5 }}>{scenario.character.name}:</p>
               <p className="balance-question-text" style={{ fontWeight: 600 }}>{displayText}</p>
               {step === 'dialogue' && <button onClick={skipTyping} className="balance-skip">Hiện lựa chọn ngay</button>}
             </div>
@@ -396,7 +396,7 @@ function GameScreen({ scenario, onChoice, muted, parallax }) {
 function ResultScreen({ choice, onNext }) {
   return (
     <div className="balance-result" role="status" style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', background: 'rgba(0,0,0,0.95)' }}>
-      <div style={{ maxWidth: 600, padding: 40 }}>
+      <div style={{ maxWidth: 960, padding: 40 }}>
         <h2 style={{ color: 'gold', marginBottom: 20 }}>{choice.resultTitle}</h2>
         <p style={{ color: 'gold', marginBottom: 15 }}>{choice.concept} · +{choice.score} điểm</p>
         <p style={{ marginBottom: 40, lineHeight: 1.6 }}>{choice.result}</p>
@@ -426,17 +426,17 @@ function EndScreen({ counts, score, history, onRestart }) {
 
   return (
     <div className="balance-end" style={{ height:'100%', display:'flex', alignItems:'center', justifyContent:'center', textAlign:'center', background:'radial-gradient(circle, #1a1a1a 0%, #000 100%)', overflowY:'auto' }}>
-      <div style={{ animation:'fadeUp 1s ease both', maxWidth:800, padding:40 }}>
+      <div style={{ animation:'fadeUp 1s ease both', maxWidth:1100, padding:40 }}>
         <p role="status" style={{ color: 'gold', marginBottom: 20 }}>Điểm học tập: {score}/200 · {counts.integrity}/4 lựa chọn phù hợp</p>
         <h2 style={{ fontSize:22, color:'#9ca3af', marginBottom:20, letterSpacing:4 }}>KẾT QUẢ RA QUYẾT ĐỊNH</h2>
-        <div style={{ fontSize:40, fontWeight:900, color, textShadow:`0 0 40px ${color}33`, lineHeight:1.2, marginBottom:30 }}>{title}</div>
-        <p style={{ fontSize:20, lineHeight:1.8, color:'#d1d5db', marginBottom:30, background:'rgba(255,255,255,0.03)', padding:25, borderRadius:20 }}>{message}</p>
+        <div style={{ fontSize: 'var(--game-question-size)', fontWeight:900, color, textShadow:`0 0 40px ${color}33`, lineHeight:1.5, marginBottom:30 }}>{title}</div>
+        <p style={{ fontSize: 'var(--body-size)', lineHeight:1.8, color:'#d1d5db', marginBottom:30, background:'rgba(255,255,255,0.03)', padding:25, borderRadius:20 }}>{message}</p>
         <div className="marx-card" style={{ padding:30, textAlign:'left', borderLeft:`8px solid ${color}`, background:'rgba(0,0,0,0.5)', marginBottom:30 }}>
-          <p style={{ color:'gold', fontWeight:900, fontSize:13, marginBottom:15, letterSpacing:2 }}>📚 LIÊN HỆ LÝ LUẬN MLN122</p>
-          <p style={{ fontSize:17, lineHeight:1.6, color:'#fff' }}>{card}</p>
+          <p style={{ color:'gold', fontWeight:900, fontSize: 'var(--caption-size)', marginBottom:15, letterSpacing:2 }}>📚 LIÊN HỆ LÝ LUẬN MLN122</p>
+          <p style={{ fontSize: 'var(--body-size)', lineHeight:1.6, color:'#fff' }}>{card}</p>
         </div>
         <ol className="balance-history" aria-label="Lựa chọn của bạn">{history.map((entry, i) => <li key={entry.title}><strong>{i + 1}. {entry.title} · +{entry.score} điểm</strong><span>{entry.answer}</span><small>{entry.concept}</small></li>)}</ol>
-        <button onClick={onRestart} style={{ padding:'16px 65px', background:'gold', color:'#000', border:'none', borderRadius:50, fontWeight:900, cursor:'pointer', fontSize:18 }}>CHƠI LẠI</button>
+        <button onClick={onRestart} style={{ padding:'16px 65px', background:'gold', color:'#000', border:'none', borderRadius:50, fontWeight:900, cursor:'pointer', fontSize: 'var(--body-size)' }}>CHƠI LẠI</button>
       </div>
     </div>
   );

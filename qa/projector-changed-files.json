@@ -1,0 +1,541 @@
+{
+  "baseline": "2eb092bd04081c79ca86947b66f8c9ad55b939b1",
+  "files": [
+    {
+      "status": "A",
+      "path": "PROJECTOR_REPORT_MLN122.md"
+    },
+    {
+      "status": "M",
+      "path": "README.md"
+    },
+    {
+      "status": "M",
+      "path": "README_MLN122.md"
+    },
+    {
+      "status": "A",
+      "path": "assets/fonts/BeVietnamPro-Black.ttf"
+    },
+    {
+      "status": "A",
+      "path": "assets/fonts/BeVietnamPro-Bold.ttf"
+    },
+    {
+      "status": "A",
+      "path": "assets/fonts/BeVietnamPro-BoldItalic.ttf"
+    },
+    {
+      "status": "A",
+      "path": "assets/fonts/BeVietnamPro-ExtraBold.ttf"
+    },
+    {
+      "status": "A",
+      "path": "assets/fonts/BeVietnamPro-Italic.ttf"
+    },
+    {
+      "status": "A",
+      "path": "assets/fonts/BeVietnamPro-Light.ttf"
+    },
+    {
+      "status": "A",
+      "path": "assets/fonts/BeVietnamPro-Medium.ttf"
+    },
+    {
+      "status": "A",
+      "path": "assets/fonts/BeVietnamPro-Regular.ttf"
+    },
+    {
+      "status": "A",
+      "path": "assets/fonts/BeVietnamPro-SemiBold.ttf"
+    },
+    {
+      "status": "A",
+      "path": "assets/fonts/NotoSerif-Bold.ttf"
+    },
+    {
+      "status": "A",
+      "path": "assets/fonts/NotoSerif-italic-Variable.ttf"
+    },
+    {
+      "status": "A",
+      "path": "assets/fonts/NotoSerif-normal-Variable.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/013fe10123fc.ttf",
+      "path": "assets/fonts/legacy/013fe10123fc.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/05b877abde46.ttf",
+      "path": "assets/fonts/legacy/05b877abde46.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/09ea70d82d0f.ttf",
+      "path": "assets/fonts/legacy/09ea70d82d0f.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/0fb425c58bfe.ttf",
+      "path": "assets/fonts/legacy/0fb425c58bfe.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/18ffac34dbf4.ttf",
+      "path": "assets/fonts/legacy/18ffac34dbf4.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/28171f661fab.ttf",
+      "path": "assets/fonts/legacy/28171f661fab.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/3f704e45d6b6.ttf",
+      "path": "assets/fonts/legacy/3f704e45d6b6.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/4279e4f05735.ttf",
+      "path": "assets/fonts/legacy/4279e4f05735.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/49159f810d4d.ttf",
+      "path": "assets/fonts/legacy/49159f810d4d.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/5ae86d38cfa3.ttf",
+      "path": "assets/fonts/legacy/5ae86d38cfa3.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/67c61c4eb68c.ttf",
+      "path": "assets/fonts/legacy/67c61c4eb68c.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/69399165ebd8.ttf",
+      "path": "assets/fonts/legacy/69399165ebd8.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/7d62dda1d389.ttf",
+      "path": "assets/fonts/legacy/7d62dda1d389.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/7ed5c1c49c73.ttf",
+      "path": "assets/fonts/legacy/7ed5c1c49c73.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/8a70c7995340.ttf",
+      "path": "assets/fonts/legacy/8a70c7995340.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/8fa83a056b0d.ttf",
+      "path": "assets/fonts/legacy/8fa83a056b0d.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/a182bc91a92c.ttf",
+      "path": "assets/fonts/legacy/a182bc91a92c.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/aaac23a6c959.ttf",
+      "path": "assets/fonts/legacy/aaac23a6c959.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/af5ad4719cc9.ttf",
+      "path": "assets/fonts/legacy/af5ad4719cc9.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/b32e81055233.ttf",
+      "path": "assets/fonts/legacy/b32e81055233.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/c67a6241b1e0.ttf",
+      "path": "assets/fonts/legacy/c67a6241b1e0.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/d0e784ef034d.ttf",
+      "path": "assets/fonts/legacy/d0e784ef034d.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/d13e9daa375a.ttf",
+      "path": "assets/fonts/legacy/d13e9daa375a.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/f168ede1842d.ttf",
+      "path": "assets/fonts/legacy/f168ede1842d.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/f5a22007f7fe.ttf",
+      "path": "assets/fonts/legacy/f5a22007f7fe.ttf"
+    },
+    {
+      "status": "R100",
+      "from": "public/fonts/fb084c8b15e9.ttf",
+      "path": "assets/fonts/legacy/fb084c8b15e9.ttf"
+    },
+    {
+      "status": "A",
+      "path": "assets/images/hero-hcmc-daylight-source.png"
+    },
+    {
+      "status": "R100",
+      "from": "public/images/mln122/hero-hcmc-sunset.jpg",
+      "path": "assets/images/hero-hcmc-sunset.jpg"
+    },
+    {
+      "status": "R100",
+      "from": "public/models/Marx.glb",
+      "path": "assets/legacy-models/Marx.glb"
+    },
+    {
+      "status": "R100",
+      "from": "public/models/astrolabe_-_medieval_-_reconstruction.glb",
+      "path": "assets/legacy-models/astrolabe_-_medieval_-_reconstruction.glb"
+    },
+    {
+      "status": "R100",
+      "from": "public/models/bust_of_the_ancient_greek_philosopher_socrates.glb",
+      "path": "assets/legacy-models/bust_of_the_ancient_greek_philosopher_socrates.glb"
+    },
+    {
+      "status": "R100",
+      "from": "public/models/globe.glb",
+      "path": "assets/legacy-models/globe.glb"
+    },
+    {
+      "status": "R100",
+      "from": "public/models/vladimir_lenin_portrait_monument.glb",
+      "path": "assets/legacy-models/vladimir_lenin_portrait_monument.glb"
+    },
+    {
+      "status": "M",
+      "path": "index.html"
+    },
+    {
+      "status": "M",
+      "path": "package-lock.json"
+    },
+    {
+      "status": "M",
+      "path": "package.json"
+    },
+    {
+      "status": "A",
+      "path": "public/fonts/be-vietnam-pro-300.woff2"
+    },
+    {
+      "status": "A",
+      "path": "public/fonts/be-vietnam-pro-400-italic.woff2"
+    },
+    {
+      "status": "A",
+      "path": "public/fonts/be-vietnam-pro-400.woff2"
+    },
+    {
+      "status": "A",
+      "path": "public/fonts/be-vietnam-pro-500.woff2"
+    },
+    {
+      "status": "A",
+      "path": "public/fonts/be-vietnam-pro-600.woff2"
+    },
+    {
+      "status": "A",
+      "path": "public/fonts/be-vietnam-pro-700-italic.woff2"
+    },
+    {
+      "status": "A",
+      "path": "public/fonts/be-vietnam-pro-700.woff2"
+    },
+    {
+      "status": "A",
+      "path": "public/fonts/be-vietnam-pro-800.woff2"
+    },
+    {
+      "status": "A",
+      "path": "public/fonts/be-vietnam-pro-900.woff2"
+    },
+    {
+      "status": "M",
+      "path": "public/fonts/fonts.css"
+    },
+    {
+      "status": "A",
+      "path": "public/fonts/licenses/BeVietnamPro-OFL.txt"
+    },
+    {
+      "status": "A",
+      "path": "public/fonts/licenses/NotoSerif-OFL.txt"
+    },
+    {
+      "status": "A",
+      "path": "public/fonts/noto-serif-italic.woff2"
+    },
+    {
+      "status": "A",
+      "path": "public/fonts/noto-serif-normal.woff2"
+    },
+    {
+      "status": "A",
+      "path": "public/images/mln122/hero-hcmc-daylight.jpg"
+    },
+    {
+      "status": "M",
+      "path": "public/textures/46_Page_1.png"
+    },
+    {
+      "status": "M",
+      "path": "public/textures/46_Page_2.png"
+    },
+    {
+      "status": "M",
+      "path": "public/textures/47_Page_1.png"
+    },
+    {
+      "status": "M",
+      "path": "public/textures/47_Page_2.png"
+    },
+    {
+      "status": "M",
+      "path": "public/textures/48_Page_1.png"
+    },
+    {
+      "status": "M",
+      "path": "public/textures/48_Page_2.png"
+    },
+    {
+      "status": "M",
+      "path": "public/textures/Close 1.png"
+    },
+    {
+      "status": "M",
+      "path": "public/textures/Close 2.png"
+    },
+    {
+      "status": "M",
+      "path": "public/textures/Coverpage_close.png"
+    },
+    {
+      "status": "M",
+      "path": "public/textures/Coverpage_open.png"
+    },
+    {
+      "status": "M",
+      "path": "public/textures/Open 1.png"
+    },
+    {
+      "status": "M",
+      "path": "public/textures/Open 2.png"
+    },
+    {
+      "status": "A",
+      "path": "qa/book-projection-1.png"
+    },
+    {
+      "status": "A",
+      "path": "qa/book-projection-2.png"
+    },
+    {
+      "status": "A",
+      "path": "qa/book-projection-3.png"
+    },
+    {
+      "status": "M",
+      "path": "qa/book-typesetting.json"
+    },
+    {
+      "status": "A",
+      "path": "qa/build-projector.txt"
+    },
+    {
+      "status": "A",
+      "path": "qa/font-audit-after.json"
+    },
+    {
+      "status": "A",
+      "path": "qa/font-audit-before.json"
+    },
+    {
+      "status": "A",
+      "path": "qa/font-coverage-verified.json"
+    },
+    {
+      "status": "A",
+      "path": "qa/http-projector.txt"
+    },
+    {
+      "status": "A",
+      "path": "qa/projection-typography-metrics.json"
+    },
+    {
+      "status": "A",
+      "path": "qa/tests-projector.txt"
+    },
+    {
+      "status": "A",
+      "path": "qa/vietnamese-font-specimen.png"
+    },
+    {
+      "status": "M",
+      "path": "qa/visual-assets-manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "scripts/audit-vietnamese-fonts.py"
+    },
+    {
+      "status": "A",
+      "path": "scripts/book-contact-sheet.mjs"
+    },
+    {
+      "status": "A",
+      "path": "scripts/book-fonts.mjs"
+    },
+    {
+      "status": "A",
+      "path": "scripts/generate-book-back-cover.mjs"
+    },
+    {
+      "status": "M",
+      "path": "scripts/generate-book-cover.mjs"
+    },
+    {
+      "status": "M",
+      "path": "scripts/generate-book-pages.mjs"
+    },
+    {
+      "status": "M",
+      "path": "scripts/optimize-visual-assets.mjs"
+    },
+    {
+      "status": "M",
+      "path": "scripts/relabel-book-back-cover.mjs"
+    },
+    {
+      "status": "M",
+      "path": "scripts/run-tests.mjs"
+    },
+    {
+      "status": "M",
+      "path": "scripts/verify-assets.mjs"
+    },
+    {
+      "status": "A",
+      "path": "scripts/verify-projection-typography.mjs"
+    },
+    {
+      "status": "M",
+      "path": "src/ai-usage/AIUsagePage.jsx"
+    },
+    {
+      "status": "M",
+      "path": "src/book/Book.jsx"
+    },
+    {
+      "status": "M",
+      "path": "src/book/BookPage.jsx"
+    },
+    {
+      "status": "A",
+      "path": "src/book/EconomicIllustrations.jsx"
+    },
+    {
+      "status": "M",
+      "path": "src/book/Experience.jsx"
+    },
+    {
+      "status": "M",
+      "path": "src/book/IntroScreen.jsx"
+    },
+    {
+      "status": "M",
+      "path": "src/book/ModelShowcase.jsx"
+    },
+    {
+      "status": "M",
+      "path": "src/book/PageReader.jsx"
+    },
+    {
+      "status": "M",
+      "path": "src/book/PopupElements.jsx"
+    },
+    {
+      "status": "M",
+      "path": "src/book/UI.jsx"
+    },
+    {
+      "status": "M",
+      "path": "src/book/framing.js"
+    },
+    {
+      "status": "A",
+      "path": "src/book/illustrationThemes.js"
+    },
+    {
+      "status": "M",
+      "path": "src/content/visualAssets.js"
+    },
+    {
+      "status": "M",
+      "path": "src/game/sections/GearOfEra.jsx"
+    },
+    {
+      "status": "M",
+      "path": "src/game/sections/Hero.jsx"
+    },
+    {
+      "status": "M",
+      "path": "src/game/sections/Navbar.jsx"
+    },
+    {
+      "status": "M",
+      "path": "src/game/sections/TonTaiXaHoi.jsx"
+    },
+    {
+      "status": "M",
+      "path": "src/index.css"
+    },
+    {
+      "status": "M",
+      "path": "src/main.jsx"
+    },
+    {
+      "status": "A",
+      "path": "src/styles/projection.css"
+    },
+    {
+      "status": "A",
+      "path": "tests/book-scene.test.jsx"
+    },
+    {
+      "status": "A",
+      "path": "tests/fiber-stub.mjs"
+    },
+    {
+      "status": "M",
+      "path": "tests/interactions.test.jsx"
+    },
+    {
+      "status": "A",
+      "path": "qa/projector-changed-files.json"
+    }
+  ]
+}

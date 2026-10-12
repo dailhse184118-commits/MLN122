@@ -11,7 +11,7 @@ import Theory from '../src/game/sections/TonTaiXaHoi';
 import Conclusion from '../src/game/sections/Conclusion';
 import Hero from '../src/game/sections/Hero';
 import { AIUsagePage } from '../src/ai-usage/AIUsagePage';
-import { UI, pages, pageAtom } from '../src/book/UI';
+import { UI, pages, pageAtom, viewModeAtom } from '../src/book/UI';
 import { scenarios } from '../src/content/mln122';
 import ExpandCard from '../src/components/ExpandCard';
 import Navbar from '../src/game/sections/Navbar';
@@ -270,8 +270,8 @@ test('Book cover-to-cover face order and responsive framing are consistent', () 
       assert.ok(Number.isFinite(reading.distance) && reading.distance > 0);
       assert.ok(showcase.distance >= reading.distance);
       const halfHeight = reading.distance * Math.tan(reading.fov * Math.PI / 360);
-      assert.ok(halfHeight * 2 >= 2.2 - 1e-8);
-      assert.ok(halfHeight * 2 * width / height >= (page === 0 || page === 6 ? 1.8 : 2.8) - 1e-8);
+      assert.ok(halfHeight * 2 >= reading.spanY - 1e-8);
+      assert.ok(halfHeight * 2 * width / height >= reading.spanX - 1e-8);
     }
   }
 });
@@ -309,5 +309,24 @@ test('Book enlarged reader navigates all twelve faces, closes and restores scrol
     assert.equal(tree.root.findAllByProps({ role: 'dialog' }).length, 0);
     assert.equal(document.body.style.overflow, 'auto');
     assert.equal(store.get(pageAtom), 6);
+  } finally { if (tree) act(() => tree.unmount()); global.document = previousDocument; clock.restore(); }
+});
+
+test('Book 3D toggle and enlarged-reader keyboard preserve page state', () => {
+  const clock = setup(); const previousDocument = global.document;
+  global.document = { body: { style: { overflow: 'auto' } }, activeElement: { focus() {} } };
+  const store = createStore(); let tree;
+  try {
+    act(() => { tree = create(<Provider store={store}><UI /></Provider>); });
+    assert.equal(store.get(viewModeAtom), 'reading');
+    const toggle = () => tree.root.findAllByType('button').find(button => button.props.className?.includes('view-toggle') && button.findAllByType('span').some(span => span.children.includes('3D View') || span.children.includes('Đọc sách')));
+    act(() => toggle().props.onClick()); assert.equal(store.get(viewModeAtom), 'showcase');
+    click(tree, 'Quan hệ'); assert.equal(store.get(pageAtom), 2);
+    act(() => toggle().props.onClick()); assert.equal(store.get(viewModeAtom), 'reading'); assert.equal(store.get(pageAtom), 2);
+    click(tree, 'Đọc bản lớn');
+    const key = name => act(() => tree.root.findByProps({ role: 'dialog' }).props.onKeyDown({ key: name, preventDefault() {} }));
+    key('ArrowRight'); assert.equal(store.get(pageAtom), 3);
+    key('ArrowLeft'); assert.equal(store.get(pageAtom), 2);
+    key('Escape'); assert.equal(tree.root.findAllByProps({ role: 'dialog' }).length, 0); assert.equal(document.body.style.overflow, 'auto');
   } finally { if (tree) act(() => tree.unmount()); global.document = previousDocument; clock.restore(); }
 });

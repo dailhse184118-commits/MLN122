@@ -1,0 +1,110 @@
+{
+  "requiredVietnameseCodepoints": 112,
+  "fonts": [
+    {
+      "file": "noto-serif-normal.woff2",
+      "family": "Noto Serif",
+      "weight": "100 900",
+      "style": "normal",
+      "missingVietnamese": [],
+      "bytes": 112088,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserif/NotoSerif%5Bwdth%2Cwght%5D.ttf"
+    },
+    {
+      "file": "noto-serif-italic.woff2",
+      "family": "Noto Serif",
+      "weight": "100 900",
+      "style": "italic",
+      "missingVietnamese": [],
+      "bytes": 143004,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserif/NotoSerif-Italic%5Bwdth%2Cwght%5D.ttf"
+    },
+    {
+      "file": "be-vietnam-pro-300.woff2",
+      "family": "Be Vietnam Pro",
+      "weight": "300",
+      "style": "normal",
+      "missingVietnamese": [],
+      "bytes": 34772,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/bevietnampro/BeVietnamPro-Light.ttf"
+    },
+    {
+      "file": "be-vietnam-pro-400.woff2",
+      "family": "Be Vietnam Pro",
+      "weight": "400",
+      "style": "normal",
+      "missingVietnamese": [],
+      "bytes": 33064,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/bevietnampro/BeVietnamPro-Regular.ttf"
+    },
+    {
+      "file": "be-vietnam-pro-500.woff2",
+      "family": "Be Vietnam Pro",
+      "weight": "500",
+      "style": "normal",
+      "missingVietnamese": [],
+      "bytes": 34984,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/bevietnampro/BeVietnamPro-Medium.ttf"
+    },
+    {
+      "file": "be-vietnam-pro-600.woff2",
+      "family": "Be Vietnam Pro",
+      "weight": "600",
+      "style": "normal",
+      "missingVietnamese": [],
+      "bytes": 35076,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/bevietnampro/BeVietnamPro-SemiBold.ttf"
+    },
+    {
+      "file": "be-vietnam-pro-700.woff2",
+      "family": "Be Vietnam Pro",
+      "weight": "700",
+      "style": "normal",
+      "missingVietnamese": [],
+      "bytes": 35844,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/bevietnampro/BeVietnamPro-Bold.ttf"
+    },
+    {
+      "file": "be-vietnam-pro-800.woff2",
+      "family": "Be Vietnam Pro",
+      "weight": "800",
+      "style": "normal",
+      "missingVietnamese": [],
+      "bytes": 35828,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/bevietnampro/BeVietnamPro-ExtraBold.ttf"
+    },
+    {
+      "file": "be-vietnam-pro-900.woff2",
+      "family": "Be Vietnam Pro",
+      "weight": "900",
+      "style": "normal",
+      "missingVietnamese": [],
+      "bytes": 34304,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/bevietnampro/BeVietnamPro-Black.ttf"
+    },
+    {
+      "file": "be-vietnam-pro-400-italic.woff2",
+      "family": "Be Vietnam Pro",
+      "weight": "400",
+      "style": "italic",
+      "missingVietnamese": [],
+      "bytes": 33400,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/bevietnampro/BeVietnamPro-Italic.ttf"
+    },
+    {
+      "file": "be-vietnam-pro-700-italic.woff2",
+      "family": "Be Vietnam Pro",
+      "weight": "700",
+      "style": "italic",
+      "missingVietnamese": [],
+      "bytes": 35232,
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/bevietnampro/BeVietnamPro-BoldItalic.ttf"
+    }
+  ],
+  "totalWoff2Bytes": 567596,
+  "canvasFonts": [
+    "assets/fonts/NotoSerif-Bold.ttf",
+    "assets/fonts/BeVietnamPro-Regular.ttf",
+    "assets/fonts/BeVietnamPro-SemiBold.ttf"
+  ]
+}

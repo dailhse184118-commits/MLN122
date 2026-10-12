@@ -1,12 +1,13 @@
 [
   {
-    "name": "hero-hcmc-sunset",
-    "original": "C:/Users/Admin/.codex/generated_images/01a12eb9-652b-7131-a9d5-b3cd1644feba/exec-1c8e5a35-dd57-476d-9dac-eafcd377b82d.png",
-    "sourceBytes": 2148610,
-    "path": "public/images/mln122/hero-hcmc-sunset.jpg",
+    "name": "hero-hcmc-daylight",
+    "original": "assets/images/hero-hcmc-daylight-source.png",
+    "sourceBytes": 2151880,
+    "path": "public/images/mln122/hero-hcmc-daylight.jpg",
     "width": 1600,
     "height": 900,
-    "bytes": 225412
+    "bytes": 226550,
+    "artDirection": "AI illustration: neutral daylight 5500K, natural 50mm appearance, restrained saturation"
   },
   {
     "name": "game-1-driver",

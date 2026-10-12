@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="hero-v2-bg" />
       <div className="hero-v2-overlay" />
       <div className="hero-v2-portrait-wrap">
-        <img src={visualAssets.hero} alt="Ảnh AI minh họa skyline Thành phố Hồ Chí Minh bên sông Sài Gòn lúc hoàng hôn" width="1600" height="900" fetchpriority="high" className="hero-v2-portrait" />
+        <img src={visualAssets.hero} alt="Ảnh AI minh họa skyline Thành phố Hồ Chí Minh bên sông Sài Gòn dưới ánh sáng ban ngày" width="1600" height="900" fetchpriority="high" className="hero-v2-portrait" />
         <div className="hero-v2-portrait-fade" />
         <span className="hero-image-credit">Minh họa bằng AI · Kinh tế Việt Nam</span>
       </div>

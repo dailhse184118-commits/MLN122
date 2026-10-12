@@ -1,0 +1,119 @@
+{
+  "requiredVietnameseCodepoints": 112,
+  "fontFilesChecked": 14,
+  "utf8TextFilesChecked": 45,
+  "fonts": [
+    {
+      "file": "public/fonts/be-vietnam-pro-300.woff2",
+      "family": "Be Vietnam Pro Light",
+      "weight": 300,
+      "missingVietnamese": [],
+      "bytes": 34772,
+      "sha256": "90bc8fe87e253090d91a33e10b3fbf149654683b099835058e25aef5e37336e3"
+    },
+    {
+      "file": "public/fonts/be-vietnam-pro-400-italic.woff2",
+      "family": "Be Vietnam Pro",
+      "weight": 400,
+      "missingVietnamese": [],
+      "bytes": 33400,
+      "sha256": "b17b6319ac7d3b00b3760f68d40252c59c0db11f573e5cc0387422de09668b8c"
+    },
+    {
+      "file": "public/fonts/be-vietnam-pro-400.woff2",
+      "family": "Be Vietnam Pro",
+      "weight": 400,
+      "missingVietnamese": [],
+      "bytes": 33064,
+      "sha256": "f97d93351ebe31ca5217f24f0febe014791477ec5ecd41702376fbb7fa915e44"
+    },
+    {
+      "file": "public/fonts/be-vietnam-pro-500.woff2",
+      "family": "Be Vietnam Pro Medium",
+      "weight": 500,
+      "missingVietnamese": [],
+      "bytes": 34984,
+      "sha256": "ab7c08d47eaf2345a434bd3f802b49392b8f8f524a68b861203b1b0409f91428"
+    },
+    {
+      "file": "public/fonts/be-vietnam-pro-600.woff2",
+      "family": "Be Vietnam Pro SemiBold",
+      "weight": 600,
+      "missingVietnamese": [],
+      "bytes": 35076,
+      "sha256": "43cfe69eed4e4454306a34416df7e93fe22200ef8b0d327fd1ef15f07b0ab2bd"
+    },
+    {
+      "file": "public/fonts/be-vietnam-pro-700-italic.woff2",
+      "family": "Be Vietnam Pro",
+      "weight": 700,
+      "missingVietnamese": [],
+      "bytes": 35232,
+      "sha256": "064cb649b8511bebdbe3c782782a24562ed5e75a2298ae526b3affaa7dbf78eb"
+    },
+    {
+      "file": "public/fonts/be-vietnam-pro-700.woff2",
+      "family": "Be Vietnam Pro",
+      "weight": 700,
+      "missingVietnamese": [],
+      "bytes": 35844,
+      "sha256": "0255c0d8871c741bf23809edb52a63cbbeb3d05f6c0dc9b6e45ada16b3e37ccd"
+    },
+    {
+      "file": "public/fonts/be-vietnam-pro-800.woff2",
+      "family": "Be Vietnam Pro ExtraBold",
+      "weight": 800,
+      "missingVietnamese": [],
+      "bytes": 35828,
+      "sha256": "83b075e0cc518a8d92559af3414cfde4b550edecd80d2132dd35db159181677d"
+    },
+    {
+      "file": "public/fonts/be-vietnam-pro-900.woff2",
+      "family": "Be Vietnam Pro Black",
+      "weight": 900,
+      "missingVietnamese": [],
+      "bytes": 34304,
+      "sha256": "01d4b40de2eef541a969eb387347c65ecb95c44df7325320bd0e2b8adb375bbf"
+    },
+    {
+      "file": "public/fonts/noto-serif-italic.woff2",
+      "family": "Noto Serif",
+      "weight": 400,
+      "missingVietnamese": [],
+      "bytes": 143004,
+      "sha256": "4fd0c365f6f526b6c93034bcabcc1551cfb87286c9a306d7c1a0312ff67f5824"
+    },
+    {
+      "file": "public/fonts/noto-serif-normal.woff2",
+      "family": "Noto Serif",
+      "weight": 400,
+      "missingVietnamese": [],
+      "bytes": 112088,
+      "sha256": "10b003570abe6cd8ed6d01798849baca74934cc79a3f0d7733c8c78ea00f9a51"
+    },
+    {
+      "file": "assets/fonts/NotoSerif-Bold.ttf",
+      "family": "Noto Serif",
+      "weight": 700,
+      "missingVietnamese": [],
+      "bytes": 515032,
+      "sha256": "50da8018a84b37614a582647d83bd69ea5f32d031b6f7d7343ffea94b360b756"
+    },
+    {
+      "file": "assets/fonts/BeVietnamPro-Regular.ttf",
+      "family": "Be Vietnam Pro",
+      "weight": 400,
+      "missingVietnamese": [],
+      "bytes": 132948,
+      "sha256": "cd1ef6e9d7db28ad5cdb88a65ccbe693870e60d340b791f349d248342b4fe4c3"
+    },
+    {
+      "file": "assets/fonts/BeVietnamPro-SemiBold.ttf",
+      "family": "Be Vietnam Pro SemiBold",
+      "weight": 600,
+      "missingVietnamese": [],
+      "bytes": 136736,
+      "sha256": "bd8e27eb02720b9d91e59e4f10a90878643219f25ce6a8d9a4f06a8a88d3bb71"
+    }
+  ]
+}

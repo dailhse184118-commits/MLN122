@@ -1,0 +1,2 @@
+HTTP verified: 57 public assets and MLN122 HTML at http://127.0.0.1:4173
+Production verified: 4 exact build artifacts, /book and /ai SPA routes; no published GLB/TTF assets.

@@ -1,5 +1,5 @@
 import { useCursor, useTexture } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 import { useAtom } from "jotai";
 import { easing } from "maath";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -96,6 +96,14 @@ const Page = ({ number, front, back, page, opened, bookClosed, ...props }) => {
     `/textures/${back}.png`,
   ]);
   picture.colorSpace = picture2.colorSpace = SRGBColorSpace;
+  const { gl } = useThree();
+  useEffect(() => {
+    const anisotropy = Math.min(8, gl.capabilities.getMaxAnisotropy());
+    for (const texture of [picture, picture2]) {
+      texture.anisotropy = anisotropy;
+      texture.needsUpdate = true;
+    }
+  }, [gl, picture, picture2]);
   const group = useRef();
   const turnedAt = useRef(0);
   const lastOpened = useRef(opened);
@@ -153,7 +161,7 @@ const Page = ({ number, front, back, page, opened, bookClosed, ...props }) => {
       return;
     }
 
-    const emissiveIntensity = highlighted ? 0.22 : 0;
+    const emissiveIntensity = highlighted ? 0.06 : 0;
     skinnedMeshRef.current.material[4].emissiveIntensity =
       skinnedMeshRef.current.material[5].emissiveIntensity = MathUtils.lerp(
         skinnedMeshRef.current.material[4].emissiveIntensity,

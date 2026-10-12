@@ -3,70 +3,110 @@
     "face": "Open 1",
     "width": 1536,
     "height": 2048,
-    "bodyFont": 64,
-    "contentBottom": 1776
+    "bodyFont": 96,
+    "headingFont": 86,
+    "titleFont": 100,
+    "contentBottom": 1698,
+    "bundledFonts": true,
+    "glyphBoundsChecked": true
   },
   {
     "face": "Open 2",
     "width": 1536,
     "height": 2048,
-    "bodyFont": 64,
-    "contentBottom": 1689
+    "bodyFont": 96,
+    "headingFont": 86,
+    "titleFont": 100,
+    "contentBottom": 1698,
+    "bundledFonts": true,
+    "glyphBoundsChecked": true
   },
   {
     "face": "46_Page_1",
     "width": 1536,
     "height": 2048,
-    "bodyFont": 64,
-    "contentBottom": 1776
+    "bodyFont": 92,
+    "headingFont": 76,
+    "titleFont": 100,
+    "contentBottom": 1440,
+    "bundledFonts": true,
+    "glyphBoundsChecked": true
   },
   {
     "face": "46_Page_2",
     "width": 1536,
     "height": 2048,
-    "bodyFont": 51,
-    "contentBottom": 1579
+    "bodyFont": 92,
+    "headingFont": 76,
+    "titleFont": 100,
+    "contentBottom": 1847,
+    "bundledFonts": true,
+    "glyphBoundsChecked": true
   },
   {
     "face": "47_Page_1",
     "width": 1536,
     "height": 2048,
-    "bodyFont": 64,
-    "contentBottom": 1689
+    "bodyFont": 96,
+    "headingFont": 86,
+    "titleFont": 100,
+    "contentBottom": 1698,
+    "bundledFonts": true,
+    "glyphBoundsChecked": true
   },
   {
     "face": "47_Page_2",
     "width": 1536,
     "height": 2048,
-    "bodyFont": 64,
-    "contentBottom": 1689
+    "bodyFont": 96,
+    "headingFont": 86,
+    "titleFont": 100,
+    "contentBottom": 1575,
+    "bundledFonts": true,
+    "glyphBoundsChecked": true
   },
   {
     "face": "48_Page_1",
     "width": 1536,
     "height": 2048,
-    "bodyFont": 64,
-    "contentBottom": 1689
+    "bodyFont": 96,
+    "headingFont": 86,
+    "titleFont": 100,
+    "contentBottom": 1821,
+    "bundledFonts": true,
+    "glyphBoundsChecked": true
   },
   {
     "face": "48_Page_2",
     "width": 1536,
     "height": 2048,
-    "bodyFont": 64,
-    "contentBottom": 1776
+    "bodyFont": 96,
+    "headingFont": 86,
+    "titleFont": 100,
+    "contentBottom": 1698,
+    "bundledFonts": true,
+    "glyphBoundsChecked": true
   },
   {
     "face": "Close 1",
     "width": 1536,
     "height": 2048,
-    "bodyFont": 64,
-    "contentBottom": 1602
+    "bodyFont": 96,
+    "headingFont": 86,
+    "titleFont": 100,
+    "contentBottom": 1832,
+    "bundledFonts": true,
+    "glyphBoundsChecked": true
   },
   {
     "face": "Close 2",
     "width": 1536,
     "height": 2048,
-    "bodyFont": 64,
-    "contentBottom": 1689
+    "bodyFont": 96,
+    "headingFont": 86,
+    "titleFont": 100,
+    "contentBottom": 1821,
+    "bundledFonts": true,
+    "glyphBoundsChecked": true
   }
 ]

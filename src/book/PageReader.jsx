@@ -20,6 +20,8 @@ export default function PageReader({ onClose }) {
   }, []);
   const onKey = event => {
     if (event.key === 'Escape') onClose();
+    if (event.key === 'ArrowRight') { event.preventDefault(); setPage(p => Math.min(pages.length, p + 1)); }
+    if (event.key === 'ArrowLeft') { event.preventDefault(); setPage(p => Math.max(0, p - 1)); }
     if (event.key !== 'Tab') return;
     const buttons = [...dialog.current.querySelectorAll('button:not(:disabled)')];
     const first = buttons[0], last = buttons.at(-1);
