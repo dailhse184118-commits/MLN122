@@ -12,7 +12,7 @@ function text(value, y, size, color = '#79272c', serif = true) {
   ctx.font = `${serif ? 'bold' : ''} ${size}px ${serif ? 'BookSerif' : 'BookSans'}`;
   ctx.fillStyle = color; ctx.textAlign = 'center'; ctx.fillText(value, 768, y);
 }
-text('MLN201 • KINH TẾ CHÍNH TRỊ', 220, 28, '#6b5549', false);
+text('MLN122 • KINH TẾ CHÍNH TRỊ', 220, 28, '#6b5549', false);
 text('KINH TẾ CHÍNH TRỊ', 470, 68); text('MÁC – LÊNIN', 575, 88);
 ctx.strokeStyle = '#b38c5c'; ctx.lineWidth = 3; ctx.beginPath();ctx.moveTo(230, 660);ctx.lineTo(1306, 660);ctx.stroke();
 text('LỢI ÍCH KINH TẾ', 830, 64, '#40302a'); text('& QUAN HỆ LỢI ÍCH', 935, 62, '#40302a'); text('KINH TẾ Ở VIỆT NAM', 1040, 62, '#40302a');
@@ -29,7 +29,7 @@ for (const [x, y, label] of points) {
 ctx.fillStyle = '#f3e5cb';ctx.beginPath();ctx.arc(768,1430,46,0,Math.PI*2);ctx.fill();ctx.stroke();
 text('LỢI ÍCH',1440,18);
 text('CHƯƠNG 5 • MỤC 5.3.1',1700,42,'#fff5df',false);
-text('MLN201 | SLOT 8',1780,30,'#fff5df',false);
+text('MLN122 | SLOT 8',1780,30,'#fff5df',false);
 text('TỪ ĐỘNG LỰC CÁ NHÂN',1870,30,'#fff5df');
 text('ĐẾN PHÁT TRIỂN XÃ HỘI',1920,30,'#fff5df');
 writeFileSync('public/textures/Coverpage_open.png', c.toBuffer('image/png'));

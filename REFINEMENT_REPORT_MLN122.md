@@ -1,6 +1,6 @@
-# MLN201 Slot 8 — Báo cáo chỉnh sửa 12/10/2026
+# MLN122 Slot 8 — Báo cáo chỉnh sửa 12/10/2026
 
-Đợt thay ảnh mới đã hoàn tất sau báo cáo này. Xem [VISUAL_ASSETS_REPORT_MLN201.md](VISUAL_ASSETS_REPORT_MLN201.md): 17/17 tests, 75/75 HTTP assets và thay đổi material sách. Số liệu bên dưới là kết quả của đợt chỉnh nội dung trước đó.
+Đợt thay ảnh mới đã hoàn tất sau báo cáo này. Xem [VISUAL_ASSETS_REPORT_MLN122.md](VISUAL_ASSETS_REPORT_MLN122.md): 17/17 tests, 75/75 HTTP assets và thay đổi material sách. Số liệu bên dưới là kết quả của đợt chỉnh nội dung trước đó.
 
 Đã sửa trực tiếp bản hiện tại tại `D:\MLN122\Website-MLN111-main`. Giữ hệ màu, font, khung nội dung, game kể chuyện, các asset nhân vật, mô hình sách, cơ chế lật và các GLB trang trí. Không thay framework hoặc thiết kế lại website.
 
@@ -42,7 +42,7 @@ Nguồn Grab là [thông báo UBCTQG ngày 11/09/2026](https://vcc.gov.vn/defaul
 - Kiểm tra đúng/sai/một phần đạt 200/0/80; chọn hỗn hợp đạt 120 và lịch sử bốn lựa chọn chính xác. Nhấp lặp không cộng điểm đôi; quiz xáo trộn, giải thích và reset đạt.
 - Kiểm tra điều hướng chuyển tab, link quan hệ/giải pháp/sinh viên, cập nhật mục đang đọc theo vị trí các phần lồng nhau và trạng thái accordion đạt.
 - Kiểm tra bảy trạng thái sách, mười hai đường dẫn texture, biên trước/sau và chế độ đọc bản lớn từ bìa đến trang cuối đạt ở mức renderer. Kiểm tra toán học framing ở các kích thước Canvas đại diện cho 1920/1366/1024/390px đạt; không thay thế quan sát WebGL.
-- Production preview đã khởi động. `node scripts/verify-assets.mjs http://127.0.0.1:4173`: **70/70 tài nguyên public trả HTTP 200**, không phải HTML fallback; HTML là MLN201. HEAD kiểm tra đường dẫn/MIME, không kiểm tra giải mã GPU.
+- Production preview đã khởi động. `node scripts/verify-assets.mjs http://127.0.0.1:4173`: **70/70 tài nguyên public trả HTTP 200**, không phải HTML fallback; HTML là MLN122. HEAD kiểm tra đường dẫn/MIME, không kiểm tra giải mã GPU.
 - Năm GLB đạt kiểm tra header/version/độ dài/JSON glTF và giữ nguyên nội dung file. Không kiểm tra tải và vẽ WebGL thực tế.
 - Đã xem contact sheet đủ 12 mặt và phóng lớn hai mặt khái niệm/nhân tố. `qa/book-contact-sheet-refined.png` là ảnh QA của texture, không phải screenshot ứng dụng. Bộ sắp chữ có cảnh báo Pango khi khởi tạo font trên Windows nhưng xuất file thành công; hai trang kiểm tra trực tiếp hiển thị dấu và chữ đúng.
 - Quét `src` và `index.html` không thấy chủ đề cũ MLN111/Tồn tại xã hội/Ý thức xã hội.
@@ -58,9 +58,9 @@ Trước giờ thuyết trình, cần mở website trên máy trình chiếu: th
 
 Danh sách 32 file triển khai nằm ở `qa/refinement-changed-files.json`. Nhóm chính:
 
-- `src/content/mln201.js`, `src/content/quiz.js`; `TonTaiXaHoi.jsx`, `Hero.jsx`, `Navbar.jsx`, `QuizGame.jsx`, `GearOfEra.jsx`, `GamePage.jsx`.
+- `src/content/mln122.js`, `src/content/quiz.js`; `TonTaiXaHoi.jsx`, `Hero.jsx`, `Navbar.jsx`, `QuizGame.jsx`, `GearOfEra.jsx`, `GamePage.jsx`.
 - `src/components/ExpandCard.jsx`, `FareExample.jsx`; `src/index.css`; `src/ai-usage/AIUsagePage.jsx`.
 - `src/book/BookPage.jsx`, `Experience.jsx`, `ModelShowcase.jsx`, `UI.jsx`; mới `PageReader.jsx`, `framing.js`.
 - Mười texture bên trong; hai ảnh mới; `scripts/generate-book-pages.mjs`; `tests/interactions.test.jsx`.
 
-Backup trước chỉnh: `D:\MLN122\MLN201-before-refinement-20261012-134946.zip`. Các báo cáo và bằng chứng QA được cập nhật riêng.
+Backup trước chỉnh: bản ZIP trong D:\MLN122, mốc 20261012-134946. Các báo cáo và bằng chứng QA được cập nhật riêng.

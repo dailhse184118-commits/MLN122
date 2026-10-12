@@ -1,0 +1,21 @@
+
+> r3f-vite-starter@1.0.0 build
+> vite build
+
+vite v4.5.14 building for production...
+transforming...
+node_modules/jotai/esm/react.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/jotai/esm/react.mjs" was ignored.
+✓ 648 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                        0.64 kB │ gzip:   0.42 kB
+dist/assets/index-2b64f0de.css        80.81 kB │ gzip:  16.07 kB
+dist/assets/AIUsagePage-ee3873a4.js    6.31 kB │ gzip:   2.85 kB
+dist/assets/index-0cc5da41.js        204.60 kB │ gzip:  67.36 kB
+dist/assets/BookPage-8bc7e5b3.js     942.22 kB │ gzip: 259.92 kB
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 6.61s

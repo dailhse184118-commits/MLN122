@@ -20,7 +20,7 @@ export const GamePage = () => {
 
       <TonTai />
        <section id="quiz">
-      <div className="page-section"><div className="section-header reveal"><span className="section-label">07 — Hoạt động tương tác</span><h2>Bốn tình huống, nhiều lợi ích</h2><p>Ôn bốn khái niệm qua quiz, rồi cùng Minh phân tích lợi ích của các bên trong game.</p></div><ExpandCard title="Ôn nhanh: bốn câu hỏi MLN201"><QuizGame /></ExpandCard></div>
+      <div className="page-section"><div className="section-header reveal"><span className="section-label">07 — Hoạt động tương tác</span><h2>Bốn tình huống, nhiều lợi ích</h2><p>Ôn bốn khái niệm qua quiz, rồi cùng Minh phân tích lợi ích của các bên trong game.</p></div><ExpandCard title="Ôn nhanh: bốn câu hỏi MLN122"><QuizGame /></ExpandCard></div>
       <GearOfEra />
        </section>
       <Conclusion />

@@ -9,7 +9,7 @@ const PORTRAITS = {
   boy_que: '/images/boy_que.png',
 };
 
-import { scenarios } from '../../content/mln201';
+import { scenarios } from '../../content/mln122';
 import { createScenarioRun } from '../../content/quiz';
 
 /* ═══ COMPONENTS ══════════════════════════════════════ */
@@ -432,7 +432,7 @@ function EndScreen({ counts, score, history, onRestart }) {
         <div style={{ fontSize:40, fontWeight:900, color, textShadow:`0 0 40px ${color}33`, lineHeight:1.2, marginBottom:30 }}>{title}</div>
         <p style={{ fontSize:20, lineHeight:1.8, color:'#d1d5db', marginBottom:30, background:'rgba(255,255,255,0.03)', padding:25, borderRadius:20 }}>{message}</p>
         <div className="marx-card" style={{ padding:30, textAlign:'left', borderLeft:`8px solid ${color}`, background:'rgba(0,0,0,0.5)', marginBottom:30 }}>
-          <p style={{ color:'gold', fontWeight:900, fontSize:13, marginBottom:15, letterSpacing:2 }}>📚 LIÊN HỆ LÝ LUẬN MLN201</p>
+          <p style={{ color:'gold', fontWeight:900, fontSize:13, marginBottom:15, letterSpacing:2 }}>📚 LIÊN HỆ LÝ LUẬN MLN122</p>
           <p style={{ fontSize:17, lineHeight:1.6, color:'#fff' }}>{card}</p>
         </div>
         <ol className="balance-history" aria-label="Lựa chọn của bạn">{history.map((entry, i) => <li key={entry.title}><strong>{i + 1}. {entry.title} · +{entry.score} điểm</strong><span>{entry.answer}</span><small>{entry.concept}</small></li>)}</ol>

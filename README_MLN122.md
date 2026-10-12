@@ -1,8 +1,8 @@
-# MLN201 — Website thuyết trình Slot 8
+# MLN122 — Website thuyết trình Slot 8
 
 Chương 5, mục 5.3.1: Lợi ích kinh tế và quan hệ lợi ích kinh tế trong nền kinh tế thị trường định hướng xã hội chủ nghĩa.
 
-Bản hoàn thiện trực tiếp từ source MLN111 và hai ZIP MLN201 người dùng cung cấp. Giữ template, game kể chuyện và sách 3D 6 lá/12 mặt.
+Bản hoàn thiện trực tiếp từ source MLN111 và hai ZIP bổ sung người dùng cung cấp. Giữ template, game kể chuyện và sách 3D 6 lá/12 mặt.
 
 ## Chạy trên Windows CMD
 
@@ -49,10 +49,10 @@ Không mở index.html bằng file://; Three.js và module cần HTTP server. C�
 - Đã đối chiếu phần lý luận với bản 2021 đăng lại và bài giảng Chương 5 của Đại học Thương mại. Chưa kiểm tra bản in của nhóm; không gán số trang cho từng diễn giải.
 - Còn 10 cảnh báo dependency sau cập nhật tương thích; chưa nâng major Vite/Tailwind.
 
-Xem [Báo cáo thay ảnh hiện tại](VISUAL_ASSETS_REPORT_MLN201.md) và [báo cáo chỉnh sửa nội dung trước đó](REFINEMENT_REPORT_MLN201.md) và [Báo cáo kiểm thử](TESTING_REPORT_MLN201.md). Báo cáo chuyển đổi trước đó nằm ở IMPLEMENTATION_REPORT_MLN201.md.
+Xem [Báo cáo thay ảnh hiện tại](VISUAL_ASSETS_REPORT_MLN122.md) và [báo cáo chỉnh sửa nội dung trước đó](REFINEMENT_REPORT_MLN122.md) và [Báo cáo kiểm thử](TESTING_REPORT_MLN122.md). Báo cáo chuyển đổi trước đó nằm ở IMPLEMENTATION_REPORT_MLN122.md.
 
 ## Sửa nội dung và sách
 
-Nội dung và tình huống nằm ở src/content/mln201.js; quiz và hàm xáo trộn ở src/content/quiz.js; nội dung chính nằm ở src/game/sections/TonTaiXaHoi.jsx. Thứ tự sách khai báo ở src/book/UI.jsx, giữ tên texture kỹ thuật.
+Nội dung và tình huống nằm ở src/content/mln122.js; quiz và hàm xáo trộn ở src/content/quiz.js; nội dung chính nằm ở src/game/sections/TonTaiXaHoi.jsx. Thứ tự sách khai báo ở src/book/UI.jsx, giữ tên texture kỹ thuật.
 
 Bìa trước được tạo lại bằng `node scripts/generate-book-cover.mjs`, dùng font Times New Roman và Arial của Windows khi có. Mười trang bên trong được sắp chữ lại bằng `node scripts/generate-book-pages.mjs`; script này dùng font Windows và ghi bằng chứng giới hạn layout vào qa/book-typesetting.json. Cơ chế sách gốc nằm ở src/book/Book.jsx. Nút Đọc bản lớn dùng chung texture và trạng thái trang của sách 3D. Nguồn tài nguyên gốc/giấy phép cần nhóm rà soát nếu phát hành công khai.

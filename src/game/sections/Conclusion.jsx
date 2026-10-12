@@ -1,4 +1,4 @@
-import { references } from '../../content/mln201';
+import { references } from '../../content/mln122';
 
 export default function Conclusion() {
   return <section id="conclusion"><div className="page-section">

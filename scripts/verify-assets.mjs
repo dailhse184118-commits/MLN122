@@ -15,6 +15,6 @@ await Promise.all(Array.from({ length: 4 }, async () => {
   }
 }));
 const html = await (await fetch(base)).text();
-assert.match(html, /MLN201/);
+assert.match(html, /MLN122/);
 assert.doesNotMatch(html, /MLN111|Triết học/);
-console.log(`HTTP verified: ${count} public assets and MLN201 HTML at ${base}`);
+console.log(`HTTP verified: ${count} public assets and MLN122 HTML at ${base}`);

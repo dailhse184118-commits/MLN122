@@ -1,6 +1,6 @@
 import ExpandCard from '../../components/ExpandCard';
 import FareExample from '../../components/FareExample';
-import { concepts, factors, relationships, stakeholders, solutions, reflections, references } from '../../content/mln201';
+import { concepts, factors, relationships, stakeholders, solutions, reflections, references } from '../../content/mln122';
 
 export default function QuanHeLoiIch() {
   return (

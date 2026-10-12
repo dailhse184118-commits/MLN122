@@ -32,6 +32,6 @@ export default function PageReader({ onClose }) {
       <div><button onClick={onClose}>Về sách 3D</button><button disabled={page === 0} onClick={() => setPage(p => Math.max(0, p - 1))}>Trang trước</button><button disabled={page === pages.length} onClick={() => setPage(p => Math.min(pages.length, p + 1))}>Trang sau</button></div>
     </div>
     <p className="book-summary-note">Tóm tắt học tập do sinh viên biên soạn; không phải bản sao chính thức của giáo trình.</p>
-    <div className="book-reader-pages">{getVisibleFaces(page).map(face => <img key={face} src={`/textures/${face}.png`} alt={`Trang tóm tắt MLN201: ${face}`} width="1536" height="2048" />)}</div>
+    <div className="book-reader-pages">{getVisibleFaces(page).map(face => <img key={face} src={`/textures/${face}.png`} alt={`Trang tóm tắt MLN122: ${face}`} width="1536" height="2048" />)}</div>
   </div>;
 }

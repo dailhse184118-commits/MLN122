@@ -1,4 +1,4 @@
-# MLN201 — Thay ảnh theo tham chiếu, 12/10/2026
+# MLN122 — Thay ảnh theo tham chiếu, 12/10/2026
 
 Đã sửa trực tiếp website hiện tại, dùng ba infographic người dùng cung cấp làm tham chiếu hình ảnh. Không đưa chữ, nút, logo, giá cước hoặc nội dung học thuật trong infographic vào website. Tạo năm ảnh riêng bằng built-in image_gen; không sử dụng infographic như một nền ghép nhiều hình.
 
@@ -6,7 +6,7 @@
 
 Tất cả là JPEG progressive **1600×900, tỷ lệ 16:9**. File gốc được giữ tại thư mục generated_images của Codex; bản tối ưu nằm trong dự án.
 
-| Vị trí | File trong public/images/mln201 | Dung lượng |
+| Vị trí | File trong public/images/mln122 | Dung lượng |
 |---|---|---:|
 | Hero — skyline TP.HCM hoàng hôn | hero-hcmc-sunset.jpg | 225.412 byte |
 | Game 1 — tài xế và nền tảng | game-1-driver.jpg | 229.145 byte |
@@ -18,13 +18,13 @@ Tổng dung lượng **973.969 byte**, giảm khoảng **90–91%** so với PNG
 
 Hero theo yêu cầu mới: skyline hoàng hôn, vùng trái tối trầm và thoáng, vùng phải có ánh vàng. Đây là ngoại lệ hoàng hôn so với quy tắc ảnh ban ngày trước đó. Bốn ảnh game dùng phong cách 50mm/F1.8, ánh sáng tự nhiên khoảng 5500K, màu dịu và bóng mềm. Các thông số là mô tả phong cách tạo ảnh AI, không phải thông số máy ảnh đo được. Ảnh không phải tư liệu thực tế của Grab/FPT và không chứa logo hoặc giao diện được ghép vào.
 
-Prompt và chế độ tạo: `qa/VISUAL_IMAGE_PROMPTS_MLN201.md`. Contact sheet `qa/replacement-assets-contact-sheet.jpg` chỉ là bản xem trước asset, **không phải screenshot website**. Năm file dùng trên website vẫn riêng biệt.
+Prompt và chế độ tạo: `qa/VISUAL_IMAGE_PROMPTS_MLN122.md`. Contact sheet `qa/replacement-assets-contact-sheet.jpg` chỉ là bản xem trước asset, **không phải screenshot website**. Năm file dùng trên website vẫn riêng biệt.
 
 ## Tích hợp vào template hiện tại
 
 - `Hero.jsx` dùng skyline mới. Giữ headline, phụ đề, nút, pills và các lớp chuyển sắc. Khung ảnh phủ phần hero, crop bằng object-fit: cover; bỏ nền tranh cũ đang hiển thị. Nội dung HTML vẫn nằm trên các lớp ảnh.
 - `src/content/visualAssets.js` gom năm đường dẫn cục bộ. Không dùng URL ảnh bên ngoài.
-- `mln201.js` gắn đúng ảnh cho bốn tình huống. Chuyển tình huống minh bạch/doanh nghiệp sang số 2, tình huống khách trả thêm sang số 3 để khớp thứ tự người dùng yêu cầu. Giữ các lựa chọn, phản hồi và mức 50/20/0 điểm; đổi phần giới thiệu tình huống 2 sang cuộc thảo luận vận hành trong doanh nghiệp.
+- `mln122.js` gắn đúng ảnh cho bốn tình huống. Chuyển tình huống minh bạch/doanh nghiệp sang số 2, tình huống khách trả thêm sang số 3 để khớp thứ tự người dùng yêu cầu. Giữ các lựa chọn, phản hồi và mức 50/20/0 điểm; đổi phần giới thiệu tình huống 2 sang cuộc thảo luận vận hành trong doanh nghiệp.
 - `GearOfEra.jsx` giữ typewriter, giọng đọc, parallax, chuyển cảnh, replay và khóa cộng điểm. Ảnh có vị trí crop theo cảnh, tăng độ hiện của ảnh ở bước giới thiệu; khi trả lời có blur nhẹ. Khung chữ riêng giữ nền đen 94%, ảnh ở lớp dưới và không nhận pointer event. Nhân vật vẫn trong hai cột riêng.
 - `AIUsagePage.jsx` cập nhật khai báo đúng năm ảnh AI và phạm vi dùng.
 
@@ -55,6 +55,6 @@ Khi chạy `npm run dev`, cần xem hero và từng tình huống ở 1366×768/
 
 ## File thay đổi
 
-17 file triển khai được liệt kê ở `qa/visual-changed-files.json`: năm JPEG; `visualAssets.js`; `Hero.jsx`, `GearOfEra.jsx`, `mln201.js`, `AIUsagePage.jsx`, `index.css`; `Book.jsx`, `BookPage.jsx`, `Experience.jsx`, `framing.js`; `optimize-visual-assets.mjs`; và `tests/interactions.test.jsx`. Các báo cáo và bằng chứng QA cập nhật riêng.
+17 file triển khai được liệt kê ở `qa/visual-changed-files.json`: năm JPEG; `visualAssets.js`; `Hero.jsx`, `GearOfEra.jsx`, `mln122.js`, `AIUsagePage.jsx`, `index.css`; `Book.jsx`, `BookPage.jsx`, `Experience.jsx`, `framing.js`; `optimize-visual-assets.mjs`; và `tests/interactions.test.jsx`. Các báo cáo và bằng chứng QA cập nhật riêng.
 
-Backup source trước đợt thay ảnh: `D:\MLN122\MLN201-before-visual-assets-20261012-150252.zip`. Asset cũ được giữ tại chỗ, website không còn tham chiếu chúng ở năm vị trí này.
+Backup source trước đợt thay ảnh: bản ZIP trong D:\MLN122, mốc 20261012-150252. Asset cũ được giữ tại chỗ, website không còn tham chiếu chúng ở năm vị trí này.

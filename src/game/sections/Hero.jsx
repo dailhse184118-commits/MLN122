@@ -11,7 +11,7 @@ export default function Hero() {
         <span className="hero-image-credit">Minh họa bằng AI · Kinh tế Việt Nam</span>
       </div>
       <div className="hero-v2-content">
-        <div className="hero-v2-badge"><span className="badge-dot">●</span> MLN201 · SLOT 8</div>
+        <div className="hero-v2-badge"><span className="badge-dot">●</span> MLN122 · SLOT 8</div>
         <h1 className="hero-v2-title">
           <span className="hero-v2-title-lg">LỢI ÍCH<br />KINH TẾ</span>
         </h1>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { references } from '../content/mln201';
+import { references } from '../content/mln122';
 
 const SOURCES = [
   { title: references[3].title, type: 'Tài liệu đối chiếu từ đại học', detail: references[3].note, url: references[3].url },
@@ -14,7 +14,7 @@ export const AIUsagePage = () => (
     <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-[#1a120d] to-transparent opacity-50 pointer-events-none" />
     <div className="max-w-[1000px] w-full relative z-10">
       <div className="text-center mb-20 animate-in fade-in slide-in-from-top-4">
-        <span className="section-label text-[#c9922a] mb-4 tracking-[0.2em] block uppercase font-['Outfit'] text-xs font-semibold">PHỤ LỤC · MLN201 · 5.3.1</span>
+        <span className="section-label text-[#c9922a] mb-4 tracking-[0.2em] block uppercase font-['Outfit'] text-xs font-semibold">PHỤ LỤC · MLN122 · 5.3.1</span>
         <h1 className="font-['Playfair_Display'] text-4xl md:text-5xl font-medium tracking-wide mb-6">Nguồn &amp; Minh Bạch Học Thuật</h1>
         <div className="w-24 h-[1px] bg-[#c9922a] mx-auto opacity-40" />
         <p className="mt-6 text-[#a39481] font-['Outfit'] font-light max-w-2xl mx-auto leading-relaxed">Phân biệt giữa kiến thức từ giáo trình, sự kiện được cơ quan chức năng công bố và nhận định học thuật của nhóm trong tình huống Grab – đối tác tài xế.</p>

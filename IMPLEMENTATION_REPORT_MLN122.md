@@ -1,20 +1,20 @@
-# Báo cáo chuyển đổi MLN201 — 12/10/2026
+# Báo cáo chuyển đổi MLN122 — 12/10/2026
 
-Đây là lịch sử đợt chuyển đổi đầu tiên. Bản hiện tại đã được chỉnh tiếp theo yêu cầu mới; xem [REFINEMENT_REPORT_MLN201.md](REFINEMENT_REPORT_MLN201.md) để biết nội dung, file và kiểm thử mới nhất.
+Đây là lịch sử đợt chuyển đổi đầu tiên. Bản hiện tại đã được chỉnh tiếp theo yêu cầu mới; xem [REFINEMENT_REPORT_MLN122.md](REFINEMENT_REPORT_MLN122.md) để biết nội dung, file và kiểm thử mới nhất.
 
 ## Phạm vi và nguồn đầu vào
 
-Đã đọc yêu cầu trong `Pasted text.txt` do người dùng xác định là yêu cầu thực hiện. Các README trong ZIP là tư liệu mô tả bản nguồn, không thay thế yêu cầu đó. Hướng dẫn SDI được cung cấp trong chat không được dùng để chuyển website môn MLN201 thành dự án SDI.
+Đã đọc yêu cầu trong `Pasted text.txt` do người dùng xác định là yêu cầu thực hiện. Các README trong ZIP là tư liệu mô tả bản nguồn, không thay thế yêu cầu đó. Hướng dẫn SDI được cung cấp trong chat không được dùng để chuyển website môn MLN122 thành dự án SDI.
 
 Đã kiểm tra kiến trúc React/Vite, toàn bộ component JSX, luồng `App → GamePage / BookPage / AIUsagePage`, CSS liên quan bố cục, package/lockfile, danh sách tài nguyên và 12 texture. CSS dài của bản gốc được tìm kiếm và đọc theo phần liên quan, không khẳng định đọc từng dòng. Không phân tích từng mesh của các GLB.
 
-Hai ZIP bổ sung `MLN201_Slot8_Changed_Files_Only.zip` và `MLN201_Slot8_Full_Website_Source.zip` khớp theo SHA-256 đối với mọi file có trong nguồn đầy đủ tại thời điểm đối chiếu. Bản thay đổi đã được tích hợp; bản sao các file MLN111 bị thay nằm ở `D:\MLN122\MLN111-before-Slot8.zip`. ZIP gốc người dùng vẫn được giữ.
+Hai ZIP bổ sung (bản file thay đổi và bản nguồn đầy đủ) khớp theo SHA-256 đối với mọi file có trong nguồn đầy đủ tại thời điểm đối chiếu. Bản thay đổi đã được tích hợp; bản sao các file MLN111 bị thay nằm ở `D:\MLN122\MLN111-before-Slot8.zip`. ZIP gốc người dùng vẫn được giữ.
 
 ## Thay đổi chính
 
 - Giữ React 18, Vite 4, Tailwind 3, Jotai, Three.js và cơ chế sách dùng skinned mesh; giữ màu sắc, nền, kiểu chữ, nhân vật, parallax, typewriter, chuyển cảnh, meter và phản hồi của game.
-- Dùng nội dung MLN201 đã có trong ZIP làm nền. `TonTaiXaHoi.jsx` bổ sung giải thích/ví dụ, các quan hệ cơ bản, bốn nhóm chủ thể Grab, nguyên nhân, hệ quả dự kiến, giải pháp kèm bên được bảo vệ và đánh đổi, liên hệ sinh viên FPT/WeDo.
-- `src/content/mln201.js` tập trung nội dung bổ sung, nguồn và bốn tình huống game. Mỗi tình huống có ba lựa chọn: 50 điểm phù hợp, 20 điểm cho góc nhìn chưa đầy đủ, 0 điểm cho phương án sai. Điểm tối đa 200 là điểm học tập, không phải thước đo rủi ro thực tế.
+- Dùng nội dung MLN122 đã có trong ZIP làm nền. `TonTaiXaHoi.jsx` bổ sung giải thích/ví dụ, các quan hệ cơ bản, bốn nhóm chủ thể Grab, nguyên nhân, hệ quả dự kiến, giải pháp kèm bên được bảo vệ và đánh đổi, liên hệ sinh viên FPT/WeDo.
+- `src/content/mln122.js` tập trung nội dung bổ sung, nguồn và bốn tình huống game. Mỗi tình huống có ba lựa chọn: 50 điểm phù hợp, 20 điểm cho góc nhìn chưa đầy đủ, 0 điểm cho phương án sai. Điểm tối đa 200 là điểm học tập, không phải thước đo rủi ro thực tế.
 - `GearOfEra.jsx`: hiển thị điểm, khóa nhấp lặp, reset bằng state, dọn timer, giọng đọc tùy chọn, lựa chọn vẫn hiện nếu không có API giọng đọc; thêm nút bỏ qua đọc. Giữ ba lựa chọn và hiệu ứng của bản nguồn.
 - `QuizGame.jsx`: thay toàn bộ câu hỏi cũ bằng cùng bốn tình huống; tích hợp phần ôn nhanh có thể mở/đóng, bên cạnh trải nghiệm kể chuyện.
 - `Conclusion.jsx`: kết luận và nguồn ngay trên trang thuyết trình. `AIUsagePage.jsx` giữ bố cục bản bổ sung, khai báo đúng việc Codex hỗ trợ và giới hạn kiểm chứng; bỏ nguồn báo chí chưa được đọc đối chiếu.
@@ -62,4 +62,4 @@ Cần nhóm/giảng viên đối chiếu trước thuyết trình: định nghĩ
 
 ## Kiểm thử và giới hạn
 
-Chi tiết tại [TESTING_REPORT_MLN201.md](TESTING_REPORT_MLN201.md). Build và kiểm thử logic thành công. Chưa thể xác nhận website sẵn sàng trình chiếu hoàn toàn vì chưa thực hiện kiểm thử trực quan trình duyệt và đối chiếu toàn văn giáo trình.
+Chi tiết tại [TESTING_REPORT_MLN122.md](TESTING_REPORT_MLN122.md). Build và kiểm thử logic thành công. Chưa thể xác nhận website sẵn sàng trình chiếu hoàn toàn vì chưa thực hiện kiểm thử trực quan trình duyệt và đối chiếu toàn văn giáo trình.

@@ -104,7 +104,7 @@ function generate(page, index) {
   }
   if (y > 1850) throw new Error(`Text overflows ${page.face}: ${Math.round(y)}`);
   ctx.strokeStyle = '#b38c5c'; ctx.beginPath(); ctx.moveTo(112, 1890); ctx.lineTo(1424, 1890); ctx.stroke();
-  ctx.fillStyle = '#6b5549'; ctx.font = '26px BookSans'; ctx.fillText('MLN201 · SLOT 8 · CHƯƠNG 5 · MỤC 5.3.1', 112, 1940);
+  ctx.fillStyle = '#6b5549'; ctx.font = '26px BookSans'; ctx.fillText('MLN122 · SLOT 8 · CHƯƠNG 5 · MỤC 5.3.1', 112, 1940);
   ctx.textAlign = 'right'; ctx.font = 'bold 42px BookSerif'; ctx.fillStyle = '#79272c'; ctx.fillText(String(index + 1).padStart(2, '0'), 1424, 1940);
   writeFileSync(`public/textures/${page.face}.png`, canvas.toBuffer('image/png'));
   return { face: page.face, width: 1536, height: 2048, bodyFont: fontSize, contentBottom: Math.round(y) };

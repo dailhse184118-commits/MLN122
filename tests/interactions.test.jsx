@@ -12,7 +12,7 @@ import Conclusion from '../src/game/sections/Conclusion';
 import Hero from '../src/game/sections/Hero';
 import { AIUsagePage } from '../src/ai-usage/AIUsagePage';
 import { UI, pages, pageAtom } from '../src/book/UI';
-import { scenarios } from '../src/content/mln201';
+import { scenarios } from '../src/content/mln122';
 import ExpandCard from '../src/components/ExpandCard';
 import Navbar from '../src/game/sections/Navbar';
 import { quizQuestions, createQuiz, createScenarioRun } from '../src/content/quiz';

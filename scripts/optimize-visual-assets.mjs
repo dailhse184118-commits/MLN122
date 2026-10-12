@@ -9,7 +9,7 @@ const assets = [
   ['game-3-customer', 'exec-e21e5eca-87a4-4f31-b050-0170cf252a2f.png'],
   ['game-4-student-startup', 'exec-a78c08ef-d7ce-4592-acae-6c533f0a16bf.png'],
 ];
-mkdirSync('public/images/mln201', { recursive: true });
+mkdirSync('public/images/mln122', { recursive: true });
 const records = [];
 for (const [name, file] of assets) {
   const original = `${generated}/${file}`;
@@ -20,7 +20,7 @@ for (const [name, file] of assets) {
   const sx = (img.width - cropWidth) / 2, sy = (img.height - cropHeight) / 2;
   const canvas = createCanvas(1600, 900), ctx = canvas.getContext('2d');
   ctx.drawImage(img, sx, sy, cropWidth, cropHeight, 0, 0, 1600, 900);
-  const output = `public/images/mln201/${name}.jpg`;
+  const output = `public/images/mln122/${name}.jpg`;
   writeFileSync(output, canvas.toBuffer('image/jpeg', { quality: .86, progressive: true, chromaSubsampling: true }));
   const decoded = await loadImage(output);
   if (decoded.width !== 1600 || decoded.height !== 900) throw new Error(`Invalid asset dimensions: ${name}`);

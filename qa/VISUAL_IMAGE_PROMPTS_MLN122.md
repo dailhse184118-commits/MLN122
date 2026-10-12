@@ -1,4 +1,4 @@
-# Prompt bộ ảnh thay thế MLN201
+# Prompt bộ ảnh thay thế MLN122
 
 Chế độ: built-in image_gen, năm lần tạo riêng, transparent_background=false. Ba infographic chỉ làm visual references. Bản JPEG được tối ưu riêng về định dạng/kích thước, không ghép giao diện vào ảnh.
 

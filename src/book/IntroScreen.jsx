@@ -25,7 +25,7 @@ export const IntroScreen = ({ onEnter }) => {
           className="text-[#C5272D] font-semibold tracking-[0.2em] uppercase text-xs mb-6 opacity-0 animate-[fadeIn_1s_ease_0.5s_forwards]"
           style={{ fontFamily: "'Outfit', sans-serif" }}
         >
-          Học phần: Kinh tế chính trị Mác – Lênin · MLN201
+          Học phần: Kinh tế chính trị Mác – Lênin · MLN122
         </p>
 
         <h1

@@ -1,0 +1,90 @@
+{
+  "courseCode": "MLN122",
+  "textureChecks": [
+    {
+      "texture": "46_Page_1.png",
+      "changedPixels": 500,
+      "minY": 1921,
+      "maxY": 1940,
+      "allPixelsOutsideCourseLabelsUnchanged": true
+    },
+    {
+      "texture": "46_Page_2.png",
+      "changedPixels": 500,
+      "minY": 1921,
+      "maxY": 1940,
+      "allPixelsOutsideCourseLabelsUnchanged": true
+    },
+    {
+      "texture": "47_Page_1.png",
+      "changedPixels": 500,
+      "minY": 1921,
+      "maxY": 1940,
+      "allPixelsOutsideCourseLabelsUnchanged": true
+    },
+    {
+      "texture": "47_Page_2.png",
+      "changedPixels": 500,
+      "minY": 1921,
+      "maxY": 1940,
+      "allPixelsOutsideCourseLabelsUnchanged": true
+    },
+    {
+      "texture": "48_Page_1.png",
+      "changedPixels": 500,
+      "minY": 1921,
+      "maxY": 1940,
+      "allPixelsOutsideCourseLabelsUnchanged": true
+    },
+    {
+      "texture": "48_Page_2.png",
+      "changedPixels": 500,
+      "minY": 1921,
+      "maxY": 1940,
+      "allPixelsOutsideCourseLabelsUnchanged": true
+    },
+    {
+      "texture": "Close 1.png",
+      "changedPixels": 500,
+      "minY": 1921,
+      "maxY": 1940,
+      "allPixelsOutsideCourseLabelsUnchanged": true
+    },
+    {
+      "texture": "Close 2.png",
+      "changedPixels": 500,
+      "minY": 1921,
+      "maxY": 1940,
+      "allPixelsOutsideCourseLabelsUnchanged": true
+    },
+    {
+      "texture": "Coverpage_close.png",
+      "changedPixels": 11571,
+      "minY": 1634,
+      "maxY": 1668,
+      "allPixelsOutsideCourseLabelsUnchanged": true
+    },
+    {
+      "texture": "Coverpage_open.png",
+      "changedPixels": 1237,
+      "minY": 199,
+      "maxY": 1780,
+      "allPixelsOutsideCourseLabelsUnchanged": true
+    },
+    {
+      "texture": "Open 1.png",
+      "changedPixels": 500,
+      "minY": 1921,
+      "maxY": 1940,
+      "allPixelsOutsideCourseLabelsUnchanged": true
+    },
+    {
+      "texture": "Open 2.png",
+      "changedPixels": 500,
+      "minY": 1921,
+      "maxY": 1940,
+      "allPixelsOutsideCourseLabelsUnchanged": true
+    }
+  ],
+  "allFivePhotosUnchanged": true
+}

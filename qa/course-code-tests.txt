@@ -1,0 +1,29 @@
+
+> r3f-vite-starter@1.0.0 test
+> node scripts/run-tests.mjs
+
+✔ Narrative game: all correct, progression, feedback, duplicate-click lock, restart (46.4421ms)
+✔ Narrative game: all incorrect, progression, feedback, duplicate-click lock, restart (25.6116ms)
+✔ Narrative game: partial credit, progression, feedback, duplicate-click lock, restart (19.6286ms)
+✔ Game choices work when speech APIs are unavailable; typewriter finishes (10.6908ms)
+✔ Quiz scores once despite stale repeated clicks, explains every selection, completes and resets (5.4777ms)
+✔ 3D book navigation: six sheets, twelve existing textures, correct boundaries (10.0107ms)
+✔ Academic coverage, source boundaries and no old topic in rendered content (70.5495ms)
+✔ Quiz incorrect answers use their own explanations and award zero points (2.2753ms)
+✔ Expandable explanations expose state and hide closed content (0.7796ms)
+✔ Navbar switches from book to specific content, and book/source tabs (1.4633ms)
+✔ Navbar scroll tracking follows nested theory, solutions and student sections (1.2141ms)
+✔ Randomized answers reach all positions without changing correctness or explanation (0.7505ms)
+✔ Narrative mixed choices produce exact score and accurate final choice history (14.5914ms)
+✔ Hypothetical fare balances money and labels fee revenue separately from profit (1.1673ms)
+✔ Book cover-to-cover face order and responsive framing are consistent (0.85ms)
+✔ Five distinct local image assets map to the intended hero and four scenarios (0.8047ms)
+✔ Book enlarged reader navigates all twelve faces, closes and restores scroll state (3.771ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 409.4787

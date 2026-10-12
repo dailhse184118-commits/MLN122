@@ -1,4 +1,6 @@
-# MLN201 — Website thuyết trình Slot 8
+# MLN122 — Website thuyết trình Slot 8
+
+Mã học phần đã được thống nhất thành MLN122 trong website và sách. Xem [kết quả kiểm tra sau khi cập nhật mã học phần](COURSE_CODE_UPDATE_MLN122.md).
 
 Website React/Vite về **lợi ích kinh tế và quan hệ lợi ích kinh tế**, Chương 5, mục 5.3.1. Có lý luận, tình huống Grab Việt Nam, giải pháp, liên hệ sinh viên, quiz/game và sách 3D sáu lá/mười hai mặt.
 
@@ -29,9 +31,9 @@ Tài liệu chính thức: [Vite trên Vercel](https://vercel.com/docs/framework
 
 ## Tài liệu và giới hạn kiểm chứng
 
-- [Hướng dẫn sử dụng](README_MLN201.md)
-- [Báo cáo nội dung và tương tác](REFINEMENT_REPORT_MLN201.md)
-- [Báo cáo bộ ảnh mới](VISUAL_ASSETS_REPORT_MLN201.md)
+- [Hướng dẫn sử dụng](README_MLN122.md)
+- [Báo cáo nội dung và tương tác](REFINEMENT_REPORT_MLN122.md)
+- [Báo cáo bộ ảnh mới](VISUAL_ASSETS_REPORT_MLN122.md)
 
 Các ảnh mới là ảnh AI minh họa, không phải ảnh tư liệu của Grab/FPT. Sách là tóm tắt học tập do sinh viên biên soạn. Phép tính trong bài là giả định; thông báo rà soát không phải kết luận vi phạm. Xem phần Nguồn & AI trong website.
 
