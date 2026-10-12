@@ -2,30 +2,30 @@
 > r3f-vite-starter@1.0.0 test
 > node scripts/run-tests.mjs
 
-✔ Every learning spread has its own illustration in normal reading and additional 3D mode (29.2208ms)
-✔ Procedural objects and book bounds fit five viewport cameras and occupy separate reading regions (120.5312ms)
-✔ Front and back covers stay in frame throughout the 360 degree orbit (3.1914ms)
-✔ 3D View starts substantially closer and permits a further close-up while retaining overview and 360 orbit (0.4024ms)
-✔ Narrative game: all correct, progression, feedback, duplicate-click lock, restart (42.0458ms)
-✔ Narrative game: all incorrect, progression, feedback, duplicate-click lock, restart (27.0132ms)
-✔ Narrative game: partial credit, progression, feedback, duplicate-click lock, restart (23.2387ms)
-✔ Game choices work when speech APIs are unavailable; typewriter finishes (11.8136ms)
-✔ Quiz scores once despite stale repeated clicks, explains every selection, completes and resets (5.1589ms)
-✔ 3D book navigation: six sheets, twelve existing textures, correct boundaries (14.3803ms)
-✔ Academic coverage, source boundaries and no old topic in rendered content (33.683ms)
-✔ Quiz incorrect answers use their own explanations and award zero points (2.803ms)
-✔ Expandable explanations expose state and hide closed content (0.8162ms)
-✔ Navbar switches from book to specific content, and book/source tabs (1.9794ms)
-✔ Navbar scroll tracking follows nested theory, solutions and student sections (2.5141ms)
-✔ Randomized answers reach all positions without changing correctness or explanation (0.8069ms)
-✔ Narrative mixed choices produce exact score and accurate final choice history (21.1946ms)
-✔ Hypothetical fare balances money and labels fee revenue separately from profit (1.1035ms)
-✔ Book cover-to-cover face order and responsive framing are consistent (0.6032ms)
-✔ Five distinct local image assets map to the intended hero and four scenarios (0.823ms)
-✔ Book enlarged reader navigates all twelve faces, closes and restores scroll state (4.9285ms)
-✔ Book 3D toggle and enlarged-reader keyboard preserve page state (2.9975ms)
-✔ Book sparkle bursts replay on fast page turns, settle, and keep ambient sparkles in 3D View (2.0348ms)
-✔ Reduced-motion preference suppresses book sparkles in both modes (0.549ms)
+✔ Every learning spread has its own illustration in normal reading and additional 3D mode (54.8224ms)
+✔ Procedural objects and book bounds fit five viewport cameras and occupy separate reading regions (211.4568ms)
+✔ Front and back covers stay in frame throughout the 360 degree orbit (3.8902ms)
+✔ 3D View starts substantially closer and permits a further close-up while retaining overview and 360 orbit (0.7485ms)
+✔ Narrative game: all correct, progression, feedback, duplicate-click lock, restart (62.5173ms)
+✔ Narrative game: all incorrect, progression, feedback, duplicate-click lock, restart (76.2777ms)
+✔ Narrative game: partial credit, progression, feedback, duplicate-click lock, restart (46.1288ms)
+✔ Game choices work when speech APIs are unavailable; typewriter finishes (19.2546ms)
+✔ Quiz scores once despite stale repeated clicks, explains every selection, completes and resets (8.1305ms)
+✔ 3D book navigation: six sheets, twelve existing textures, correct boundaries (19.1983ms)
+✔ Academic coverage, source boundaries and no old topic in rendered content (54.2483ms)
+✔ Quiz incorrect answers use their own explanations and award zero points (4.1039ms)
+✔ Expandable explanations expose state and hide closed content (2.565ms)
+✔ Navbar switches from book to specific content, and book/source tabs (3.0743ms)
+✔ Navbar scroll tracking follows nested theory, solutions and student sections (2.1738ms)
+✔ Randomized answers reach all positions without changing correctness or explanation (1.0584ms)
+✔ Narrative mixed choices produce exact score and accurate final choice history (20.8293ms)
+✔ Hypothetical fare balances money and labels fee revenue separately from profit (1.975ms)
+✔ Book cover-to-cover face order and responsive framing are consistent (0.9638ms)
+✔ Five distinct local image assets map to the intended hero and four scenarios (1.6681ms)
+✔ Book enlarged reader navigates all twelve faces, closes and restores scroll state (4.5992ms)
+✔ Book 3D toggle and enlarged-reader keyboard preserve page state (2.7493ms)
+✔ Book sparkle bursts replay on fast page turns, settle, and keep ambient sparkles in 3D View (1.7258ms)
+✔ Reduced-motion preference suppresses book sparkles in both modes (0.565ms)
 ℹ tests 24
 ℹ suites 0
 ℹ pass 24
@@ -33,4 +33,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 350.7954
+ℹ duration_ms 512.4746

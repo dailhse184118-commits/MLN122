@@ -2,10 +2,10 @@
 :root {
   --font-body: 'Be Vietnam Pro', Arial, sans-serif;
   --font-heading: 'Noto Serif', Georgia, 'Times New Roman', serif;
-  --body-size: clamp(16.5px, calc(.9vw + 6.2px), 21.5px);
+  --body-size: clamp(16.5px, calc(.86vw + 5.9px), 20.5px);
   --caption-size: clamp(16px, calc(.33vw + 11.3px), 19px);
-  --card-title-size: clamp(20px, calc(.6vw + 11.8px), 24px);
-  --section-title-size: clamp(34px, calc(2.1vw + 11px), 49px);
+  --card-title-size: clamp(19px, calc(.57vw + 11.2px), 23px);
+  --section-title-size: clamp(32.5px, calc(1.99vw + 10.5px), 46.5px);
   --game-question-size: clamp(26px, calc(1.3vw + 8.8px), 34px);
   --game-answer-size: clamp(19.5px, calc(.64vw + 10.6px), 22.5px);
   --nav-clearance: 100px;
@@ -24,7 +24,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .section-header p { font-size: var(--body-size); max-width: 960px; line-height: 1.7; margin-top: 20px; }
 .section-label, .mln-source-note, .hero-image-credit { font-size: var(--caption-size); line-height: 1.65; }
 .section-label { letter-spacing: .075em; color: #8b6029; }
-.mln-subheading, .def-box h3, .fare-example figcaption h3 { font-size: clamp(24px, 1.88vw, 32px); line-height: 1.45; }
+.mln-subheading, .def-box h3, .fare-example figcaption h3 { font-size: clamp(23px, 1.79vw, 30.5px); line-height: 1.45; }
 .def-box p, .icon-card p, .fare-example p, .fare-takeaway, .exp-card-summary, .exp-card-body p, .exp-card-body ul { font-size: var(--body-size); line-height: 1.7; }
 .def-box p + p, .exp-card-body p + p { margin-top: 18px; }
 .def-box { padding: 28px 32px; }

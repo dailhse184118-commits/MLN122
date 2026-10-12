@@ -33,16 +33,16 @@ Giới hạn: cmap và shaping Skia đã được kiểm tra; chưa xác nhận 
 
 ## 3. Cỡ chữ trước và sau
 
-Theo phản hồi tiếp theo của người dùng, chữ giao diện đã giảm theo ba lượt: khoảng 10%, 5–7%, rồi thêm khoảng 5%. Nội dung và texture sách đã được người dùng chấp nhận, được giữ nguyên trong lượt khôi phục hiệu ứng và xoay 360°. Các giá trị hiện tại dưới đây tính từ CSS ở zoom 100%, root 16px; không phải số đo từ browser. Hai số sau lần lượt là tại 1366px và 1920px chiều rộng.
+Theo các phản hồi tiếp theo của người dùng, chữ giao diện đã giảm khoảng 10%, 5–7%, rồi khoảng 5%; lượt cuối giảm thêm khoảng 5% tiêu đề và nội dung desktop theo ảnh phần Grab. Nội dung và texture sách đã được người dùng chấp nhận, được giữ nguyên trong lượt khôi phục hiệu ứng và xoay 360°. Các giá trị hiện tại dưới đây tính từ CSS ở zoom 100%, root 16px; không phải số đo từ browser. Hai số sau lần lượt là tại 1366px và 1920px chiều rộng.
 
 | Thành phần | Trước | Sau |
 |---|---:|---:|
 | Hero headline | 82 / 88px | 72 / 89px |
-| Heading section | 44,8px | 39,7 / 49px |
-| Tiêu đề feature card | 18,4px | 20 / 23,3px |
-| Nội dung feature card | 15,2px | 18,5 / 21,5px |
-| Tiêu đề accordion | 16,8px | 20 / 23,3px |
-| Nội dung accordion | khoảng 16px | 18,5 / 21,5px |
+| Heading section | 44,8px | 37,7 / 46,5px |
+| Tiêu đề feature card | 18,4px | 19 / 22,1px |
+| Nội dung feature card | 15,2px | 17,6 / 20,5px |
+| Tiêu đề accordion | 16,8px | 19 / 22,1px |
+| Nội dung accordion | khoảng 16px | 17,6 / 20,5px |
 | Câu hỏi game kể chuyện | 24,6 / 25px | 26,6 / 33,8px |
 | Lựa chọn game kể chuyện | 15,7 / 18px | 19,5 / 22,5px |
 | Câu hỏi quiz | 25,6px | 26,6 / 33,8px |
