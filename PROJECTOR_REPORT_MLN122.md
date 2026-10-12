@@ -33,26 +33,26 @@ Giới hạn: cmap và shaping Skia đã được kiểm tra; chưa xác nhận 
 
 ## 3. Cỡ chữ trước và sau
 
-Các giá trị dưới đây tính từ CSS ở zoom 100%, root 16px; không phải số đo từ browser. Hai số sau lần lượt là tại 1366px và 1920px chiều rộng.
+Theo phản hồi tiếp theo của người dùng, chữ giao diện đã giảm khoảng 10% so với đợt tối ưu trình chiếu đầu tiên. Các giá trị hiện tại dưới đây tính từ CSS ở zoom 100%, root 16px; không phải số đo từ browser. Hai số sau lần lượt là tại 1366px và 1920px chiều rộng.
 
 | Thành phần | Trước | Sau |
 |---|---:|---:|
-| Hero headline | 82 / 88px | 88 / 112px |
-| Heading section | 44,8px | 50,5 / 64px |
-| Tiêu đề feature card | 18,4px | 25,2 / 29,4px |
-| Nội dung feature card | 15,2px | 23 / 26px |
-| Tiêu đề accordion | 16,8px | 25,2 / 29,4px |
-| Nội dung accordion | khoảng 16px | 23 / 26px |
-| Câu hỏi game kể chuyện | 24,6 / 25px | 33,9 / 42px |
-| Lựa chọn game kể chuyện | 15,7 / 18px | 24,9 / 28px |
-| Câu hỏi quiz | 25,6px | 33,9 / 42px |
-| Lựa chọn quiz | 15,2px | 24,9 / 28px |
+| Hero headline | 82 / 88px | 80 / 100px |
+| Heading section | 44,8px | 45,1 / 56px |
+| Tiêu đề feature card | 18,4px | 22,3 / 26,1px |
+| Nội dung feature card | 15,2px | 20,7 / 24px |
+| Tiêu đề accordion | 16,8px | 22,3 / 26,1px |
+| Nội dung accordion | khoảng 16px | 20,7 / 24px |
+| Câu hỏi game kể chuyện | 24,6 / 25px | 29,8 / 37,8px |
+| Lựa chọn game kể chuyện | 15,7 / 18px | 22 / 25px |
+| Câu hỏi quiz | 25,6px | 29,8 / 37,8px |
+| Lựa chọn quiz | 15,2px | 22 / 25px |
 | Chú thích nguồn chính | 13,6px | 17 / 18,7px |
 | Navigation | 12px | 15 / 16,5px |
 | Navigation sách | 11px | 16px |
-| Heading reader | 19,2px | 28px |
+| Heading reader | 19,2px | 25px |
 
-Body line-height 1,7; heading 1,4; câu hỏi game 1,5 và đáp án 1,55. Card tự tăng chiều cao; grid giảm số cột khi cần. Màn hình nhỏ dùng body 18–20px, không giữ nguyên desktop size rồi ép nội dung vào khung cố định.
+Body line-height 1,7; heading 1,4; câu hỏi game 1,5 và đáp án 1,55. Card tự tăng chiều cao; grid giảm số cột khi cần. Màn hình nhỏ dùng body 18–19px, không giữ nguyên desktop size rồi ép nội dung vào khung cố định.
 
 Trong texture 1536×2048: body tăng từ 64px lên 96px với trang ba mục, từ 51px lên 92px với trang bốn mục; tiêu đề trang tăng 82px → 100px. Đây là pixel trong ảnh texture, không phải kích thước chữ CSS khi sách được chiếu lên màn hình.
 

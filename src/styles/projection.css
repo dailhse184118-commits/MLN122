@@ -2,12 +2,12 @@
 :root {
   --font-body: 'Be Vietnam Pro', Arial, sans-serif;
   --font-heading: 'Noto Serif', Georgia, 'Times New Roman', serif;
-  --body-size: clamp(20px, calc(1.1vw + 8px), 26px);
+  --body-size: clamp(18px, calc(1vw + 7px), 24px);
   --caption-size: clamp(17px, calc(.35vw + 12px), 20px);
-  --card-title-size: clamp(25px, calc(.75vw + 15px), 30px);
-  --section-title-size: clamp(42px, calc(2.6vw + 15px), 64px);
-  --game-question-size: clamp(32px, calc(1.6vw + 12px), 42px);
-  --game-answer-size: clamp(24px, calc(.8vw + 14px), 28px);
+  --card-title-size: clamp(22px, calc(.68vw + 13px), 27px);
+  --section-title-size: clamp(38px, calc(2.35vw + 13px), 56px);
+  --game-question-size: clamp(29px, calc(1.45vw + 10px), 38px);
+  --game-answer-size: clamp(22px, calc(.72vw + 12px), 25px);
   --nav-clearance: 100px;
   --text-muted: #51453d;
 }
@@ -24,7 +24,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .section-header p { font-size: var(--body-size); max-width: 960px; line-height: 1.7; margin-top: 20px; }
 .section-label, .mln-source-note, .hero-image-credit { font-size: var(--caption-size); line-height: 1.65; }
 .section-label { letter-spacing: .075em; color: #8b6029; }
-.mln-subheading, .def-box h3, .fare-example figcaption h3 { font-size: clamp(30px, 2.3vw, 40px); line-height: 1.45; }
+.mln-subheading, .def-box h3, .fare-example figcaption h3 { font-size: clamp(27px, 2.1vw, 36px); line-height: 1.45; }
 .def-box p, .icon-card p, .fare-example p, .fare-takeaway, .exp-card-summary, .exp-card-body p, .exp-card-body ul { font-size: var(--body-size); line-height: 1.7; }
 .def-box p + p, .exp-card-body p + p { margin-top: 18px; }
 .def-box { padding: 28px 32px; }
@@ -32,11 +32,11 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .card-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .feature-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 24px; align-items: stretch; }
 .feature-card { padding: 28px 30px; }
-.feature-card h4 { font-size: var(--card-title-size); line-height: 1.45; padding-right: 64px; min-height: 76px; }
+.feature-card h4 { font-size: var(--card-title-size); line-height: 1.45; padding-right: 64px; min-height: 68px; }
 .feature-card p { font-size: var(--body-size); line-height: 1.7; }
 .feature-card > .fc-num + p { padding-right: 64px; }
 .feature-card .fc-num { top: 24px; right: 24px; font-size: 52px; line-height: 1.3; }
-.exp-card-header { width: 100%; min-height: 100px; padding: 22px 26px; gap: 14px; text-align: left; }
+.exp-card-header { width: 100%; min-height: 90px; padding: 22px 26px; gap: 14px; text-align: left; }
 .exp-card-title { font-family: var(--font-heading); font-size: var(--card-title-size); line-height: 1.5; letter-spacing: 0; overflow-wrap: break-word; }
 .exp-card-hint { font-size: var(--caption-size); opacity: 1; text-transform: none; letter-spacing: 0; }
 .exp-card-summary { padding: 0 26px 24px; }
@@ -46,7 +46,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .dialectic-side { padding: 30px 26px; min-width: 0; }
 .dialectic-side h4 { font-size: var(--card-title-size); line-height: 1.5; }
 .dialectic-side p { font-size: var(--caption-size); }
-.dialectic-mid { writing-mode: horizontal-tb; width: auto; flex: 0 1 230px; padding: 24px; font-size: 24px; line-height: 1.5; text-align: center; color: #211811; }
+.dialectic-mid { writing-mode: horizontal-tb; width: auto; flex: 0 1 230px; padding: 24px; font-size: 22px; line-height: 1.5; text-align: center; color: #211811; }
 .ri-item { padding: 24px; gap: 24px; font-size: var(--body-size); }
 .ri-item p { font-size: var(--caption-size); margin-top: 12px; color: #51453d; }
 .ri-num { font-size: 36px; flex: 0 0 50px; color: #92713f; }
@@ -61,11 +61,11 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .nav-mode-book .navbar-nav a { color: #4a3c33 !important; }
 
 .hero-v2-content { max-width: 860px; width: min(65%, 860px); padding: calc(var(--nav-clearance) + 36px) 32px 52px clamp(40px, 6vw, 112px); }
-.hero-v2-title-lg { font-size: clamp(88px, 5.85vw, 112px); line-height: 1.28; letter-spacing: -.025em; padding: 4px 0; }
+.hero-v2-title-lg { font-size: clamp(80px, 5.25vw, 100px); line-height: 1.28; letter-spacing: -.025em; padding: 4px 0; }
 .hero-v2-badge { font-size: var(--caption-size); letter-spacing: .07em; color: #f3e8db; margin-bottom: 18px; }
-.hero-v2-subtitle { font-size: clamp(23px, 1.6vw, 28px); line-height: 1.6; color: #f2dba9; letter-spacing: 0; max-width: 720px; }
-.hero-v2-desc { font-size: clamp(20px, 1.25vw, 24px); line-height: 1.65; color: #f4eee7; max-width: 740px; }
-.hero-v2-btn { font-size: 20px; line-height: 1.5; padding: 16px 24px; }
+.hero-v2-subtitle { font-size: clamp(21px, 1.45vw, 25px); line-height: 1.6; color: #f2dba9; letter-spacing: 0; max-width: 720px; }
+.hero-v2-desc { font-size: clamp(18px, 1.15vw, 22px); line-height: 1.65; color: #f4eee7; max-width: 740px; }
+.hero-v2-btn { font-size: 18px; line-height: 1.5; padding: 16px 24px; }
 .hero-v2-pill { font-size: 17px; }
 .hero-v2-actions { flex-wrap: wrap; }
 .hero-v2-portrait { object-position: 68% center; }
@@ -75,15 +75,15 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .fare-flow { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
 .fare-flow li { padding: 18px 14px; gap: 10px; }
 .fare-flow li > span:not(.fare-arrow), .fare-flow small { font-size: var(--caption-size); line-height: 1.6; }
-.fare-flow strong { font-size: clamp(30px, 2.1vw, 40px); }
+.fare-flow strong { font-size: clamp(28px, 1.9vw, 36px); }
 .quiz-container { max-width: 1160px; overflow: visible; margin: 24px auto; padding: 32px; }
 .quiz-question-box h3 { font-size: var(--game-question-size); line-height: 1.55; }
 .option-card { font-size: var(--game-answer-size); padding: 20px 24px; line-height: 1.6; }
 .option-label { width: 42px; height: 42px; }
 .quiz-progress { font-size: var(--caption-size); }
 .explanation, .result-score { font-size: var(--body-size); line-height: 1.7; }
-.result-rank { font-size: 32px; }
-.quiz-btn { font-size: 22px; }
+.result-rank { font-size: 29px; }
+.quiz-btn { font-size: 20px; }
 
 .balance-game { min-height: 100svh; }
 .balance-content { padding: 100px 28px 36px; }
@@ -96,7 +96,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .balance-character { height: clamp(260px, 45svh, 450px); }
 .balance-context { padding: 38px 28px; }
 .balance-context h2, .balance-result h2 { font-size: var(--section-title-size); line-height: 1.4; }
-.balance-rules h2 { font-size: clamp(32px, 3vw, 48px); line-height: 1.4; }
+.balance-rules h2 { font-size: clamp(29px, 2.7vw, 43px); line-height: 1.4; }
 .balance-rules p { font-size: var(--body-size); line-height: 1.7; }
 .balance-context p, .balance-result p, .balance-rules-score, .balance-history li { font-size: var(--body-size); line-height: 1.65; }
 .balance-score { font-size: var(--caption-size); top: 24px; right: 90px; }
@@ -107,14 +107,14 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 
 .book-page-shell { height: 100svh; padding-top: var(--book-top-clearance, calc(var(--nav-clearance) + 76px)); padding-bottom: 104px; }
 .book-header { padding-top: calc(var(--nav-clearance) + 8px); padding-left: 24px; padding-right: 24px; align-items: flex-start; }
-.book-header h1 { font-size: 24px; line-height: 1.4; }
+.book-header h1 { font-size: 22px; line-height: 1.4; }
 .book-topic, .book-chapter { font-size: 17px; line-height: 1.5; color: #51453d; letter-spacing: .02em; }
 .book-summary-note { font-size: 17px; max-width: 740px; line-height: 1.55; color: #51453d; }
 .book-intro > .relative { max-width: 1080px; }
-.book-intro h1 { font-size: clamp(48px, 3.8vw, 72px); }
+.book-intro h1 { font-size: clamp(44px, 3.4vw, 65px); }
 .book-intro p { font-size: var(--body-size); line-height: 1.7; color: #51453d; max-width: 860px; }
 .book-intro > .relative > p:first-child, .book-intro > .absolute p { font-size: var(--caption-size); }
-.book-intro button { font-size: 20px; }
+.book-intro button { font-size: 18px; }
 .book-footer { gap: 8px; padding: 0 20px 8px; }
 .book-footer .book-summary-note { max-width: 1200px; text-align: center; }
 .book-nav > div { min-width: 0; max-width: 100%; }
@@ -125,13 +125,13 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .book-view-actions { bottom: 112px; }
 .book-reader { padding: 20px 28px; }
 .book-reader-toolbar { top: -20px; padding: 12px 0; }
-.book-reader-toolbar h2 { font-size: 28px; }
+.book-reader-toolbar h2 { font-size: 25px; }
 .book-reader button { font-size: 18px; }
 .book-reader-pages { max-width: 1680px; gap: 24px; margin-top: 20px; }
 
 .ai-usage-page { font-family: var(--font-body); padding-top: calc(var(--nav-clearance) + 40px); }
 .ai-usage-page h1 { font-size: var(--section-title-size); }
-.ai-usage-page h2 { font-size: 36px; line-height: 1.45; }
+.ai-usage-page h2 { font-size: 32px; line-height: 1.45; }
 .ai-usage-page h3 { font-size: var(--card-title-size); line-height: 1.5; }
 .ai-usage-page p, .ai-usage-page a { font-size: var(--body-size); color: #eee2d3; line-height: 1.75; }
 .ai-usage-page span { font-size: var(--caption-size); }
@@ -147,7 +147,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
   .book-header .page-eyebrow { max-width: 390px; }
 }
 @media (max-width: 900px) {
-  :root { --body-size: 20px; --card-title-size: 25px; --game-question-size: 29px; --game-answer-size: 22px; }
+  :root { --body-size: 19px; --card-title-size: 23px; --game-question-size: 27px; --game-answer-size: 20px; }
   .card-grid-2, .mln-comparison { grid-template-columns: minmax(0, 1fr); }
   .dialectic-wrapper { flex-direction: column; }
   .dialectic-mid { width: 100%; flex: auto; min-height: 64px; padding: 18px; }
@@ -157,18 +157,18 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
   .book-header .page-eyebrow { display: none; }
   .book-page-shell { padding-top: var(--book-top-clearance, calc(var(--nav-clearance) + 76px)); }
   .hero-v2-content { width: 100%; max-width: 780px; }
-  .hero-v2-title-lg { font-size: clamp(62px, 9vw, 88px); }
+  .hero-v2-title-lg { font-size: clamp(56px, 8.2vw, 80px); }
   .hero-v2-portrait { object-position: 65% center; }
 }
 @media (max-width: 650px) {
-  :root { --body-size: 18px; --caption-size: 16px; --card-title-size: 23px; --section-title-size: 36px; --game-question-size: 26px; --game-answer-size: 20px; }
+  :root { --body-size: 18px; --caption-size: 16px; --card-title-size: 22px; --section-title-size: 34px; --game-question-size: 25px; --game-answer-size: 19px; }
   .page-section { padding: 44px 18px; }
   .navbar-theory { width: calc(100% - 20px); padding: 7px 12px; gap: 12px; }
   .navbar-brand { font-size: 14px; max-width: 100px; }
   .navbar-nav a { font-size: 15px; }
   .hero-v2-content { padding: calc(var(--nav-clearance) + 24px) 22px 36px; }
-  .hero-v2-title-lg { font-size: 58px; }
-  .hero-v2-subtitle { font-size: 22px; }
+  .hero-v2-title-lg { font-size: 54px; }
+  .hero-v2-subtitle { font-size: 20px; }
   .hero-v2-desc, .hero-v2-btn { font-size: 18px; }
   .hero-v2-pill { font-size: 16px; }
   .hero-image-credit { right: 16px; bottom: 12px; font-size: 14px; }
@@ -194,7 +194,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
   .balance-choices button { padding: 16px; }
   .balance-score { top: 24px; right: 76px; font-size: 16px; }
   .book-header { padding-left: 18px; padding-right: 18px; }
-  .book-header h1 { font-size: 21px; }
+  .book-header h1 { font-size: 20px; }
   .book-topic { font-size: 16px; }
   .book-footer .book-summary-note { font-size: 14px; }
   .book-page-shell { padding-bottom: 220px; }
@@ -203,7 +203,7 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
   .book-view-actions { right: 16px; bottom: 164px; }
   .book-reader { padding: 16px; }
   .book-reader-toolbar { top: -16px; }
-  .book-reader-toolbar h2 { font-size: 24px; }
+  .book-reader-toolbar h2 { font-size: 22px; }
   .book-reader-pages { grid-template-columns: minmax(0, 1fr); }
   .ri-item { flex-direction: column; gap: 8px; }
   .ri-num { flex-basis: auto; }

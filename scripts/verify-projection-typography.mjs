@@ -35,8 +35,8 @@ for (const family of ['BookSans', 'BookSerif']) {
 writeFileSync('qa/vietnamese-font-specimen.png', canvas.toBuffer('image/png'));
 const game = [];
 for (const width of [1366, 1920, 2560, 820, 390]) {
-  const questionSize = width <= 650 ? 26 : width <= 900 ? 29 : Math.max(32, Math.min(42, width * .016 + 12));
-  const answerSize = width <= 650 ? 20 : width <= 900 ? 22 : Math.max(24, Math.min(28, width * .008 + 14));
+  const questionSize = width <= 650 ? 25 : width <= 900 ? 27 : Math.max(29, Math.min(38, width * .0145 + 10));
+  const answerSize = width <= 650 ? 19 : width <= 900 ? 20 : Math.max(22, Math.min(25, width * .0072 + 12));
   const outer = width <= 650 ? 32 : 56, gap = width >= 1800 ? 26 : width <= 900 ? 10 : 18;
   const side = width >= 1800 ? 180 : width <= 900 ? 70 : 90;
   const center = width <= 650 ? width - outer : Math.min(width - outer - side * 2 - gap * 2, width >= 1800 ? 1120 : 960);

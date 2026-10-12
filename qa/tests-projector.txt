@@ -2,26 +2,26 @@
 > r3f-vite-starter@1.0.0 test
 > node scripts/run-tests.mjs
 
-✔ Every learning spread has its own illustration in normal reading and additional 3D mode (30.9583ms)
-✔ Procedural objects and book bounds fit five viewport cameras and occupy separate reading regions (108.7605ms)
-✔ Narrative game: all correct, progression, feedback, duplicate-click lock, restart (47.4066ms)
-✔ Narrative game: all incorrect, progression, feedback, duplicate-click lock, restart (25.9848ms)
-✔ Narrative game: partial credit, progression, feedback, duplicate-click lock, restart (23.2115ms)
-✔ Game choices work when speech APIs are unavailable; typewriter finishes (11.8466ms)
-✔ Quiz scores once despite stale repeated clicks, explains every selection, completes and resets (4.3643ms)
-✔ 3D book navigation: six sheets, twelve existing textures, correct boundaries (13.9906ms)
-✔ Academic coverage, source boundaries and no old topic in rendered content (35.3742ms)
-✔ Quiz incorrect answers use their own explanations and award zero points (2.7339ms)
-✔ Expandable explanations expose state and hide closed content (0.9472ms)
-✔ Navbar switches from book to specific content, and book/source tabs (1.703ms)
-✔ Navbar scroll tracking follows nested theory, solutions and student sections (2.2325ms)
-✔ Randomized answers reach all positions without changing correctness or explanation (0.9219ms)
-✔ Narrative mixed choices produce exact score and accurate final choice history (16.3426ms)
-✔ Hypothetical fare balances money and labels fee revenue separately from profit (1.0888ms)
-✔ Book cover-to-cover face order and responsive framing are consistent (0.5292ms)
-✔ Five distinct local image assets map to the intended hero and four scenarios (1.3347ms)
-✔ Book enlarged reader navigates all twelve faces, closes and restores scroll state (4.2214ms)
-✔ Book 3D toggle and enlarged-reader keyboard preserve page state (2.8207ms)
+✔ Every learning spread has its own illustration in normal reading and additional 3D mode (31.5244ms)
+✔ Procedural objects and book bounds fit five viewport cameras and occupy separate reading regions (99.7689ms)
+✔ Narrative game: all correct, progression, feedback, duplicate-click lock, restart (44.7345ms)
+✔ Narrative game: all incorrect, progression, feedback, duplicate-click lock, restart (24.9401ms)
+✔ Narrative game: partial credit, progression, feedback, duplicate-click lock, restart (22.9885ms)
+✔ Game choices work when speech APIs are unavailable; typewriter finishes (12.3334ms)
+✔ Quiz scores once despite stale repeated clicks, explains every selection, completes and resets (3.9556ms)
+✔ 3D book navigation: six sheets, twelve existing textures, correct boundaries (10.7097ms)
+✔ Academic coverage, source boundaries and no old topic in rendered content (32.508ms)
+✔ Quiz incorrect answers use their own explanations and award zero points (2.3455ms)
+✔ Expandable explanations expose state and hide closed content (0.8574ms)
+✔ Navbar switches from book to specific content, and book/source tabs (2.2278ms)
+✔ Navbar scroll tracking follows nested theory, solutions and student sections (1.4553ms)
+✔ Randomized answers reach all positions without changing correctness or explanation (0.7453ms)
+✔ Narrative mixed choices produce exact score and accurate final choice history (15.1212ms)
+✔ Hypothetical fare balances money and labels fee revenue separately from profit (1.1692ms)
+✔ Book cover-to-cover face order and responsive framing are consistent (0.7258ms)
+✔ Five distinct local image assets map to the intended hero and four scenarios (0.9671ms)
+✔ Book enlarged reader navigates all twelve faces, closes and restores scroll state (4.4396ms)
+✔ Book 3D toggle and enlarged-reader keyboard preserve page state (2.7612ms)
 ℹ tests 20
 ℹ suites 0
 ℹ pass 20
@@ -29,4 +29,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 369.7743
+ℹ duration_ms 356.8624

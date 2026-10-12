@@ -9,13 +9,13 @@ node_modules/jotai/esm/react.mjs (1:0) Module level directives cause errors when
 rendering chunks...
 computing gzip size...
 dist/index.html                        0.85 kB │ gzip:   0.48 kB
-dist/assets/index-5c306610.css        90.23 kB │ gzip:  18.07 kB
-dist/assets/AIUsagePage-c9eae014.js    6.39 kB │ gzip:   2.89 kB
-dist/assets/index-55ec0c3a.js        205.39 kB │ gzip:  67.53 kB
-dist/assets/BookPage-1d0eb616.js     872.29 kB │ gzip: 239.23 kB
+dist/assets/index-ef30b830.css        90.24 kB │ gzip:  18.07 kB
+dist/assets/AIUsagePage-9e63cdc4.js    6.39 kB │ gzip:   2.89 kB
+dist/assets/index-63193cbe.js        205.39 kB │ gzip:  67.53 kB
+dist/assets/BookPage-3f256ad9.js     872.29 kB │ gzip: 239.23 kB
 
 (!) Some chunks are larger than 500 kBs after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-✓ built in 7.13s
+✓ built in 5.87s
