@@ -43,7 +43,7 @@ Không mở index.html bằng file://; Three.js và module cần HTTP server. C�
 
 ## Kết quả và giới hạn
 
-- Đợt tối ưu trình chiếu hiện tại: 23/23 kiểm thử tương tác/tọa độ thành công; build production thành công; 57/57 tài nguyên public đúng HTTP. Bốn artifact build được đối chiếu SHA-256 qua production preview. Sách có năm minh họa hình học, không tải GLB. Font cục bộ đủ 112 mã tiếng Việt đã kiểm tra.
+- Đợt tối ưu trình chiếu hiện tại: 24/24 kiểm thử tương tác/tọa độ thành công; build production thành công; 57/57 tài nguyên public đúng HTTP. Bốn artifact build được đối chiếu SHA-256 qua production preview. Sách có năm minh họa hình học, không tải GLB. Font cục bộ đủ 112 mã tiếng Việt đã kiểm tra.
 - Chưa kiểm thử trực quan browser/desktop/mobile/WebGL/console vì công cụ không xác minh được quyền localhost. Chưa có screenshot website đang chạy.
 - Đã đọc thông báo gốc UBCTQG ngày 11/09/2026; đây là rà soát/xác minh, không phải kết luận vi phạm.
 - Đã đối chiếu phần lý luận với bản 2021 đăng lại và bài giảng Chương 5 của Đại học Thương mại. Chưa kiểm tra bản in của nhóm; không gán số trang cho từng diễn giải.

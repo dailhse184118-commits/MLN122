@@ -90,7 +90,7 @@ test('Procedural objects and book bounds fit five viewport cameras and occupy se
         assert.ok(orbit.enableRotate && !Number.isFinite(orbit.minAzimuthAngle) && !Number.isFinite(orbit.maxAzimuthAngle), '360 degree orbit has no horizontal stops');
         for (let angle = 0; angle < 24; angle++) for (const polar of [orbit.minPolarAngle, Math.PI / 2, orbit.maxPolarAngle]) {
           const azimuth = angle * Math.PI / 12;
-          camera.position.copy(new THREE.Vector3().setFromSphericalCoords(layout.distance, polar, azimuth).add(new THREE.Vector3(...layout.target)));
+          camera.position.copy(new THREE.Vector3().setFromSphericalCoords(layout.overviewDistance, polar, azimuth).add(new THREE.Vector3(...layout.target)));
           camera.lookAt(...layout.target); camera.updateMatrixWorld();
           const a = projected(book, camera), b = projected(model, camera);
           for (const region of [a, b]) assert.ok(region.left > -1 && region.right < 1 && region.bottom > -1 && region.top < 1, `${width}×${height} ${mode} page ${page}: orbit clips ${JSON.stringify(region)}`);
@@ -111,11 +111,30 @@ test('Front and back covers stay in frame throughout the 360 degree orbit', () =
       const orbit = getBookOrbitOptions(layout, 'showcase');
       const camera = new THREE.PerspectiveCamera(layout.fov, width / height, .1, 100);
       for (let angle = 0; angle < 24; angle++) for (const polar of [orbit.minPolarAngle, Math.PI / 2, orbit.maxPolarAngle]) {
-        camera.position.copy(new THREE.Vector3().setFromSphericalCoords(layout.distance, polar, angle * Math.PI / 12).add(new THREE.Vector3(...layout.target)));
+        camera.position.copy(new THREE.Vector3().setFromSphericalCoords(layout.overviewDistance, polar, angle * Math.PI / 12).add(new THREE.Vector3(...layout.target)));
         camera.lookAt(...layout.target); camera.updateMatrixWorld();
         const region = projected(box, camera);
         assert.ok(region.left > -1 && region.right < 1 && region.bottom > -1 && region.top < 1, `${width}×${height} cover ${page}: orbit clips the cover`);
       }
     }
+  }
+});
+
+test('3D View starts substantially closer and permits a further close-up while retaining overview and 360 orbit', () => {
+  const book = new THREE.Box3(new THREE.Vector3(-1.3, -.93, -.26), new THREE.Vector3(1.3, .93, .26));
+  for (const [width, height] of [[1366, 488], [1920, 800], [2560, 1160]]) {
+    const layout = getBookFraming(width, height, 'showcase', 4);
+    const orbit = getBookOrbitOptions(layout, 'showcase');
+    const camera = new THREE.PerspectiveCamera(layout.fov, width / height, .1, 100);
+    const visibleWidth = distance => {
+      camera.position.set(layout.target[0], layout.target[1], distance);
+      camera.lookAt(...layout.target); camera.updateMatrixWorld();
+      const region = projected(book, camera); return region.right - region.left;
+    };
+    assert.ok(visibleWidth(layout.distance) > visibleWidth(layout.overviewDistance) * 1.5, 'default book size exceeds the former overview-locked view');
+    assert.ok(visibleWidth(orbit.minDistance) > visibleWidth(layout.distance) * 1.3, 'wheel zoom can magnify beyond the starting view');
+    assert.ok(orbit.maxDistance >= layout.overviewDistance, 'full-scene overview remains reachable');
+    assert.ok(orbit.enableRotate && orbit.minAzimuthAngle === -Infinity && orbit.maxAzimuthAngle === Infinity);
+    assert.equal(getBookOrbitOptions(getBookFraming(width, height, 'reading', 4), 'reading').enableRotate, false);
   }
 });

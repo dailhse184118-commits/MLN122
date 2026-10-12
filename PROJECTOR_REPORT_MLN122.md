@@ -68,7 +68,7 @@ Trong texture 1536×2048: body tăng từ 64px lên 96px với trang ba mục, t
 
 Hiện trong cả chế độ đọc mặc định và `3D View`; bìa trước/sau không đặt minh họa. Mỗi lần chỉ dựng mô hình của phần đang đọc; dưới 60 mesh mỗi cảnh trong kiểm thử. Dùng geometry nhỏ, vật liệu roughness cao, vàng trầm và burgundy; không tải GLB. Chuyển động xuất hiện nhẹ, bob 0,02 đơn vị và cán cân nghiêng chậm; có hỗ trợ reduced motion. Khôi phục PageParticles: burst 40 hạt sáng và 12 hạt burgundy trong 1,8 giây khi lật trang; thêm 24 hạt vàng nhẹ trong 3D View. Tắt hạt khi hệ điều hành yêu cầu reduced motion.
 
-Camera dành vùng riêng bên cạnh sách trên desktop hoặc phía trên trên màn hình hẹp. `3D View` cho phép xoay đủ 360° ngang, nghiêng gần toàn bộ chiều dọc và zoom có giới hạn. Camera dùng bán kính bao cảnh để sách và minh họa không bị cắt khi nhìn từ các hướng khác nhau. Bấm Đọc sách để trở về góc đọc thẳng. Khi người dùng kéo, camera tự động ngừng nội suy để không giành quyền điều khiển; thao tác kéo quá 4px không bị coi là click lật trang. Không đổi skeleton, UV, sáu lá sách hay thuật toán lật trang gốc.
+Camera dành vùng riêng bên cạnh sách trên desktop hoặc phía trên trên màn hình hẹp. `3D View` cho phép xoay đủ 360° ngang, nghiêng gần toàn bộ chiều dọc và zoom có giới hạn. Camera mặc định dùng khung nhìn gần hơn; không dùng bán kính bao toàn cảnh làm khoảng cách mặc định hoặc giới hạn zoom gần. Zoom-in được phép đến 70% khoảng cách khởi đầu (sàn 1,4 đơn vị). Góc toàn cảnh dùng bán kính bao cảnh vẫn nằm trong phạm vi zoom-out để xem trọn sách và minh họa từ mọi hướng. Khi zoom sát, người dùng có thể chủ động xem chi tiết thay vì buộc toàn bộ cảnh luôn nằm trong màn hình. Bấm Đọc sách để trở về góc đọc thẳng. Khi người dùng kéo, camera tự động ngừng nội suy để không giành quyền điều khiển; thao tác kéo quá 4px không bị coi là click lật trang. Không đổi skeleton, UV, sáu lá sách hay thuật toán lật trang gốc.
 
 ## 5. Sách dễ đọc hơn
 
@@ -95,7 +95,7 @@ Các điều chỉnh bố trí được triển khai trong source; chưa xác nh
 
 | Kiểm tra | Kết quả / bằng chứng |
 |---|---|
-| `npm test` | 23/23 pass; `qa/tests-projector.txt` |
+| `npm test` | 24/24 pass; `qa/tests-projector.txt` |
 | `npm run build` | Exit 0; `qa/build-projector.txt` |
 | Asset HTTP production preview | 57/57 public assets đúng HTTP 200 và MIME không phải HTML; `qa/http-projector.txt` |
 | Bundle production | Bốn file build được GET và đối chiếu SHA-256 với file hiện tại; `/book`, `/ai` trả HTML SPA |
@@ -103,9 +103,10 @@ Các điều chỉnh bố trí được triển khai trong source; chưa xác nh
 | Font shaping / text metrics | NFC/NFD cùng độ rộng; 20 tổ hợp tình huống/chiều rộng; `qa/projection-typography-metrics.json` |
 | Typesetting sách | 10 trang không tràn chân trang và không chồng glyph; `qa/book-typesetting.json` |
 | Book logic | Bảy vị trí điều hướng, 12 mặt texture, chế độ đọc/3D, reader, phím trái/phải/Escape và khôi phục scrolling |
+| Zoom 3D | Ba kích thước desktop: sách ở góc mặc định lớn hơn 1,5 lần so với góc toàn cảnh cũ; cho phép zoom gần để tăng thêm hơn 1,3 lần. Góc đọc thường giữ nguyên |
 | Sparkles | Burst phát lại khi lật nhanh, tự dừng, ambient còn trong 3D View và reduced motion tắt hiệu ứng |
 | Game / quiz | Đúng, sai, điểm từng phần, tổng hỗn hợp 120/200, khóa double click, phản hồi, xáo trộn và replay |
-| Camera tính toán | 1366×768, 1920×1080, 2560×1440, 820×1180, 390×844: 50 cấu hình mở sách mặc định và 2.520 góc orbit lấy mẫu qua các cặp trang/bìa; bounding box sách/mô hình nằm trong khung và tách nhau ở góc đọc ban đầu |
+| Camera tính toán | 1366×768, 1920×1080, 2560×1440, 820×1180, 390×844: 50 cấu hình mở sách mặc định và 2.520 góc orbit lấy mẫu ở khoảng cách toàn cảnh qua các cặp trang/bìa; bounding box nằm trong khung. Ở góc mặc định, sách và mô hình nằm trong khung và tách nhau |
 
 Kiểm thử camera dùng geometry Three.js, perspective projection và React renderer có stub Fiber/Drei; không có GPU/WebGL hoặc layout engine browser. Chiều cao canvas được giả định trong kiểm thử; source đo header và canvas thực tế khi chạy. Mẫu metrics game là ước lượng xuống dòng, không phải đo layout DOM. Ở viewport hẹp nội dung game có thể cần cuộn, không cắt đáp án.
 
