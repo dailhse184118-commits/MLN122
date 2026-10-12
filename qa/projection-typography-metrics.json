@@ -34,8 +34,8 @@
     {
       "viewportWidth": 1366,
       "scene": 1,
-      "questionSize": 29.807000000000002,
-      "answerSize": 22,
+      "questionSize": 28.1276,
+      "answerSize": 20.5,
       "centerWidth": 960,
       "questionLines": 2,
       "answerLines": [
@@ -43,29 +43,29 @@
         1,
         1
       ],
-      "estimatedContentHeight": 550,
+      "estimatedContentHeight": 538,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 1366,
       "scene": 2,
-      "questionSize": 29.807000000000002,
-      "answerSize": 22,
+      "questionSize": 28.1276,
+      "answerSize": 20.5,
       "centerWidth": 960,
-      "questionLines": 2,
+      "questionLines": 1,
       "answerLines": [
         1,
         1,
         1
       ],
-      "estimatedContentHeight": 550,
+      "estimatedContentHeight": 496,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 1366,
       "scene": 3,
-      "questionSize": 29.807000000000002,
-      "answerSize": 22,
+      "questionSize": 28.1276,
+      "answerSize": 20.5,
       "centerWidth": 960,
       "questionLines": 2,
       "answerLines": [
@@ -73,29 +73,29 @@
         1,
         1
       ],
-      "estimatedContentHeight": 550,
+      "estimatedContentHeight": 538,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 1366,
       "scene": 4,
-      "questionSize": 29.807000000000002,
-      "answerSize": 22,
+      "questionSize": 28.1276,
+      "answerSize": 20.5,
       "centerWidth": 960,
       "questionLines": 2,
       "answerLines": [
-        2,
         1,
-        2
+        1,
+        1
       ],
-      "estimatedContentHeight": 618,
+      "estimatedContentHeight": 538,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 1920,
       "scene": 1,
-      "questionSize": 37.84,
-      "answerSize": 25,
+      "questionSize": 35.5,
+      "answerSize": 23.5,
       "centerWidth": 1120,
       "questionLines": 2,
       "answerLines": [
@@ -103,14 +103,14 @@
         1,
         1
       ],
-      "estimatedContentHeight": 588,
+      "estimatedContentHeight": 574,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 1920,
       "scene": 2,
-      "questionSize": 37.84,
-      "answerSize": 25,
+      "questionSize": 35.5,
+      "answerSize": 23.5,
       "centerWidth": 1120,
       "questionLines": 2,
       "answerLines": [
@@ -118,14 +118,14 @@
         1,
         1
       ],
-      "estimatedContentHeight": 588,
+      "estimatedContentHeight": 574,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 1920,
       "scene": 3,
-      "questionSize": 37.84,
-      "answerSize": 25,
+      "questionSize": 35.5,
+      "answerSize": 23.5,
       "centerWidth": 1120,
       "questionLines": 2,
       "answerLines": [
@@ -133,29 +133,29 @@
         1,
         1
       ],
-      "estimatedContentHeight": 588,
+      "estimatedContentHeight": 574,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 1920,
       "scene": 4,
-      "questionSize": 37.84,
-      "answerSize": 25,
+      "questionSize": 35.5,
+      "answerSize": 23.5,
       "centerWidth": 1120,
       "questionLines": 2,
       "answerLines": [
         1,
         1,
-        2
+        1
       ],
-      "estimatedContentHeight": 627,
+      "estimatedContentHeight": 574,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 2560,
       "scene": 1,
-      "questionSize": 38,
-      "answerSize": 25,
+      "questionSize": 35.5,
+      "answerSize": 23.5,
       "centerWidth": 1120,
       "questionLines": 2,
       "answerLines": [
@@ -163,14 +163,14 @@
         1,
         1
       ],
-      "estimatedContentHeight": 589,
+      "estimatedContentHeight": 574,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 2560,
       "scene": 2,
-      "questionSize": 38,
-      "answerSize": 25,
+      "questionSize": 35.5,
+      "answerSize": 23.5,
       "centerWidth": 1120,
       "questionLines": 2,
       "answerLines": [
@@ -178,14 +178,14 @@
         1,
         1
       ],
-      "estimatedContentHeight": 589,
+      "estimatedContentHeight": 574,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 2560,
       "scene": 3,
-      "questionSize": 38,
-      "answerSize": 25,
+      "questionSize": 35.5,
+      "answerSize": 23.5,
       "centerWidth": 1120,
       "questionLines": 2,
       "answerLines": [
@@ -193,29 +193,29 @@
         1,
         1
       ],
-      "estimatedContentHeight": 589,
+      "estimatedContentHeight": 574,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 2560,
       "scene": 4,
-      "questionSize": 38,
-      "answerSize": 25,
+      "questionSize": 35.5,
+      "answerSize": 23.5,
       "centerWidth": 1120,
       "questionLines": 2,
       "answerLines": [
         1,
         1,
-        2
+        1
       ],
-      "estimatedContentHeight": 627,
+      "estimatedContentHeight": 574,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 820,
       "scene": 1,
-      "questionSize": 27,
-      "answerSize": 20,
+      "questionSize": 25.5,
+      "answerSize": 19,
       "centerWidth": 604,
       "questionLines": 2,
       "answerLines": [
@@ -223,14 +223,14 @@
         2,
         2
       ],
-      "estimatedContentHeight": 625,
+      "estimatedContentHeight": 612,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 820,
       "scene": 2,
-      "questionSize": 27,
-      "answerSize": 20,
+      "questionSize": 25.5,
+      "answerSize": 19,
       "centerWidth": 604,
       "questionLines": 2,
       "answerLines": [
@@ -238,14 +238,14 @@
         2,
         2
       ],
-      "estimatedContentHeight": 625,
+      "estimatedContentHeight": 612,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 820,
       "scene": 3,
-      "questionSize": 27,
-      "answerSize": 20,
+      "questionSize": 25.5,
+      "answerSize": 19,
       "centerWidth": 604,
       "questionLines": 2,
       "answerLines": [
@@ -253,14 +253,14 @@
         2,
         2
       ],
-      "estimatedContentHeight": 625,
+      "estimatedContentHeight": 612,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 820,
       "scene": 4,
-      "questionSize": 27,
-      "answerSize": 20,
+      "questionSize": 25.5,
+      "answerSize": 19,
       "centerWidth": 604,
       "questionLines": 2,
       "answerLines": [
@@ -268,14 +268,14 @@
         2,
         2
       ],
-      "estimatedContentHeight": 625,
+      "estimatedContentHeight": 612,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 390,
       "scene": 1,
-      "questionSize": 25,
-      "answerSize": 19,
+      "questionSize": 24,
+      "answerSize": 18,
       "centerWidth": 358,
       "questionLines": 3,
       "answerLines": [
@@ -283,14 +283,14 @@
         3,
         3
       ],
-      "estimatedContentHeight": 916,
+      "estimatedContentHeight": 898,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 390,
       "scene": 2,
-      "questionSize": 25,
-      "answerSize": 19,
+      "questionSize": 24,
+      "answerSize": 18,
       "centerWidth": 358,
       "questionLines": 3,
       "answerLines": [
@@ -298,14 +298,14 @@
         3,
         3
       ],
-      "estimatedContentHeight": 916,
+      "estimatedContentHeight": 898,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 390,
       "scene": 3,
-      "questionSize": 25,
-      "answerSize": 19,
+      "questionSize": 24,
+      "answerSize": 18,
       "centerWidth": 358,
       "questionLines": 3,
       "answerLines": [
@@ -313,22 +313,22 @@
         3,
         3
       ],
-      "estimatedContentHeight": 916,
+      "estimatedContentHeight": 898,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     },
     {
       "viewportWidth": 390,
       "scene": 4,
-      "questionSize": 25,
-      "answerSize": 19,
+      "questionSize": 24,
+      "answerSize": 18,
       "centerWidth": 358,
       "questionLines": 3,
       "answerLines": [
         4,
-        4,
+        3,
         4
       ],
-      "estimatedContentHeight": 1004,
+      "estimatedContentHeight": 953,
       "kind": "text metrics estimate; CSS flow allows scrolling"
     }
   ]
