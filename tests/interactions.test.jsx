@@ -59,7 +59,12 @@ for (const [name, pick, expected] of [['all correct', s => s.choices.find(c => c
       let score = 0;
       scenarios.forEach((s, i) => {
         assert.ok(content(tree).includes(s.title));
-        click(tree, 'TIẾP TỤC'); click(tree, 'Hiện lựa chọn ngay');
+        const checkWeDo = () => assert.equal(tree.root.findAllByType('a').filter(a => a.props.href === 'https://wedofpt.com.vn/').length, s.id === 4 ? 1 : 0);
+        checkWeDo();
+        click(tree, 'TIẾP TỤC');
+        checkWeDo();
+        click(tree, 'Hiện lựa chọn ngay');
+        checkWeDo();
         const c = pick(s); const button = tree.root.findAllByType('button').find(b => label(b) === c.text);
         act(() => { button.props.onClick(); button.props.onClick(); });
         score += c.score; clock.advance(1200);

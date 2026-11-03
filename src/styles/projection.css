@@ -102,6 +102,15 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .wedo-invite a { color: #f3d58a; font-size: 20px; line-height: 1.6; text-decoration: underline; text-underline-offset: 4px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .wedo-invite a:focus-visible { outline: 3px solid #f3d58a; outline-offset: 5px; border-radius: 4px; }
 .wedo-invite img { display: block; width: 222px; max-width: 100%; height: auto; background: white; }
+.balance-stage > .wedo-invite-compact { grid-column: 1 / -1; grid-row: 3; justify-self: center; width: min(100%, 500px); display: grid; grid-template-columns: 180px minmax(0, 1fr); column-gap: 24px; row-gap: 8px; padding: 16px; margin-top: 8px; text-align: center; }
+.wedo-invite-compact a { grid-column: 1; grid-row: 1 / 4; font-size: 17px; gap: 8px; }
+.wedo-invite-compact img { width: 180px; }
+.wedo-invite-compact strong, .wedo-invite-compact > span, .wedo-invite-compact small { grid-column: 2; }
+@media (max-width: 420px) {
+  .balance-stage > .wedo-invite-compact { grid-template-columns: minmax(0, 1fr); }
+  .wedo-invite-compact a { grid-row: auto; }
+  .wedo-invite-compact strong, .wedo-invite-compact > span, .wedo-invite-compact small { grid-column: 1; }
+}
 @media (max-width: 700px) {
   .balance-startup-intro { grid-template-columns: minmax(0, 1fr); }
   .wedo-invite { width: min(100%, 300px); justify-self: center; }

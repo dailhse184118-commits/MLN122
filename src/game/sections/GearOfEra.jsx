@@ -276,6 +276,20 @@ function RulesScreen({ onStart }) {
   );
 }
 
+function WeDoInvite({ compact = false }) {
+  return (
+              <aside className={compact ? "wedo-invite wedo-invite-compact" : "wedo-invite"} aria-label="Khám phá WeDo" onClick={event => event.stopPropagation()}>
+                <strong>Khám phá WeDo</strong>
+                <span>Làm việc nhóm tích hợp AI</span>
+                <a href="https://wedofpt.com.vn/" target="_blank" rel="noopener noreferrer" aria-label="Mở website WeDo trong tab mới">
+                  <img src="/images/wedo-qr.png" width="444" height="444" alt="Mã QR truy cập https://wedofpt.com.vn/" />
+                  <span>wedofpt.com.vn ↗</span>
+                </a>
+                <small>Quét mã để trải nghiệm</small>
+              </aside>
+  );
+}
+
 function GameScreen({ scenario, onChoice, muted, parallax }) {
   const [submitted, setSubmitted] = useState(false);
   const [step, setStep] = useState('context');
@@ -351,15 +365,7 @@ function GameScreen({ scenario, onChoice, muted, parallax }) {
             <button onClick={startDialogue} style={{ padding: '15px 50px', background: 'gold', border: 'none', borderRadius: 50, fontWeight: 900, cursor: 'pointer' }}>TIẾP TỤC</button>
             </div>
             {scenario.id === 4 && (
-              <aside className="wedo-invite" aria-label="Khám phá WeDo">
-                <strong>Khám phá WeDo</strong>
-                <span>Làm việc nhóm tích hợp AI</span>
-                <a href="https://wedofpt.com.vn/" target="_blank" rel="noopener noreferrer" aria-label="Mở website WeDo trong tab mới">
-                  <img src="/images/wedo-qr.png" width="444" height="444" alt="Mã QR truy cập https://wedofpt.com.vn/" />
-                  <span>wedofpt.com.vn ↗</span>
-                </a>
-                <small>Quét mã để trải nghiệm</small>
-              </aside>
+              <WeDoInvite />
             )}
           </div>
         </div>
@@ -387,6 +393,7 @@ function GameScreen({ scenario, onChoice, muted, parallax }) {
               </div>
             )}
           </div>
+          {scenario.id === 4 && <WeDoInvite compact />}
         </div>
       )}
 
