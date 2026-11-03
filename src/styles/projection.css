@@ -95,6 +95,17 @@ section, .section-header[id] { scroll-margin-top: var(--nav-clearance); }
 .balance-choice-label { width: 36px; height: 36px; }
 .balance-character { height: clamp(260px, 45svh, 450px); }
 .balance-context { padding: 38px 28px; }
+.balance-startup-intro { display: grid; grid-template-columns: minmax(0, 1fr) 272px; gap: clamp(24px, 4vw, 64px); align-items: center; width: 100%; }
+.wedo-invite { padding: 24px 16px; border: 1px solid rgba(201, 146, 42, .55); border-radius: 20px; background: #201316; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.wedo-invite strong { color: #f3d58a; font-size: 24px; line-height: 1.5; }
+.wedo-invite > span, .wedo-invite small { color: #ede6d6; font-size: 16px; line-height: 1.6; }
+.wedo-invite a { color: #f3d58a; font-size: 20px; line-height: 1.6; text-decoration: underline; text-underline-offset: 4px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.wedo-invite a:focus-visible { outline: 3px solid #f3d58a; outline-offset: 5px; border-radius: 4px; }
+.wedo-invite img { display: block; width: 222px; max-width: 100%; height: auto; background: white; }
+@media (max-width: 700px) {
+  .balance-startup-intro { grid-template-columns: minmax(0, 1fr); }
+  .wedo-invite { width: min(100%, 300px); justify-self: center; }
+}
 .balance-context h2, .balance-result h2 { font-size: var(--section-title-size); line-height: 1.4; }
 .balance-rules h2 { font-size: clamp(26px, 2.4vw, 38px); line-height: 1.4; }
 .balance-rules p { font-size: var(--body-size); line-height: 1.7; }

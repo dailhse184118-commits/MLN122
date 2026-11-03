@@ -344,10 +344,23 @@ function GameScreen({ scenario, onChoice, muted, parallax }) {
       <div className="balance-scene-bg" aria-hidden="true" style={{ position: 'absolute', inset: '-50px', backgroundImage: `url(${scenario.image})`, backgroundSize: 'cover', backgroundPosition: scenario.imagePosition || 'center', filter: step === 'choices' ? 'blur(3px) brightness(0.48)' : 'brightness(0.62)', transform: `translate(${parallax.bg.x}px, ${parallax.bg.y}px)`, transition: 'all 1s' }} />
       {step === 'context' && (
         <div className="balance-context" style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.8)' }}>
-          <div style={{ maxWidth: 960, textAlign: 'center', animation: 'fadeUp 1s ease' }}>
+          <div className={scenario.id === 4 ? 'balance-startup-intro' : undefined} style={{ maxWidth: scenario.id === 4 ? 1120 : 960, textAlign: 'center', animation: 'fadeUp 1s ease' }}>
+            <div>
             <h2 style={{ color: 'gold', marginBottom: 20 }}>{scenario.title}</h2>
             <p style={{ lineHeight: 1.8, marginBottom: 40 }}>{scenario.context}</p>
             <button onClick={startDialogue} style={{ padding: '15px 50px', background: 'gold', border: 'none', borderRadius: 50, fontWeight: 900, cursor: 'pointer' }}>TIẾP TỤC</button>
+            </div>
+            {scenario.id === 4 && (
+              <aside className="wedo-invite" aria-label="Khám phá WeDo">
+                <strong>Khám phá WeDo</strong>
+                <span>Làm việc nhóm tích hợp AI</span>
+                <a href="https://wedofpt.com.vn/" target="_blank" rel="noopener noreferrer" aria-label="Mở website WeDo trong tab mới">
+                  <img src="/images/wedo-qr.png" width="444" height="444" alt="Mã QR truy cập https://wedofpt.com.vn/" />
+                  <span>wedofpt.com.vn ↗</span>
+                </a>
+                <small>Quét mã để trải nghiệm</small>
+              </aside>
+            )}
           </div>
         </div>
       )}
